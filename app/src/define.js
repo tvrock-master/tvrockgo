@@ -1,0 +1,49 @@
+
+module.exports = {
+    TSP_ALL : 0,
+    TSP_TS: 1,
+    TSP_BS: 2,
+    TSP_CS: 3,
+    TSP_OS: 4,
+    TSP_ST: 5,
+    TSP_TSALL: 6,
+    TSP_BSALL: 7,
+    SUBCHANNEL_CODE: 8,
+
+    SEC: 60,
+    MSEC: 1000,
+    DAY: 1440,
+    WEEK: 7,
+
+    HSTK: 3,
+
+    WEEKW: ['日','月','火','水','木','金','土'],
+
+    DBOOT_OFF: 0,
+    DBOOT_TYPE_WATCH: 1,
+    DBOOT_TYPE_RECORDER: 2,
+    DBOOT_TYPE_WATCH_ONLY: 3,
+    DBOOT_TYPE_ONESEG_WATCH: 4,
+    DBOOT_TYPE_ONESEG_RECORD: 5,
+    DBOOT_TYPE_ONESEG_WATCH_ONLY: 6,
+    DBOOT_TYPE_FETCH_PROGRAM_TS: 7,
+    DBOOT_TYPE_FETCH_PROGRAM_BS: 8,
+    DBOOT_TYPE_FETCH_PROGRAM_CS: 9,
+    DBOOT_TYPE_FETCH_PROGRAM_OS: 10,
+
+    DSTAT_OFF: 0,
+    DSTAT_BOOTING: 1,
+    DSTAT_READY: 2,
+    DSTAT_RECORDING: 3,
+    DSTAT_SHUTDOWN: 4,
+
+    COM_RECORD_START: 'RecordStart',
+    COM_RECORD_STOP: 'RecordStop',
+    COM_CAPTURE: 'Capture',
+
+	TUNER_TYPE_TS: 0,
+	TUNER_TYPE_BSCS: 1,
+
+    MPEG2TS: false,
+    DEBUG: false
+};

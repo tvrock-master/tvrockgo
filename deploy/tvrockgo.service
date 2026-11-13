@@ -1,0 +1,16 @@
+[Unit]
+Description=TvRockGO
+After=network.target
+
+[Service]
+Type=simple
+User=tvrockgo
+Group=tvrockgo
+WorkingDirectory=/opt/tvrockgo
+ExecStart=/opt/tvrockgo/tvrockgo --data-dir /opt/tvrockgo
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=120
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,38 @@
+[Ll]og/
+
+# .vscode/
+.vs/
+.devcontainer/
+*.exe
+*.syso
+data/
+# temporary
+debug
+__debug_*
+.tmp/
+.tmp-gocache/
+.gocache/
+*.pprof
+static/
+node_modules/
+app/node_modules/
+conf/tvrock.yml
+tvrockgo/
+
+# Local secrets and private working files
+.env
+.env.*
+!.env.example
+*.key
+*.pfx
+*.p12
+backups/
+.cache/
+test-output/
+.agents/
+.codex/
+.aws/
+.ssh/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,7 @@
+NSIS UAC plug-in
+Copyright (C) Anders Kjersem.
+Licensed under the zlib/libpng license; see the accompanying License.txt.
+
+The copyright and license statement above is from the source archive's
+NSIS_CUSTOMPISDK.h. The plug-in is distributed by its author at:
+https://nsis.sourceforge.io/UAC_plug-in

@@ -1,0 +1,33 @@
+{
+  "name": "rockbar",
+  "version": "1.0.0",
+  "description": "Standalone tvrockgo device controller",
+  "author": "tvrock-master",
+  "private": true,
+  "main": "electron/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "build": "npm run build:electron",
+    "build:electron": "node scripts/build-electron.cjs",
+    "build:web": "node scripts/build-web.cjs",
+    "build:all": "npm run build:web && npm run build:electron",
+    "test": "node --test test/*.test.cjs"
+  },
+  "dependencies": { "ws": "^8.18.3" },
+  "devDependencies": { "electron": "^42.0.0", "electron-builder": "^26.0.12" },
+  "build": {
+    "appId": "jp.tvrockgo.rockbar",
+    "productName": "Rockbar",
+    "directories": { "output": "dist" },
+    "files": ["electron/**/*", "src/**/*", "package.json"],
+    "extraResources": [{"from": "../THIRD_PARTY_LICENSES.md", "to": "THIRD_PARTY_LICENSES.md"}],
+    "win": { "target": "nsis", "icon": "build/icon.ico", "signExecutable": false },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": false
+    },
+    "artifactName": "Rockbar-Setup-${version}-${arch}.${ext}"
+  }
+}

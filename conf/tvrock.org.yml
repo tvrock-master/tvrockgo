@@ -1,0 +1,521 @@
+host: "localhost:80"
+maxconnection: 100
+writetimeout: 50000          # msec
+readtimeout: 50000           # msec
+readHeadertimeout: 10000     # msec
+idletimeout: 120000          # msec
+allowOrigins:
+  - "http://localhost"
+  - "http://127.0.0.1"
+allowOriginPrefix:
+  - "http://192.168."
+# データベース
+dbfile: "./data/data.db"
+programdbfile: "./data/programs.db"
+captiondbfile: "./data/caption.db"
+pastdbfile: "./data/past.db"
+archivedbfile: "./data/archive.db"
+captionarchivedbfile: "./data/captionarc.db"
+blevefile: "./data/bleve-program"
+# 録画 (Webアプリで設定できます)
+recordersetting:
+  gaijiexclusion: 0               # 録画ファイル名の外字削除
+  filenameex: "@TT"               # 録画ファイル名置換
+  recordfileextension: ".ts"      # 録画ファイル拡張子
+  analyzetsafterrecording: false  # 録画後にTS解析処理を行う
+# タスク
+tasksetting:
+  maxtasks: 32              # タスク最大
+  exectime: 600             # 溢れたタスクの再スケジュール時刻
+# 電源管理
+powermanagersetting:
+  powermanager: false                         # 電源管理ON/OFF
+  preventsleep: true                          # スリープ抑止ON/OFF
+  sleeptimer: 5                               # 予約が無い状態でスリープへの移行時間(分)
+  sleeptimerpause: false                      # スリープタイマー・一時停止
+  preventifdevicerunning: true                # デバイスが起動していればスリープへ移行しない
+  wakebeforeschedule: 5                       # 次の予約の開始時刻から指定時間前に解除(分)(0でOFF)
+  waketaskname: tvrockgo-WakeForNextSchedule  # タスクスケジューラで使用するタスク名(windows)
+  wakeupsuppressduration: 100                 # スリープ解除後のスリープ抑制時間(秒)(windows)
+  preventsleeptime: 600                       # 次の録画予約までのスリープ抑制時間(秒)(windows)
+  preventdisplayoff: true                     # モニタOFFを抑止
+archiversetting:
+  executioninterval: 86400                    # アーカイバが起動する時間間隔(秒)
+  suspendtime: 1800                           # 録画予約がある場合のアーカイバの抑止時間(秒)
+  archiverbleveinsertmax: 1000                # 一度に古いデータをBleveへ登録する際の上限
+# リモート視聴
+remotewatch:
+  maxsessions: 32                             # 録画デバイスごとの同時視聴セッション数の上限（0以下は32）
+  keepbeforescheduleseconds: 60               # 視聴終了時に録画アプリを残す次のスケジュール起動までの時間
+  disconnectgraceseconds: 15                  # 通信切断時に視聴セッションを保持する猶予時間
+  startuptimeoutseconds: 60                   # 視聴開始時に準備完了を待つ時間
+bootwebserver: true         # WEBサーバー起動
+bootlauncher: true          # ランチャ起動
+bootscheduler: true         # スケジューラー起動
+bootarchiver: true          # アーカイバ起動
+bleve: false                # 全文検索エンジン
+captionrecord: true         # 字幕保存
+adjustbctime: true
+isafterwithmargin: false    # アイドル時間をスケジュールの衝突判定に含める
+adjusttimethreshold: 600
+launcherhostid: ""
+launchertoken: ""           # 内蔵ランチャー専用。未設定時に自動生成・保存（公開・共有しない）
+devicerequestqueuesize: 256
+devicebootuptimeout: 30
+deviceshutdowntime: 3       # デバイスの終了するための猶予(秒)
+searchmaxworkerthreads: 4   # 検索時の番組テキスト照合・字幕フェッチ並行処理に使用する最大ワーカースレッド
+debug: false
+frontendstationlimit: 1024  # フロントエンド局情報取得最大
+sqlitesetting:              # Sqlite設定
+  - "cache=private"
+  - "_pragma=busy_timeout(5000)"
+  - "_pragma=journal_mode(WAL)"
+  - "_pragma=synchronous(NORMAL)"
+  - "_pragma=cache_size(-65536)"
+  - "_pragma=mmap_size(268435456)"
+  - "_pragma=temp_store(MEMORY)"
+# cron設定
+crontask:
+  storagesurvey: "*/1 * * * *"          # ストレージ監視間隔
+  archiver: "*/20 * * * *"              # アーカイバ作動間隔(以前の処理からarchiversetting.executioninterval時間経たないと実行されない)
+  indexingarchive: "*/1 * * * *"        # 全文検索インデクシング間隔
+  fetchprogramscheduler: "10 */2 * * *" # 番組情報取得スケジュール予約処理
+searchlimit: 3000                       # 検索数最大
+currentprogramthreshold: 604800         # 現行で使用するのスケジュール及び番組(秒)
+currentkeywordreservethreshold: 2592000 # 現行で使用する検索予約(秒)
+currentcaptionthreshold: 604800         # 現行で使用する字幕(秒)
+# ユーザー認証
+authentication: true
+# ログインアカウント（複数指定可能）
+useraccount:
+  myaccount: "mypassword"
+cookiedomain: "localhost"
+cookiename: "tvrockgo"
+cookiepath: "/"
+sessionname: "tvrockgo"
+sessionsecretkey: ""
+sessionmaxage: 31536000
+sessionmaxlength: 100000000
+sessionhttponly: true
+# デバイス設定
+devicemacrots: &devmacrots                          # 地上波マクロ
+  apppath1: "C:\\Recorder\\TVTest.exe"              # 視聴アプリ・フルパス
+  apppath2: "C:\\Recorder\\RecTest.exe"             # 録画アプリ・フルパス
+  apppath3: "C:\\Recorder\\TVH264.exe"              # 視聴アプリ・フルパス(ワンセグ)
+  apppath4: "C:\\Recorder\\RecTest.exe"             # 録画アプリ・フルパス(ワンセグ)
+  recordpath: "D:\\RecordTS"                        # 録画ファイルのフォルダ
+  tunertype: 0                                      # 0=地上波,1=BS/CS
+devicemacrobscs: &devmacrobscs                      # BSCSマクロ
+  apppath1: "C:\\Recorder\\TVTest.exe"              # 視聴アプリ・フルパス
+  apppath2: "C:\\Recorder\\RecTest.exe"             # 録画アプリ・フルパス
+  recordpath: "D:\\RecordBSCS"                      # 録画ファイルのフォルダ
+  tunertype: 1                                      # 0=地上波,1=BS/CS
+
+# 最新のTVTest/TSTaskであれば以下の設定に置き換える
+#devicemacrots: &devmacrots                          # 地上波マクロ
+#  apppath1: "C:\\Recorder\\TVTest.exe"              # 視聴アプリ・フルパス
+#  apppath2: "C:\\Recorder\\TSTask.exe"              # 録画アプリ・フルパス
+#  recordpath: "D:\\RecordTS"                        # 録画ファイルのフォルダ
+#  tunertype: 0                                      # 0=地上波,1=BS/CS
+#  hybrid: true                                      # 地上波/ワンセグ兼用
+#devicemacrobscs: &devmacrobscs                      # BSCSマクロ
+#  apppath1: "C:\\Recorder\\TVTest.exe"              # 視聴アプリ・フルパス
+#  apppath2: "C:\\Recorder\\TSTask.exe"              # 録画アプリ・フルパス
+#  recordpath: "D:\\RecordBSCS"                      # 録画ファイルのフォルダ
+#  tunertype: 1                                      # 0=地上波,1=BS/CS
+
+# リモート視聴を行う場合は視聴アプリも録画用のアプリに設定します
+# サーバ側でもRockbarで起動させれば視聴ができます。
+#  apppath1: "C:\\Recorder\\TSTask.exe"              # 視聴アプリ・フルパス
+#  apppath2: "C:\\Recorder\\TSTask.exe"              # 録画アプリ・フルパス
+
+devices:
+  - <<: *devmacrots
+    id: "REC01"                                           # デバイスID (IDで使用するのでこのフォーマットをなるべく崩さないでください)
+    option1: "/DID A /reccurservice /d BonDriver_T0.dll"  # 視聴アプリ・オプション
+    option2: "/DID A /reccurservice /d BonDriver_T0.dll"  # 録画アプリ・オプション
+    option3: "/DID A /reccurservice /d BonDriver_T0.dll"  # 視聴アプリ・オプション（ワンセグ)
+    option4: "/DID A /reccurservice /d BonDriver_T0.dll"  # 録画アプリ・オプション（ワンセグ)
+  - <<: *devmacrots
+    id: "REC02"
+    option1: "/DID B /reccurservice /d BonDriver_T1.dll"
+    option2: "/DID B /reccurservice /d BonDriver_T1.dll"
+    option3: "/DID B /reccurservice /d BonDriver_T1.dll"
+    option4: "/DID B /reccurservice /d BonDriver_T1.dll"
+  - <<: *devmacrots
+    id: "REC03"
+    option1: "/DID C /reccurservice /d BonDriver_T2.dll"
+    option2: "/DID C /reccurservice /d BonDriver_T2.dll"
+    option3: "/DID C /reccurservice /d BonDriver_T2.dll"
+    option4: "/DID C /reccurservice /d BonDriver_T2.dll"
+  - <<: *devmacrots
+    id: "REC04"
+    option1: "/DID D /reccurservice /d BonDriver_T3.dll"
+    option2: "/DID D /reccurservice /d BonDriver_T3.dll"
+    option3: "/DID D /reccurservice /d BonDriver_T3.dll"
+    option4: "/DID D /reccurservice /d BonDriver_T3.dll"
+  - <<: *devmacrobscs
+    id: "REC05"
+    option1: "/DID E /reccurservice /d BonDriver_S0.dll"
+    option2: "/DID E /reccurservice /d BonDriver_S0.dll"
+  - <<: *devmacrobscs
+    id: "REC06"
+    option1: "/DID F /reccurservice /d BonDriver_S1.dll"
+    option2: "/DID F /reccurservice /d BonDriver_S1.dll"
+  - <<: *devmacrobscs
+    id: "REC07"
+    option1: "/DID G /reccurservice /d BonDriver_S2.dll"
+    option2: "/DID G /reccurservice /d BonDriver_S2.dll"
+  - <<: *devmacrobscs
+    id: "REC08"
+    option1: "/DID H /reccurservice /d BonDriver_S3.dll"
+    option2: "/DID H /reccurservice /d BonDriver_S3.dll"
+# 補助デバイスを追加する場合は"SUB01"~"SUB08"を追加する。ドライバはA~Hと同じものを使用する
+#  - <<: *devmacrots
+#    id: "SUB01"
+#    option1: "/DID I /reccurservice /d BonDriver_T0.dll"
+#    option2: "/DID I /reccurservice /d BonDriver_T0.dll"
+#    option3: "/DID I /reccurservice /d BonDriver_T0.dll"
+#    option4: "/DID I /reccurservice /d BonDriver_T0.dll"
+#  - <<: *devmacrots
+#    id: "SUB02"
+#    option1: "/DID J /reccurservice /d BonDriver_T1.dll"
+#    option2: "/DID J /reccurservice /d BonDriver_T1.dll"
+#    option3: "/DID J /reccurservice /d BonDriver_T1.dll"
+#    option4: "/DID J /reccurservice /d BonDriver_T1.dll"
+#  - <<: *devmacrots
+#    id: "SUB03"
+#    option1: "/DID K /reccurservice /d BonDriver_T2.dll"
+#    option2: "/DID K /reccurservice /d BonDriver_T2.dll"
+#    option3: "/DID K /reccurservice /d BonDriver_T2.dll"
+#    option4: "/DID K /reccurservice /d BonDriver_T2.dll"
+#  - <<: *devmacrots
+#    id: "SUB04"
+#    option1: "/DID L /reccurservice /d BonDriver_T3.dll"
+#    option2: "/DID L /reccurservice /d BonDriver_T3.dll"
+#    option3: "/DID L /reccurservice /d BonDriver_T3.dll"
+#    option4: "/DID L /reccurservice /d BonDriver_T3.dll"
+#  - <<: *devmacrobscs
+#    id: "SUB05"
+#    option1: "/DID M /reccurservice /d BonDriver_S0.dll"
+#    option2: "/DID M /reccurservice /d BonDriver_S0.dll"
+#  - <<: *devmacrobscs
+#    id: "SUB06"
+#    option1: "/DID N /reccurservice /d BonDriver_S1.dll"
+#    option2: "/DID N /reccurservice /d BonDriver_S1.dll"
+#  - <<: *devmacrobscs
+#    id: "SUB07"
+#    option1: "/DID O /reccurservice /d BonDriver_S2.dll"
+#    option2: "/DID O /reccurservice /d BonDriver_S2.dll"
+#  - <<: *devmacrobscs
+#    id: "SUB08"
+#    option1: "/DID P /reccurservice /d BonDriver_S3.dll"
+#    option2: "/DID P /reccurservice /d BonDriver_S3.dll"
+# 自動録画予約デバイス優先順位
+recordingdevice:
+  orderts:     # 地上波
+    - "REC01"
+    - "REC02"
+    - "REC03"
+    - "REC04"
+  orderbs:     # BS
+    - "REC05"
+    - "REC06"
+    - "REC07"
+    - "REC08"
+  ordercs:     # CS
+    - "REC05"
+    - "REC06"
+    - "REC07"
+    - "REC08"
+  orderos:     # ワンセグ
+    - "REC01"
+    - "REC02"
+    - "REC03"
+    - "REC04"
+  # 補助デバイス
+  assist: false
+# デバイスに対応する補助デバイスID
+#  deviceassistance:
+#    REC01: SUB01
+#    REC02: SUB02
+#    REC03: SUB03
+#    REC04: SUB04
+#    REC05: SUB05
+#    REC06: SUB06
+#    REC07: SUB07
+#    REC08: SUB08
+# 番組情報取得スケジュール
+fetchprogram:
+  schedulets: true
+  schedulebs: true
+  schedulecs: true
+  scheduleos: true
+  # 番組情報取得のタイムアウト(秒)
+  timeoutts: 30
+  timeoutbs: 90
+  timeoutcs: 120
+  timeoutos: 30
+  # スケジュール時間
+  scheduleduration: 1800
+  # スケジュール登録操作時間(12時間毎)
+  schedulewindow: 43200
+  schedulehours:
+    - 7
+    - 8
+  # タスクが次回実行するまでの時間
+  schedulerperiod: 43200
+  # スケジュール登録操作時間(1分)
+  searchstep: 30
+  # 取得デバイス優先順位
+  deviceorderts:
+    - "REC04"
+    - "REC03"
+    - "REC02"
+    - "REC01"
+  deviceorderbs:
+    - "REC08"
+    - "REC07"
+    - "REC06"
+    - "REC05"
+  deviceordercs:
+    - "REC08"
+    - "REC07"
+    - "REC06"
+    - "REC05"
+  deviceorderos:
+    - "REC04"
+    - "REC03"
+    - "REC02"
+    - "REC01"
+# ストレージ調査コマンド
+#storagecommand:
+#  id: StorageSurvey
+#  apppath: cmd.exe
+#  options:
+#  - /c
+#  - wmic logicaldisk get caption,freespace,size,volumename
+storagecommand:
+  id: StorageSurvey
+  apppath: powershell
+  options:
+  - "-Command"
+  - "Get-CimInstance Win32_LogicalDisk | Select-Object Caption,FreeSpace,Size,VolumeName"
+# カスタムコマンド
+# optionsは固定引数のみ。番組情報は環境変数TVROCK_CONTEXT_FILEが指すJSONで取得。
+# docs/custom-commands.md と docs/custom-command-examples/ を参照。
+customcommand:
+# サンプル1
+- id: Directory
+  mode: 0             # 0:録画停止後に実行 1:録画開始時に実行 2:待機開始時に実行
+  dependencies: ""    # 他のコマンドIDで実行
+  type: powershell
+  apppath: "./docs/custom-command-examples/Directory.ps1"
+  options: []
+# サンプル2
+- id: Touch
+  mode: 0
+  dependencies: ""
+  type: batch
+  apppath: "./docs/custom-command-examples/Touch.cmd"
+  options: []
+# サンプル3
+- id: Tweet
+  mode: 1
+  dependencies: "Touch"
+  type: powershell
+  apppath: "./docs/custom-command-examples/WriteRecordInfo.ps1"
+  options:
+  - "-Mode"
+  - "Tweet"
+# 番組特集判定パターン
+features:
+  - name: new
+    pattern: '.*(🈟|\[新\])|（新）|\(新\)|＜新＞.*'
+  - name: end
+    pattern: '.*(🈡|\[終\])|（終）|\(終\)|＜終＞.*'
+  - name: first
+    pattern: '.*第(1|一)回|第(1|一)話|第(1|一)幕|#0*1($|^[0-9])|（初）|🈠|No\.0*1($|^[0-9])'
+  - name: free
+    pattern: '.*(🈚|\[無\]\[無料\]).*'
+#  - name: feature1
+#    pattern: '.*(🈟|\[生\])|（生）|\(生\)|＜生＞.*'
+#  - name: feature2
+#    pattern: '.*(🈟|\[生\])|（生）|\(生\)|＜生＞.*'
+#  - name: feature3
+#    pattern: '.*(🈟|\[生\])|（生）|\(生\)|＜生＞.*'
+#  - name: feature4
+#    pattern: '.*(🈟|\[生\])|（生）|\(生\)|＜生＞.*'
+#
+# 再生デバイス。視聴アプリとSRT受信ポートは各Rockbarで設定します。
+# 未指定の場合もPBK01～PBK08が使用できます。Rockbarのデバイス一覧には使用時だけ表示します。
+playbackdevices:
+  - id: PBK01
+  - id: PBK02
+  - id: PBK03
+  - id: PBK04
+  - id: PBK05
+  - id: PBK06
+  - id: PBK07
+  - id: PBK08
+#
+# サービスの親子対応（tsp: 1=地上波、2=BS、3=CS、4=ワンセグ、16=4K）
+# SIDは放送波の16ビット値。同じTSに親・子がある場合だけ適用し、地上波の自動判定より優先。
+# 未指定の地上波は同じTSIDの最小SIDのフルセグTVを親に自動判定、BS/CS/4Kは独立扱い。空配列 [] で明示指定なし。
+servicegroups:
+  - tsp: 2
+    parent: 101
+    children: [102, 103]
+  - tsp: 2
+    parent: 141
+    children: [142, 143]
+  - tsp: 2
+    parent: 151
+    children: [152, 153]
+  - tsp: 2
+    parent: 161
+    children: [162, 163]
+  - tsp: 2
+    parent: 171
+    children: [172, 173]
+  - tsp: 2
+    parent: 181
+    children: [182, 183]
+# 境界線判断テーブル
+tscmboundaryrules:
+  - sid: 1040
+    pid: 0x051f
+    nopacketseconds: 10
+    startforwardpackets: 0
+    endbackpackets: 0
+  - sid: 1056
+    pid: 0x081a
+    nopacketseconds: 5
+    startforwardpackets: 0
+    endbackpackets: 0
+  - sid: 1064
+    pid: 0x1005
+    nopacketseconds: 5
+    startforwardpackets: 3
+    endbackpackets: 0
+  - sid: 23608
+    pid: 0x075e
+    nopacketseconds: 5
+    startforwardpackets: 3
+    endbackpackets: 8
+# 変換リスト(形式的に存在するだけであまり意味は無し)
+tsidlist:
+  - freq: 11727
+    tsid: 16400
+    tsp: 2
+  - freq: 11727
+    tsid: 16401
+    tsp: 2
+  - freq: 11727
+    tsid: 16402
+    tsp: 2
+  - freq: 11766
+    tsid: 16432
+    tsp: 2
+  - freq: 11766
+    tsid: 17969
+    tsp: 2
+  - freq: 11766
+    tsid: 17970
+    tsp: 2
+  - freq: 11804
+    tsid: 17488
+    tsp: 2
+  - freq: 11804
+    tsid: 17489
+    tsp: 2
+  - freq: 11880
+    tsid: 16528
+    tsp: 2
+  - freq: 11880
+    tsid: 16530
+    tsp: 2
+  - freq: 11958
+    tsid: 16592
+    tsp: 2
+  - freq: 11958
+    tsid: 16593
+    tsp: 2
+  - freq: 11958
+    tsid: 18130
+    tsp: 2
+  - freq: 11996
+    tsid: 16625
+    tsp: 2
+  - freq: 11996
+    tsid: 16626
+    tsp: 2
+  - freq: 11996
+    tsid: 18675
+    tsp: 2
+  - freq: 12073
+    tsid: 18224
+    tsp: 2
+  - freq: 12073
+    tsid: 18225
+    tsp: 2
+  - freq: 12073
+    tsid: 18226
+    tsp: 2
+  - freq: 12073
+    tsid: 18227
+    tsp: 2
+  - freq: 12111
+    tsid: 18256
+    tsp: 2
+  - freq: 12111
+    tsid: 18257
+    tsp: 2
+  - freq: 12111
+    tsid: 18258
+    tsp: 2
+  - freq: 12149
+    tsid: 18288
+    tsp: 2
+  - freq: 12149
+    tsid: 18801
+    tsp: 2
+  - freq: 12149
+    tsid: 18803
+    tsp: 2
+  - freq: 12291
+    tsid: 24608
+    tsp: 3
+  - freq: 12331
+    tsid: 28736
+    tsp: 3
+  - freq: 12371
+    tsid: 28768
+    tsp: 3
+  - freq: 12411
+    tsid: 24704
+    tsp: 3
+  - freq: 12451
+    tsid: 24736
+    tsp: 3
+  - freq: 12491
+    tsid: 28864
+    tsp: 3
+  - freq: 12531
+    tsid: 28896
+    tsp: 3
+  - freq: 12571
+    tsid: 28928
+    tsp: 3
+  - freq: 12611
+    tsid: 28960
+    tsp: 3
+  - freq: 12651
+    tsid: 28992
+    tsp: 3
+  - freq: 12691
+    tsid: 29024
+    tsp: 3
+  - freq: 12731
+    tsid: 29056
+    tsp: 3

@@ -1,0 +1,57 @@
+name: Tests
+
+on:
+  push:
+    branches: ['**']
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    env:
+      CGO_ENABLED: '0'
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version-file: go.mod
+          cache: true
+      - name: Run tests
+        run: go test -count=1 -shuffle=on -timeout=10m ./...
+      - name: Run static checks
+        run: go vet ./...
+
+  rockbar:
+    runs-on: windows-2022
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            app/package-lock.json
+            rockbar/package-lock.json
+      - name: Install Web dependencies for license check
+        run: npm ci --prefix app --ignore-scripts
+      - name: Check third-party license notices
+        run: node scripts/generate-third-party-licenses.cjs --check
+      - name: Install Rockbar dependencies
+        working-directory: rockbar
+        run: npm ci
+      - name: Test Rockbar
+        working-directory: rockbar
+        run: npm test

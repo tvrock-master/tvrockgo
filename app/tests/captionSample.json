@@ -1,0 +1,90 @@
+[
+  {
+    "Pid": 100,
+    "Pts": 90000,
+    "Lang": 1,
+    "Clear": true,
+    "X": -1,
+    "Y": -1,
+    "Color": 7,
+    "ColorName": "white",
+    "BgColor": 8,
+    "Size": "normal",
+    "Text": "",
+    "DelayMs": 0,
+    "Timing": 1,
+    "Layout": null
+  },
+  {
+    "Pid": 100,
+    "Pts": 90000,
+    "Lang": 1,
+    "Clear": false,
+    "X": 4,
+    "Y": 4,
+    "Color": 7,
+    "ColorName": "white",
+    "BgColor": 65,
+    "Size": "normal",
+    "Text": "架空の町の風向きを観察します",
+    "DelayMs": 0,
+    "Timing": 1,
+    "Layout": {
+      "X": 170,
+      "Y": 269,
+      "CellWidth": 40,
+      "CellHeight": 60,
+      "GlyphWidth": 36,
+      "GlyphHeight": 36,
+      "Cells": 15
+    }
+  },
+  {
+    "Pid": 100,
+    "Pts": 90000,
+    "Lang": 1,
+    "Clear": false,
+    "X": 4,
+    "Y": 5,
+    "Color": 7,
+    "ColorName": "white",
+    "BgColor": 65,
+    "Size": "normal",
+    "Text": "旗の揺れを順に記録しました",
+    "DelayMs": 0,
+    "Timing": 1,
+    "Layout": {
+      "X": 170,
+      "Y": 329,
+      "CellWidth": 40,
+      "CellHeight": 60,
+      "GlyphWidth": 36,
+      "GlyphHeight": 36,
+      "Cells": 15
+    }
+  },
+  {
+    "Pid": 100,
+    "Pts": 90000,
+    "Lang": 1,
+    "Clear": false,
+    "X": 38,
+    "Y": 5,
+    "Color": 7,
+    "ColorName": "white",
+    "BgColor": 65,
+    "Size": "medium",
+    "Text": "、",
+    "DelayMs": 0,
+    "Timing": 1,
+    "Layout": {
+      "X": 770,
+      "Y": 329,
+      "CellWidth": 20,
+      "CellHeight": 60,
+      "GlyphWidth": 18,
+      "GlyphHeight": 36,
+      "Cells": 1
+    }
+  }
+]

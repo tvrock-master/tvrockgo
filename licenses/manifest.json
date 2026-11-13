@@ -1,0 +1,1329 @@
+{
+  "inputHashes": {
+    "LICENSE": "c5b5925f2d4a2bd658cc5db4c5eada43d8a5c8344c2f8eaacab9af2f5115e12a",
+    "app/package-lock.json": "c1ab1c63e0d9cfcf351010934ad56c2af10365689d8efbe6270715e96114f4dc",
+    "app/package.json": "b273c4ad5c6e5798b365f2955ac413613c3de1e5f03bf010819f1d0711124053",
+    "go.mod": "ae04f6fa6dfdf2434636e859da4229de6be2391ed1358aad1a636962201aa503",
+    "go.sum": "240ea87c3f69d7cdb812381b9fd8e93217a1921e204a31f6fe26b96a7716715d",
+    "licenses/NSIS-COPYING.txt": "ca55a5185240ecd93ef4333cc611f96e068fa73d475b1d2a1bfdcdd51a1de632",
+    "licenses/external-fonts/Apache-2.0.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "licenses/external-fonts/MDI-CSS-MIT.txt": "94c48068283f45adb9396cf993e0e68e552650a048fd836dfec56701f58a004c",
+    "licenses/external-fonts/MDI-LICENSE.txt": "3bae6305bcaa6d10219b999f65c342034c2d40b1c0e8567fa08605e73ccba829",
+    "licenses/external-fonts/NotoSansJP-OFL.txt": "babcfe66c8a098b2fa279bc724a3a342f8124f77ce18941fbcc1bbb39823cded",
+    "licenses/external-fonts/NotoSansSymbols-OFL.txt": "e87c2ed7ff174c637d55fa381939ebb96f43f0415ad94605a37589228f4cbf4f",
+    "licenses/external-fonts/NotoSansSymbols2-OFL.txt": "e87c2ed7ff174c637d55fa381939ebb96f43f0415ad94605a37589228f4cbf4f",
+    "licenses/external-fonts/Roboto-OFL.txt": "ee94f8704aa81e9a3bf4271e8320e99d975a3ee08ea45a088b494b918476ec12",
+    "licenses/external-fonts/sources.json": "7d625f8d191e5a5a40bd8c5a55a8420a3f9d05811ec4a3af249901539049464e",
+    "licenses/nsis-plugins/StdUtils/LGPL.txt": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551",
+    "licenses/nsis-plugins/StdUtils/LGPL_CLARIFICATION.txt": "49287ffa37d51910a8cb595d7ab64ebd2d42525384b16d4322783a0e57a77194",
+    "licenses/nsis-plugins/StdUtils/NOTICE.txt": "5eabc5d784d933344303279c80953295a96748aa92166a3c94f036767ff896ff",
+    "licenses/nsis-plugins/StdUtils/blake2-COPYING.txt": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+    "licenses/nsis-plugins/StdUtils/rhash-COPYING.txt": "8cf876d3406a2eed6c17ae804c8958bd78d3a0f63c30d6e2e789ab575e9fde40",
+    "licenses/nsis-plugins/UAC/License.txt": "dc66200eed16adc58e24a2a69403b304f8e025ba1967fc0d1aa9ef130d4ab412",
+    "licenses/nsis-plugins/UAC/NOTICE.txt": "df649e96ecc228176a36dbfa6115439b11bf84fa261557b922d5bebc68b19aa4",
+    "licenses/nsis-plugins/WinShell-NOTICE.txt": "89c2e99bf67f8cf28c9ec0a58810297008e600c8f428e3cc071f5b666fd52f8e",
+    "licenses/nsis-plugins/nsProcess-NOTICE.txt": "9f344f0a9be1be89f2bb77305ec5da9816cd7c55c3bff2755156ae608045cde6",
+    "licenses/nsis-plugins/nsis7z/License.txt": "57d7567b6904dc71e1f45727b8a5c13a242209361cf92e344f2cc7dc1b85410f",
+    "licenses/nsis-plugins/nsis7z/nsis7z.txt": "400e2c07bcdf7dac1d8e8ff702d92a544b3e3998e1cfc089b31cf736484ab8dc",
+    "licenses/nsis-plugins/sources.json": "a8f63302deadf60df82a20a2809aa22b73b55028310f092a1c75b61c251d8b0b",
+    "rockbar/package-lock.json": "39aebb1f4567f6c5eb8088fedfe196a13464f0d1aeb17c70704152a7390d409b",
+    "rockbar/package.json": "f0ff8707118ca3cc259a5889107bd69cd89edab03b2cb29d177d97b06f7171f7",
+    "rockbar/src/assets/playback-icons/LICENSE": "5bc9d55ddbf691f2577e8daf36f8e0e6e7df3ec17388318eae8a48d95241ea8b"
+  },
+  "documentHash": "ffd57dbb98dc1582135cddfb2e90546f55adf314ced594ad1fd3566cc1d9609b",
+  "noticeCount": 105,
+  "goModules": 72,
+  "appPackages": [
+    "@vue/vue-loader-v15",
+    "axios",
+    "vue",
+    "vuetify",
+    "vuetify-loader"
+  ],
+  "electron": {
+    "version": "42.11.8",
+    "chromiumComponents": 761
+  },
+  "components": [
+    {
+      "name": "github.com/asticode/go-astikit",
+      "version": "v0.30.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/asticode/go-astikit@v0.30.0",
+      "notices": [
+        "L0001"
+      ],
+      "packages": [
+        "github.com/asticode/go-astikit"
+      ]
+    },
+    {
+      "name": "github.com/asticode/go-astits",
+      "version": "v1.16.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/asticode/go-astits@v1.16.0",
+      "notices": [
+        "L0002"
+      ],
+      "packages": [
+        "github.com/asticode/go-astits"
+      ]
+    },
+    {
+      "name": "github.com/benburkert/openpgp",
+      "version": "v0.0.0-20160410205803-c2471f86866c",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/benburkert/openpgp@v0.0.0-20160410205803-c2471f86866c",
+      "notices": [
+        "L0003"
+      ],
+      "packages": [
+        "github.com/benburkert/openpgp/aes/keywrap"
+      ]
+    },
+    {
+      "name": "github.com/bits-and-blooms/bitset",
+      "version": "v1.24.2",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/bits-and-blooms/bitset@v1.24.2",
+      "notices": [
+        "L0004"
+      ],
+      "packages": [
+        "github.com/bits-and-blooms/bitset"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/bleve_index_api",
+      "version": "v1.3.11",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/bleve_index_api@v1.3.11",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/bleve_index_api"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/bleve/v2",
+      "version": "v2.6.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/bleve/v2@v2.6.0",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/bleve/v2",
+        "github.com/blevesearch/bleve/v2/analysis",
+        "github.com/blevesearch/bleve/v2/analysis/analyzer/custom",
+        "github.com/blevesearch/bleve/v2/analysis/analyzer/keyword",
+        "github.com/blevesearch/bleve/v2/analysis/analyzer/standard",
+        "github.com/blevesearch/bleve/v2/analysis/datetime/flexible",
+        "github.com/blevesearch/bleve/v2/analysis/datetime/optional",
+        "github.com/blevesearch/bleve/v2/analysis/datetime/timestamp/microseconds",
+        "github.com/blevesearch/bleve/v2/analysis/datetime/timestamp/milliseconds",
+        "github.com/blevesearch/bleve/v2/analysis/datetime/timestamp/nanoseconds",
+        "github.com/blevesearch/bleve/v2/analysis/datetime/timestamp/seconds",
+        "github.com/blevesearch/bleve/v2/analysis/lang/en",
+        "github.com/blevesearch/bleve/v2/analysis/token/lowercase",
+        "github.com/blevesearch/bleve/v2/analysis/token/porter",
+        "github.com/blevesearch/bleve/v2/analysis/token/stop",
+        "github.com/blevesearch/bleve/v2/analysis/tokenizer/single",
+        "github.com/blevesearch/bleve/v2/analysis/tokenizer/unicode",
+        "github.com/blevesearch/bleve/v2/document",
+        "github.com/blevesearch/bleve/v2/fusion",
+        "github.com/blevesearch/bleve/v2/geo",
+        "github.com/blevesearch/bleve/v2/index/scorch",
+        "github.com/blevesearch/bleve/v2/index/scorch/mergeplan",
+        "github.com/blevesearch/bleve/v2/index/upsidedown",
+        "github.com/blevesearch/bleve/v2/index/upsidedown/store/boltdb",
+        "github.com/blevesearch/bleve/v2/index/upsidedown/store/gtreap",
+        "github.com/blevesearch/bleve/v2/mapping",
+        "github.com/blevesearch/bleve/v2/numeric",
+        "github.com/blevesearch/bleve/v2/registry",
+        "github.com/blevesearch/bleve/v2/search",
+        "github.com/blevesearch/bleve/v2/search/collector",
+        "github.com/blevesearch/bleve/v2/search/facet",
+        "github.com/blevesearch/bleve/v2/search/highlight",
+        "github.com/blevesearch/bleve/v2/search/highlight/format/html",
+        "github.com/blevesearch/bleve/v2/search/highlight/fragmenter/simple",
+        "github.com/blevesearch/bleve/v2/search/highlight/highlighter/html",
+        "github.com/blevesearch/bleve/v2/search/highlight/highlighter/simple",
+        "github.com/blevesearch/bleve/v2/search/query",
+        "github.com/blevesearch/bleve/v2/search/scorer",
+        "github.com/blevesearch/bleve/v2/search/searcher",
+        "github.com/blevesearch/bleve/v2/size",
+        "github.com/blevesearch/bleve/v2/util"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/geo",
+      "version": "v0.2.5",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/geo@v0.2.5",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/geo/geojson",
+        "github.com/blevesearch/geo/r1",
+        "github.com/blevesearch/geo/r2",
+        "github.com/blevesearch/geo/r3",
+        "github.com/blevesearch/geo/s1",
+        "github.com/blevesearch/geo/s2"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/go-porterstemmer",
+      "version": "v1.0.3",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/go-porterstemmer@v1.0.3",
+      "notices": [
+        "L0006"
+      ],
+      "packages": [
+        "github.com/blevesearch/go-porterstemmer"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/gtreap",
+      "version": "v0.1.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/gtreap@v0.1.1",
+      "notices": [
+        "L0007"
+      ],
+      "packages": [
+        "github.com/blevesearch/gtreap"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/mmap-go",
+      "version": "v1.2.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/mmap-go@v1.2.0",
+      "notices": [
+        "L0008"
+      ],
+      "packages": [
+        "github.com/blevesearch/mmap-go"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/scorch_segment_api/v2",
+      "version": "v2.4.7",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/scorch_segment_api/v2@v2.4.7",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/scorch_segment_api/v2"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/segment",
+      "version": "v0.9.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/segment@v0.9.1",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/segment"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/snowballstem",
+      "version": "v0.9.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/snowballstem@v0.9.0",
+      "notices": [
+        "L0009"
+      ],
+      "packages": [
+        "github.com/blevesearch/snowballstem",
+        "github.com/blevesearch/snowballstem/english"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/upsidedown_store_api",
+      "version": "v1.0.2",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/upsidedown_store_api@v1.0.2",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/upsidedown_store_api"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/vellum",
+      "version": "v1.2.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/vellum@v1.2.0",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/vellum",
+        "github.com/blevesearch/vellum/levenshtein",
+        "github.com/blevesearch/vellum/regexp",
+        "github.com/blevesearch/vellum/utf8"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/zapx/v11",
+      "version": "v11.4.3",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/zapx/v11@v11.4.3",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/zapx/v11"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/zapx/v12",
+      "version": "v12.4.3",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/zapx/v12@v12.4.3",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/zapx/v12"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/zapx/v13",
+      "version": "v13.4.3",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/zapx/v13@v13.4.3",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/zapx/v13"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/zapx/v14",
+      "version": "v14.4.3",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/zapx/v14@v14.4.3",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/zapx/v14"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/zapx/v15",
+      "version": "v15.4.3",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/zapx/v15@v15.4.3",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/zapx/v15"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/zapx/v16",
+      "version": "v16.3.4",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/zapx/v16@v16.3.4",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/zapx/v16"
+      ]
+    },
+    {
+      "name": "github.com/blevesearch/zapx/v17",
+      "version": "v17.1.2",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/blevesearch/zapx/v17@v17.1.2",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/blevesearch/zapx/v17"
+      ]
+    },
+    {
+      "name": "github.com/comail/colog",
+      "version": "v0.0.0-20160416085026-fba8e7b1f46c",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/comail/colog@v0.0.0-20160416085026-fba8e7b1f46c",
+      "notices": [
+        "L0010"
+      ],
+      "packages": [
+        "github.com/comail/colog"
+      ]
+    },
+    {
+      "name": "github.com/datarhei/gosrt",
+      "version": "v0.13.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/datarhei/gosrt@v0.13.0",
+      "notices": [
+        "L0011"
+      ],
+      "packages": [
+        "github.com/datarhei/gosrt",
+        "github.com/datarhei/gosrt/circular",
+        "github.com/datarhei/gosrt/congestion",
+        "github.com/datarhei/gosrt/congestion/live",
+        "github.com/datarhei/gosrt/crypto",
+        "github.com/datarhei/gosrt/fec",
+        "github.com/datarhei/gosrt/net",
+        "github.com/datarhei/gosrt/packet",
+        "github.com/datarhei/gosrt/rand"
+      ]
+    },
+    {
+      "name": "github.com/dustin/go-humanize",
+      "version": "v1.0.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/dustin/go-humanize@v1.0.1",
+      "notices": [
+        "L0012"
+      ],
+      "packages": [
+        "github.com/dustin/go-humanize"
+      ]
+    },
+    {
+      "name": "github.com/easonlin404/limit",
+      "version": "v0.0.0-20190114092031-3d7b09b656e2",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/easonlin404/limit@v0.0.0-20190114092031-3d7b09b656e2",
+      "notices": [
+        "L0013"
+      ],
+      "packages": [
+        "github.com/easonlin404/limit"
+      ]
+    },
+    {
+      "name": "github.com/gin-contrib/cors",
+      "version": "v1.4.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/gin-contrib/cors@v1.4.0",
+      "notices": [
+        "L0014"
+      ],
+      "packages": [
+        "github.com/gin-contrib/cors"
+      ]
+    },
+    {
+      "name": "github.com/gin-contrib/sessions",
+      "version": "v0.0.5",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/gin-contrib/sessions@v0.0.5",
+      "notices": [
+        "L0014"
+      ],
+      "packages": [
+        "github.com/gin-contrib/sessions",
+        "github.com/gin-contrib/sessions/cookie"
+      ]
+    },
+    {
+      "name": "github.com/gin-contrib/sse",
+      "version": "v0.1.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/gin-contrib/sse@v0.1.0",
+      "notices": [
+        "L0015"
+      ],
+      "packages": [
+        "github.com/gin-contrib/sse"
+      ]
+    },
+    {
+      "name": "github.com/gin-gonic/gin",
+      "version": "v1.8.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/gin-gonic/gin@v1.8.1",
+      "notices": [
+        "L0016",
+        "L0015"
+      ],
+      "packages": [
+        "github.com/gin-gonic/gin",
+        "github.com/gin-gonic/gin/binding",
+        "github.com/gin-gonic/gin/internal/bytesconv",
+        "github.com/gin-gonic/gin/internal/json",
+        "github.com/gin-gonic/gin/render"
+      ]
+    },
+    {
+      "name": "github.com/go-playground/locales",
+      "version": "v0.14.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/go-playground/locales@v0.14.0",
+      "notices": [
+        "L0017"
+      ],
+      "packages": [
+        "github.com/go-playground/locales",
+        "github.com/go-playground/locales/currency"
+      ]
+    },
+    {
+      "name": "github.com/go-playground/universal-translator",
+      "version": "v0.18.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/go-playground/universal-translator@v0.18.0",
+      "notices": [
+        "L0017"
+      ],
+      "packages": [
+        "github.com/go-playground/universal-translator"
+      ]
+    },
+    {
+      "name": "github.com/go-playground/validator/v10",
+      "version": "v10.10.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/go-playground/validator/v10@v10.10.0",
+      "notices": [
+        "L0018"
+      ],
+      "packages": [
+        "github.com/go-playground/validator/v10"
+      ]
+    },
+    {
+      "name": "github.com/golang/snappy",
+      "version": "v1.0.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/golang/snappy@v1.0.0",
+      "notices": [
+        "L0019",
+        "L0020",
+        "L0021"
+      ],
+      "packages": [
+        "github.com/golang/snappy"
+      ]
+    },
+    {
+      "name": "github.com/google/uuid",
+      "version": "v1.6.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/google/uuid@v1.6.0",
+      "notices": [
+        "L0022",
+        "L0023"
+      ],
+      "packages": [
+        "github.com/google/uuid"
+      ]
+    },
+    {
+      "name": "github.com/gorilla/context",
+      "version": "v1.1.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/gorilla/context@v1.1.1",
+      "notices": [
+        "L0024"
+      ],
+      "packages": [
+        "github.com/gorilla/context"
+      ]
+    },
+    {
+      "name": "github.com/gorilla/securecookie",
+      "version": "v1.1.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/gorilla/securecookie@v1.1.1",
+      "notices": [
+        "L0024"
+      ],
+      "packages": [
+        "github.com/gorilla/securecookie"
+      ]
+    },
+    {
+      "name": "github.com/gorilla/sessions",
+      "version": "v1.2.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/gorilla/sessions@v1.2.1",
+      "notices": [
+        "L0025",
+        "L0026"
+      ],
+      "packages": [
+        "github.com/gorilla/sessions"
+      ]
+    },
+    {
+      "name": "github.com/gorilla/websocket",
+      "version": "v1.4.2",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/gorilla/websocket@v1.4.2",
+      "notices": [
+        "L0027",
+        "L0028"
+      ],
+      "packages": [
+        "github.com/gorilla/websocket"
+      ]
+    },
+    {
+      "name": "github.com/ikawaha/bleveplugin",
+      "version": "v0.0.13",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/ikawaha/bleveplugin@v0.0.13",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/ikawaha/bleveplugin/analysis/lang/ja"
+      ]
+    },
+    {
+      "name": "github.com/ikawaha/kagome-dict",
+      "version": "v1.1.7",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/ikawaha/kagome-dict@v1.1.7",
+      "notices": [
+        "L0029"
+      ],
+      "packages": [
+        "github.com/ikawaha/kagome-dict/dict",
+        "github.com/ikawaha/kagome-dict/dict/trie"
+      ]
+    },
+    {
+      "name": "github.com/ikawaha/kagome-dict/ipa",
+      "version": "v1.2.6",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/ikawaha/kagome-dict/ipa@v1.2.6",
+      "notices": [
+        "L0030",
+        "L0031"
+      ],
+      "packages": [
+        "github.com/ikawaha/kagome-dict/ipa"
+      ]
+    },
+    {
+      "name": "github.com/ikawaha/kagome-dict/uni",
+      "version": "v1.2.6",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/ikawaha/kagome-dict/uni@v1.2.6",
+      "notices": [
+        "L0030",
+        "L0032"
+      ],
+      "packages": [
+        "github.com/ikawaha/kagome-dict/uni"
+      ]
+    },
+    {
+      "name": "github.com/ikawaha/kagome/v2",
+      "version": "v2.11.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/ikawaha/kagome/v2@v2.11.0",
+      "notices": [
+        "L0030"
+      ],
+      "packages": [
+        "github.com/ikawaha/kagome/v2/filter",
+        "github.com/ikawaha/kagome/v2/tokenizer",
+        "github.com/ikawaha/kagome/v2/tokenizer/lattice",
+        "github.com/ikawaha/kagome/v2/tokenizer/lattice/mem"
+      ]
+    },
+    {
+      "name": "github.com/json-iterator/go",
+      "version": "v1.1.12",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/json-iterator/go@v1.1.12",
+      "notices": [
+        "L0033"
+      ],
+      "packages": [
+        "github.com/json-iterator/go"
+      ]
+    },
+    {
+      "name": "github.com/leodido/go-urn",
+      "version": "v1.2.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/leodido/go-urn@v1.2.1",
+      "notices": [
+        "L0034"
+      ],
+      "packages": [
+        "github.com/leodido/go-urn"
+      ]
+    },
+    {
+      "name": "github.com/lestrrat-go/file-rotatelogs",
+      "version": "v2.3.0+incompatible",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/lestrrat-go/file-rotatelogs@v2.3.0+incompatible",
+      "notices": [
+        "L0035"
+      ],
+      "packages": [
+        "github.com/lestrrat-go/file-rotatelogs",
+        "github.com/lestrrat-go/file-rotatelogs/internal/option"
+      ]
+    },
+    {
+      "name": "github.com/lestrrat-go/strftime",
+      "version": "v1.0.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/lestrrat-go/strftime@v1.0.1",
+      "notices": [
+        "L0036"
+      ],
+      "packages": [
+        "github.com/lestrrat-go/strftime"
+      ]
+    },
+    {
+      "name": "github.com/mattn/go-isatty",
+      "version": "v0.0.24",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/mattn/go-isatty@v0.0.24",
+      "notices": [
+        "L0037"
+      ],
+      "packages": [
+        "github.com/mattn/go-isatty"
+      ]
+    },
+    {
+      "name": "github.com/modern-go/concurrent",
+      "version": "v0.0.0-20180228061459-e0a39a4cb421",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/modern-go/concurrent@v0.0.0-20180228061459-e0a39a4cb421",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/modern-go/concurrent"
+      ]
+    },
+    {
+      "name": "github.com/modern-go/reflect2",
+      "version": "v1.0.2",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/modern-go/reflect2@v1.0.2",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/modern-go/reflect2"
+      ]
+    },
+    {
+      "name": "github.com/mschoch/smat",
+      "version": "v0.2.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/mschoch/smat@v0.2.0",
+      "notices": [
+        "L0005"
+      ],
+      "packages": [
+        "github.com/mschoch/smat"
+      ]
+    },
+    {
+      "name": "github.com/ncruces/go-strftime",
+      "version": "v1.0.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/ncruces/go-strftime@v1.0.0",
+      "notices": [
+        "L0038"
+      ],
+      "packages": [
+        "github.com/ncruces/go-strftime"
+      ]
+    },
+    {
+      "name": "github.com/pelletier/go-toml/v2",
+      "version": "v2.0.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/pelletier/go-toml/v2@v2.0.1",
+      "notices": [
+        "L0039"
+      ],
+      "packages": [
+        "github.com/pelletier/go-toml/v2",
+        "github.com/pelletier/go-toml/v2/internal/ast",
+        "github.com/pelletier/go-toml/v2/internal/danger",
+        "github.com/pelletier/go-toml/v2/internal/tracker"
+      ]
+    },
+    {
+      "name": "github.com/pkg/errors",
+      "version": "v0.9.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/pkg/errors@v0.9.1",
+      "notices": [
+        "L0040"
+      ],
+      "packages": [
+        "github.com/pkg/errors"
+      ]
+    },
+    {
+      "name": "github.com/remyoudompheng/bigfft",
+      "version": "v0.0.0-20230129092748-24d4a6f8daec",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/remyoudompheng/bigfft@v0.0.0-20230129092748-24d4a6f8daec",
+      "notices": [
+        "L0041"
+      ],
+      "packages": [
+        "github.com/remyoudompheng/bigfft"
+      ]
+    },
+    {
+      "name": "github.com/RoaringBitmap/roaring/v2",
+      "version": "v2.14.5",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/RoaringBitmap/roaring/v2@v2.14.5",
+      "notices": [
+        "L0042",
+        "L0043",
+        "L0044",
+        "L0045"
+      ],
+      "packages": [
+        "github.com/RoaringBitmap/roaring/v2",
+        "github.com/RoaringBitmap/roaring/v2/internal",
+        "github.com/RoaringBitmap/roaring/v2/roaring64"
+      ]
+    },
+    {
+      "name": "github.com/robfig/cron/v3",
+      "version": "v3.0.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/robfig/cron/v3@v3.0.1",
+      "notices": [
+        "L0046"
+      ],
+      "packages": [
+        "github.com/robfig/cron/v3"
+      ]
+    },
+    {
+      "name": "github.com/rs/xid",
+      "version": "v1.2.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/rs/xid@v1.2.1",
+      "notices": [
+        "L0047"
+      ],
+      "packages": [
+        "github.com/rs/xid"
+      ]
+    },
+    {
+      "name": "github.com/ugorji/go/codec",
+      "version": "v1.2.7",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/github.com/ugorji/go/codec@v1.2.7",
+      "notices": [
+        "L0048"
+      ],
+      "packages": [
+        "github.com/ugorji/go/codec"
+      ]
+    },
+    {
+      "name": "go.etcd.io/bbolt",
+      "version": "v1.4.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/go.etcd.io/bbolt@v1.4.0",
+      "notices": [
+        "L0049"
+      ],
+      "packages": [
+        "go.etcd.io/bbolt",
+        "go.etcd.io/bbolt/errors",
+        "go.etcd.io/bbolt/internal/common",
+        "go.etcd.io/bbolt/internal/freelist"
+      ]
+    },
+    {
+      "name": "golang.org/x/crypto",
+      "version": "v0.58.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/golang.org/x/crypto@v0.58.0",
+      "notices": [
+        "L0050"
+      ],
+      "packages": [
+        "golang.org/x/crypto/bcrypt",
+        "golang.org/x/crypto/blowfish",
+        "golang.org/x/crypto/sha3"
+      ]
+    },
+    {
+      "name": "golang.org/x/net",
+      "version": "v0.61.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/golang.org/x/net@v0.61.0",
+      "notices": [
+        "L0050"
+      ],
+      "packages": [
+        "golang.org/x/net/bpf",
+        "golang.org/x/net/html",
+        "golang.org/x/net/html/atom",
+        "golang.org/x/net/html/charset",
+        "golang.org/x/net/http/httpguts",
+        "golang.org/x/net/http2",
+        "golang.org/x/net/http2/h2c",
+        "golang.org/x/net/http2/hpack",
+        "golang.org/x/net/idna",
+        "golang.org/x/net/internal/httpcommon",
+        "golang.org/x/net/internal/httpsfv",
+        "golang.org/x/net/internal/iana",
+        "golang.org/x/net/internal/socket",
+        "golang.org/x/net/ipv4",
+        "golang.org/x/net/ipv6"
+      ]
+    },
+    {
+      "name": "golang.org/x/sys",
+      "version": "v0.49.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/golang.org/x/sys@v0.49.0",
+      "notices": [
+        "L0050"
+      ],
+      "packages": [
+        "golang.org/x/sys/cpu",
+        "golang.org/x/sys/unix",
+        "golang.org/x/sys/windows",
+        "golang.org/x/sys/windows/registry"
+      ]
+    },
+    {
+      "name": "golang.org/x/text",
+      "version": "v0.43.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/golang.org/x/text@v0.43.0",
+      "notices": [
+        "L0050"
+      ],
+      "packages": [
+        "golang.org/x/text/encoding",
+        "golang.org/x/text/encoding/charmap",
+        "golang.org/x/text/encoding/htmlindex",
+        "golang.org/x/text/encoding/internal",
+        "golang.org/x/text/encoding/internal/identifier",
+        "golang.org/x/text/encoding/japanese",
+        "golang.org/x/text/encoding/korean",
+        "golang.org/x/text/encoding/simplifiedchinese",
+        "golang.org/x/text/encoding/traditionalchinese",
+        "golang.org/x/text/encoding/unicode",
+        "golang.org/x/text/internal/language",
+        "golang.org/x/text/internal/language/compact",
+        "golang.org/x/text/internal/tag",
+        "golang.org/x/text/internal/utf8internal",
+        "golang.org/x/text/language",
+        "golang.org/x/text/runes",
+        "golang.org/x/text/secure/bidirule",
+        "golang.org/x/text/transform",
+        "golang.org/x/text/unicode/bidi",
+        "golang.org/x/text/unicode/norm"
+      ]
+    },
+    {
+      "name": "google.golang.org/protobuf",
+      "version": "v1.36.6",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/google.golang.org/protobuf@v1.36.6",
+      "notices": [
+        "L0051"
+      ],
+      "packages": [
+        "google.golang.org/protobuf/encoding/prototext",
+        "google.golang.org/protobuf/encoding/protowire",
+        "google.golang.org/protobuf/internal/descfmt",
+        "google.golang.org/protobuf/internal/descopts",
+        "google.golang.org/protobuf/internal/detrand",
+        "google.golang.org/protobuf/internal/editiondefaults",
+        "google.golang.org/protobuf/internal/encoding/defval",
+        "google.golang.org/protobuf/internal/encoding/messageset",
+        "google.golang.org/protobuf/internal/encoding/tag",
+        "google.golang.org/protobuf/internal/encoding/text",
+        "google.golang.org/protobuf/internal/errors",
+        "google.golang.org/protobuf/internal/filedesc",
+        "google.golang.org/protobuf/internal/filetype",
+        "google.golang.org/protobuf/internal/flags",
+        "google.golang.org/protobuf/internal/genid",
+        "google.golang.org/protobuf/internal/impl",
+        "google.golang.org/protobuf/internal/order",
+        "google.golang.org/protobuf/internal/pragma",
+        "google.golang.org/protobuf/internal/protolazy",
+        "google.golang.org/protobuf/internal/set",
+        "google.golang.org/protobuf/internal/strs",
+        "google.golang.org/protobuf/internal/version",
+        "google.golang.org/protobuf/proto",
+        "google.golang.org/protobuf/reflect/protoreflect",
+        "google.golang.org/protobuf/reflect/protoregistry",
+        "google.golang.org/protobuf/runtime/protoiface",
+        "google.golang.org/protobuf/runtime/protoimpl"
+      ]
+    },
+    {
+      "name": "gopkg.in/ini.v1",
+      "version": "v1.57.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/gopkg.in/ini.v1@v1.57.0",
+      "notices": [
+        "L0052"
+      ],
+      "packages": [
+        "gopkg.in/ini.v1"
+      ]
+    },
+    {
+      "name": "gopkg.in/yaml.v2",
+      "version": "v2.4.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/gopkg.in/yaml.v2@v2.4.0",
+      "notices": [
+        "L0053",
+        "L0054",
+        "L0055"
+      ],
+      "packages": [
+        "gopkg.in/yaml.v2"
+      ]
+    },
+    {
+      "name": "modernc.org/libc",
+      "version": "v1.74.4",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/modernc.org/libc@v1.74.4",
+      "notices": [
+        "L0056",
+        "L0057",
+        "L0058",
+        "L0059"
+      ],
+      "packages": [
+        "modernc.org/libc",
+        "modernc.org/libc/errno",
+        "modernc.org/libc/fcntl",
+        "modernc.org/libc/fts",
+        "modernc.org/libc/grp",
+        "modernc.org/libc/honnef.co/go/netdb",
+        "modernc.org/libc/langinfo",
+        "modernc.org/libc/limits",
+        "modernc.org/libc/netdb",
+        "modernc.org/libc/netinet/in",
+        "modernc.org/libc/poll",
+        "modernc.org/libc/pthread",
+        "modernc.org/libc/pwd",
+        "modernc.org/libc/signal",
+        "modernc.org/libc/stdio",
+        "modernc.org/libc/stdlib",
+        "modernc.org/libc/sys/socket",
+        "modernc.org/libc/sys/stat",
+        "modernc.org/libc/sys/types",
+        "modernc.org/libc/termios",
+        "modernc.org/libc/time",
+        "modernc.org/libc/unistd",
+        "modernc.org/libc/utime",
+        "modernc.org/libc/uuid/uuid",
+        "modernc.org/libc/wctype"
+      ]
+    },
+    {
+      "name": "modernc.org/mathutil",
+      "version": "v1.7.1",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/modernc.org/mathutil@v1.7.1",
+      "notices": [
+        "L0060",
+        "L0061",
+        "L0062",
+        "L0063",
+        "L0064",
+        "L0065"
+      ],
+      "packages": [
+        "modernc.org/mathutil"
+      ]
+    },
+    {
+      "name": "modernc.org/memory",
+      "version": "v1.11.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/modernc.org/memory@v1.11.0",
+      "notices": [
+        "L0066",
+        "L0067",
+        "L0068",
+        "L0069",
+        "L0070",
+        "L0008"
+      ],
+      "packages": [
+        "modernc.org/memory"
+      ]
+    },
+    {
+      "name": "modernc.org/sqlite",
+      "version": "v1.57.0",
+      "kind": "Go（Windows / Linux / macOS の実行時依存）",
+      "source": "https://pkg.go.dev/modernc.org/sqlite@v1.57.0",
+      "notices": [
+        "L0071",
+        "L0072",
+        "L0073",
+        "L0074",
+        "L0075"
+      ],
+      "packages": [
+        "modernc.org/sqlite",
+        "modernc.org/sqlite/lib",
+        "modernc.org/sqlite/vtab"
+      ]
+    },
+    {
+      "name": "Go runtime / standard library",
+      "version": "go1.26.3",
+      "kind": "Go実行環境",
+      "source": "https://go.dev/LICENSE",
+      "notices": [
+        "L0050",
+        "L0076"
+      ]
+    },
+    {
+      "name": "vue-loader",
+      "version": "15.9.8",
+      "kind": "Webアプリに出力されるコード",
+      "source": "https://github.com/vuejs/vue-loader.git",
+      "notices": [
+        "L0077"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "axios",
+      "version": "0.27.2",
+      "kind": "Webアプリに出力されるコード",
+      "source": "https://github.com/axios/axios.git",
+      "notices": [
+        "L0078"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "vue",
+      "version": "2.6.14",
+      "kind": "Webアプリに出力されるコード",
+      "source": "git+https://github.com/vuejs/vue.git",
+      "notices": [
+        "L0079"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "vuetify",
+      "version": "2.6.6",
+      "kind": "Webアプリに出力されるコード",
+      "source": "git+https://github.com/vuetifyjs/vuetify.git",
+      "notices": [
+        "L0080"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "vuetify-loader",
+      "version": "1.7.3",
+      "kind": "Webアプリに出力されるコード",
+      "source": "git+https://github.com/vuetifyjs/vuetify-loader.git",
+      "notices": [
+        "L0081"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "webpack",
+      "version": "5.73.0",
+      "kind": "Webアプリのバンドル実行時コード",
+      "source": "https://github.com/webpack/webpack.git",
+      "notices": [
+        "L0082"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "ws",
+      "version": "8.21.3",
+      "kind": "RockbarのNode.js実行時依存",
+      "source": "git+https://github.com/websockets/ws.git",
+      "notices": [
+        "L0083"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "Electron",
+      "version": "42.11.8",
+      "kind": "RockbarのWindows実行環境",
+      "source": "https://github.com/electron/electron",
+      "notices": [
+        "L0084"
+      ],
+      "bundledNotices": "licenses/electron/LICENSES.chromium.html",
+      "bundledNoticeHash": "ca0a3f71df977796bf39a99472783c1ce9378bf4d8f4142a95048c3843980415"
+    },
+    {
+      "name": "app-builder-lib",
+      "version": "26.15.3",
+      "kind": "Rockbarインストーラーに使われるNSISテンプレート",
+      "source": "git+https://github.com/electron-userland/electron-builder.git",
+      "notices": [
+        "L0085",
+        "L0086",
+        "L0087"
+      ],
+      "license": "MIT"
+    },
+    {
+      "name": "Roboto",
+      "version": "Google Fonts配信（固定バージョンなし）",
+      "kind": "CDNから読み込むフォント・アイコン",
+      "source": "https://github.com/google/fonts/blob/main/ofl/roboto/OFL.txt",
+      "notices": [
+        "L0088"
+      ]
+    },
+    {
+      "name": "Noto Sans JP",
+      "version": "Google Fonts配信（固定バージョンなし）",
+      "kind": "CDNから読み込むフォント・アイコン",
+      "source": "https://github.com/google/fonts/blob/main/ofl/notosansjp/OFL.txt",
+      "notices": [
+        "L0089"
+      ]
+    },
+    {
+      "name": "Noto Sans Symbols",
+      "version": "Google Fonts配信（固定バージョンなし）",
+      "kind": "CDNから読み込むフォント・アイコン",
+      "source": "https://github.com/google/fonts/blob/main/ofl/notosanssymbols/OFL.txt",
+      "notices": [
+        "L0090"
+      ]
+    },
+    {
+      "name": "Noto Sans Symbols 2",
+      "version": "Google Fonts配信（固定バージョンなし）",
+      "kind": "CDNから読み込むフォント・アイコン",
+      "source": "https://github.com/google/fonts/blob/main/ofl/notosanssymbols2/OFL.txt",
+      "notices": [
+        "L0090"
+      ]
+    },
+    {
+      "name": "Material Design Icons (@mdi/font)",
+      "version": "7.4.47（@latest配信の取得時点）",
+      "kind": "CDNから読み込むフォント・アイコン",
+      "source": "https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/LICENSE",
+      "notices": [
+        "L0091",
+        "L0005",
+        "L0092"
+      ]
+    },
+    {
+      "name": "Lucide / Feather-derived icons",
+      "version": "0.468.0",
+      "kind": "Rockbarの再生操作アイコン（派生アイコンを含む）",
+      "source": "https://github.com/lucide-icons/lucide/blob/0.468.0/LICENSE",
+      "notices": [
+        "L0093"
+      ]
+    },
+    {
+      "name": "NSIS installer / compression modules",
+      "version": "3.0.4.1",
+      "kind": "RockbarのWindowsインストーラー",
+      "source": "https://github.com/electron-userland/electron-builder-binaries/releases/tag/nsis-3.0.4.1",
+      "notices": [
+        "L0094"
+      ]
+    },
+    {
+      "name": "NSIS StdUtils plug-in",
+      "version": "1.14",
+      "kind": "RockbarのWindowsインストーラー用プラグイン",
+      "source": "https://github.com/lordmulder/stdutils/tree/1.14",
+      "notices": [
+        "L0095",
+        "L0096",
+        "L0097",
+        "L0098",
+        "L0099"
+      ]
+    },
+    {
+      "name": "NSIS nsis7z plug-in / LZMA SDK",
+      "version": "19.00",
+      "kind": "RockbarのWindowsインストーラー用プラグイン",
+      "source": "https://nsis.sourceforge.io/Nsis7z_plug-in",
+      "notices": [
+        "L0100",
+        "L0101",
+        "L0096"
+      ]
+    },
+    {
+      "name": "NSIS UAC plug-in",
+      "version": "nsis-resources 3.4.1",
+      "kind": "RockbarのWindowsインストーラー用プラグイン",
+      "source": "https://nsis.sourceforge.io/UAC_plug-in",
+      "notices": [
+        "L0102",
+        "L0103"
+      ]
+    },
+    {
+      "name": "NSIS WinShell plug-in",
+      "version": "nsis-resources 3.4.1",
+      "kind": "RockbarのWindowsインストーラー用プラグイン",
+      "source": "https://nsis.sourceforge.io/WinShell_plug-in",
+      "notices": [
+        "L0104"
+      ]
+    },
+    {
+      "name": "NSIS nsProcess plug-in",
+      "version": "nsis-resources 3.4.1",
+      "kind": "RockbarのWindowsインストーラー用プラグイン",
+      "source": "https://nsis.sourceforge.io/NsProcess_plugin",
+      "notices": [
+        "L0105"
+      ]
+    }
+  ]
+}

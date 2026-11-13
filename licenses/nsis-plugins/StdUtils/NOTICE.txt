@@ -1,0 +1,10 @@
+StdUtils plug-in Library for NSIS 1.14
+Copyright (C) 2004-2018 LoRd_MuldeR <mulder2@gmx.de>
+
+Source and license files:
+https://github.com/lordmulder/stdutils/tree/1.14
+
+The LGPL text and the author's LGPL clarification are reproduced separately.
+The bundled rhash and BLAKE2 copyright and permission notices are reproduced
+alongside them. The copyright above also appears in the bundled DLL's version
+resource. No changes are made to the plugin DLL.

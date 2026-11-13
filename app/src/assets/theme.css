@@ -1,0 +1,56 @@
+/* Light colours stay at their original values in each component's fallback.
+   Root variables also reach Vuetify's detached menus and program popups. */
+:root[data-color-scheme="dark"] {
+  --app-surface: #202932;
+  --app-surface-soft: #27323d;
+  --app-text: #e0e7ed;
+  --app-text-secondary: #b5c2ce;
+  --app-border: #455360;
+  --app-table-header: #354e65;
+  --app-section-header: #454e70;
+  --app-disabled: #414953;
+  --app-recording: #57373e;
+  --app-complete: #483c48;
+  --app-watch: #514831;
+  --app-device-on: #3d4a58;
+  --app-device-off: #303944;
+  --app-link: #a3c7f1;
+  --app-success-text: #92cea6;
+  --app-warning-text: #e8c578;
+  --app-error-text: #f19c9f;
+  --tt-background: #182129;
+  --tt-border: #425265;
+  --tt-text: #cad6e0;
+  --tt-title: #d0daf3;
+  --tt-subtitle: #97a4af;
+  --tt-description: #87949f;
+  --tt-hour-background: #2c344b;
+  --tt-hour-text: #c2c7df;
+  --tt-station-background: #2f527c;
+  --tt-popup: #26323e;
+  --tt-blank: #252e3b;
+  --tt-record-button: #854850;
+  --tt-watch-button: #71602e;
+  --tt-action-button: #395b82;
+}
+
+:where(:root[data-color-scheme="dark"]) .theme--dark.v-application { background: #171f27; color: var(--app-text); }
+:where(:root[data-color-scheme="dark"]) .theme--dark.v-sheet:where(:not(.devinfo,.devinfo-rec,.devinfo-watch,.devcolor-on,.devcolor-off)),
+:where(:root[data-color-scheme="dark"]) .theme--dark.v-data-table,
+:where(:root[data-color-scheme="dark"]) .theme--dark.v-tabs-items,
+:where(:root[data-color-scheme="dark"]) .theme--dark.v-list { background-color: var(--app-surface); }
+:where(:root[data-color-scheme="dark"]) .theme--dark.v-data-table > .v-data-table__wrapper > table > tbody > tr:hover:not(.v-data-table__expanded__content):not(.v-data-table__empty-wrapper) {
+  background-color: #344250;
+}
+:where(:root[data-color-scheme="dark"]) .theme--dark.v-application a { color: var(--app-link); }
+/* Filled semantic buttons use dark ink on the lighter dark-theme accents. */
+:where(:root[data-color-scheme="dark"]) .theme--dark.v-btn:is(.primary,.secondary,.accent,.error,.warning,.info,.success):not(.v-btn--text):not(.v-btn--outlined):not(.v-btn--disabled) {
+  color: #17232b;
+}
+:where(:root[data-color-scheme="dark"]) .theme--dark .tab-side-navigation { border-color: var(--app-border); }
+:where(:root[data-color-scheme="dark"]) .theme--dark .program-subheader.grey.lighten-3 { background-color: var(--app-surface-soft) !important; }
+:where(:root[data-color-scheme="dark"]) .theme--dark thead.blue.lighten-4,
+:where(:root[data-color-scheme="dark"]) .theme--dark thead.blue.lighten-5 { background-color: var(--app-table-header) !important; }
+:where(:root[data-color-scheme="dark"]) .theme--dark .device-card .blue--text.text--darken-4 { color: var(--app-link) !important; }
+:where(:root[data-color-scheme="dark"]) .theme--dark .grey--text.text--darken-1 { color: var(--app-text-secondary) !important; }
+:where(:root[data-color-scheme="dark"]) .theme--dark .tt-program-grid > [data-caption-key]:focus-visible { outline-color: var(--app-link); }

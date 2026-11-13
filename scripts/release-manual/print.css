@@ -1,0 +1,70 @@
+@page {
+  size: A4;
+  margin: 15mm 16mm 17mm;
+}
+
+body {
+  margin: 0;
+  color: #182532;
+  font: 10.5pt/1.52 "Noto Sans JP Variable", Meiryo, sans-serif;
+}
+
+.cover { padding-top: 32mm; }
+.cover .product { color: #075a83; font-size: 17pt; font-weight: 700; }
+.cover h1 { font-size: 33pt; }
+.cover h2 { margin-top: 13mm; }
+.cover ol { line-height: 2; }
+.chapter { break-before: page; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #143040;
+  line-height: 1.35;
+  break-after: avoid;
+}
+
+h1 { margin: 0 0 .6em; font-size: 2.15em; }
+h2 {
+  margin-top: 1.45em;
+  padding-bottom: .25em;
+  border-bottom: 1px solid #cddbe4;
+  font-size: 1.5em;
+}
+
+h3 { margin-top: 1.4em; font-size: 1.18em; }
+p, li { orphans: 2; widows: 2; }
+p, li, td, a { overflow-wrap: anywhere; }
+a { color: #075a83; text-underline-offset: .15em; }
+
+img {
+  max-width: 100%;
+  max-height: 145mm;
+  height: auto;
+  object-fit: contain;
+  vertical-align: middle;
+  break-inside: avoid;
+}
+
+p:has(> img:only-child) { break-inside: avoid; }
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: .94em; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+th, td { border: 1px solid #d5e0e7; padding: 3px 6px; text-align: left; vertical-align: top; }
+th { background: #eaf2f6; }
+
+code {
+  font: .89em Consolas, "Noto Sans JP Variable", monospace;
+  background: #edf3f6;
+  padding: .09em .26em;
+  overflow-wrap: anywhere;
+}
+
+pre {
+  padding: 7px 9px;
+  background: #edf3f6;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  line-height: 1.46;
+}
+
+pre code { padding: 0; }
+blockquote { margin-left: 0; border-left: 3px solid #84aebf; padding-left: 1em; }

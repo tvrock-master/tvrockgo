@@ -1,0 +1,7 @@
+[
+  { "name": "Roboto", "version": "Google Fonts配信（固定バージョンなし）", "file": "Roboto-OFL.txt", "source": "https://github.com/google/fonts/blob/main/ofl/roboto/OFL.txt" },
+  { "name": "Noto Sans JP", "version": "Google Fonts配信（固定バージョンなし）", "file": "NotoSansJP-OFL.txt", "source": "https://github.com/google/fonts/blob/main/ofl/notosansjp/OFL.txt" },
+  { "name": "Noto Sans Symbols", "version": "Google Fonts配信（固定バージョンなし）", "file": "NotoSansSymbols-OFL.txt", "source": "https://github.com/google/fonts/blob/main/ofl/notosanssymbols/OFL.txt" },
+  { "name": "Noto Sans Symbols 2", "version": "Google Fonts配信（固定バージョンなし）", "file": "NotoSansSymbols2-OFL.txt", "source": "https://github.com/google/fonts/blob/main/ofl/notosanssymbols2/OFL.txt" },
+  { "name": "Material Design Icons (@mdi/font)", "version": "7.4.47（@latest配信の取得時点）", "file": "MDI-LICENSE.txt", "additional": ["Apache-2.0.txt", "MDI-CSS-MIT.txt"], "source": "https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/LICENSE" }
+]

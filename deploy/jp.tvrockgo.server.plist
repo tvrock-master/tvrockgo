@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+ <key>Label</key><string>jp.tvrockgo.server</string>
+ <key>ProgramArguments</key>
+ <array>
+  <string>/usr/local/lib/tvrockgo/tvrockgo</string>
+  <string>--data-dir</string><string>/usr/local/lib/tvrockgo</string>
+ </array>
+ <key>WorkingDirectory</key><string>/usr/local/lib/tvrockgo</string>
+ <key>UserName</key><string>tvrockgo</string>
+ <key>RunAtLoad</key><true/>
+ <key>KeepAlive</key><dict><key>SuccessfulExit</key><false/></dict>
+ <key>ThrottleInterval</key><integer>5</integer>
+ <key>ExitTimeOut</key><integer>120</integer>
+ <key>StandardOutPath</key><string>/usr/local/lib/tvrockgo/log/launchd.out.log</string>
+ <key>StandardErrorPath</key><string>/usr/local/lib/tvrockgo/log/launchd.err.log</string>
+</dict>
+</plist>

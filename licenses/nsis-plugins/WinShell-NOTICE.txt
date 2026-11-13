@@ -1,0 +1,8 @@
+NSIS WinShell plug-in
+Author: Anders
+Upstream: https://nsis.sourceforge.io/WinShell_plug-in
+
+The author's plug-in page identifies the license as "Freeware".
+The author's WinShell.zip download contains plug-in DLLs but no separate
+copyright or license text. No MIT, BSD or other license is substituted here.
+NSIS's own plug-in API is covered by its COPYING notice, reproduced separately.

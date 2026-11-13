@@ -1,0 +1,54 @@
+workflow:
+  rules:
+    - if: '$CI_COMMIT_TAG && $CI_PIPELINE_SOURCE == "push"'
+    - when: never
+
+stages:
+  - test
+  - build
+
+.windows-go-node:
+  # Same GitLab.com Windows runner as tvrockdtv. Change for a self-managed runner.
+  tags:
+    - saas-windows-medium-amd64
+  variables:
+    CGO_ENABLED: '0'
+    GOTOOLCHAIN: auto
+  before_script:
+    - . ./setup-ci.ps1
+
+test:
+  extends: .windows-go-node
+  stage: test
+  script:
+    - |
+      go test -count=1 -shuffle=on -timeout=10m ./...
+      if ($LASTEXITCODE -ne 0) { throw 'Backend tests failed.' }
+    - |
+      npm ci --prefix rockbar
+      if ($LASTEXITCODE -ne 0) { throw 'Rockbar dependency installation failed.' }
+    - |
+      npm test --prefix rockbar
+      if ($LASTEXITCODE -ne 0) { throw 'Rockbar tests failed.' }
+
+build:
+  extends: .windows-go-node
+  stage: build
+  needs:
+    - test
+  script:
+    - $env:APP_VERSION = $env:CI_COMMIT_TAG
+    - |
+      npm ci --prefix app
+      if ($LASTEXITCODE -ne 0) { throw 'App dependency installation failed.' }
+    - |
+      npm ci --prefix rockbar
+      if ($LASTEXITCODE -ne 0) { throw 'Rockbar dependency installation failed.' }
+    - ./buildall.ps1
+    - ./publish-gitlab-release.ps1
+  artifacts:
+    name: 'tvrockgo-$CI_COMMIT_TAG'
+    paths:
+      - tvrockgo/
+      - .tmp/release/tvrockgo.zip
+    expire_in: never

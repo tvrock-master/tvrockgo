@@ -1,0 +1,9 @@
+NSIS nsProcess plug-in
+Author: Shengalts Aleksander (Instructor)
+Upstream: https://nsis.sourceforge.io/NsProcess_plugin
+
+Upstream attribution also credits Ravi Kochhar for FIND_PROC_BY_NAME and
+iceman_k, DITMan and brainsucker for their contributions.
+The nsis-resources 3.4.1 bundle supplies the plug-in DLL without a separate
+license file. No MIT, BSD or other license is substituted here. NSIS's own
+plug-in API is covered by its COPYING notice, reproduced separately.

@@ -1,0 +1,6031 @@
+# サードパーティーライセンス
+
+TvRockGOのGo実行時依存、Webアプリの本番バンドル、Rockbarの実行時依存・Electron付属コンポーネント、配信フォント・アイコン、インストーラーに関する著作権表示とライセンス本文です。
+
+GoはWindows・Linux・macOS（CGO無効）の依存を合わせています。npmは本番バンドルに出力されるコードとRockbarの実行時依存を対象とし、出力されないビルド・テスト専用ツールは含めていません。CDNのフォントは取得時点の配布元表記です。各コンポーネントのNOTICE、辞書の利用条件、同梱された第三者表記も保持しています。同一本文はまとめ、下の一覧と本文冒頭の「対象」で対応を示します。
+
+TvRockGO自身のライセンスは[LICENSE](LICENSE)を参照してください。別途導入するTVTest・BonDriver・TvRockDTV・TvRockOnTVTest等は、この配布物に含めず、それぞれの配布元の表記を参照してください。
+
+このファイルとログイン画面のLicenseは、同じ生成元から更新します。更新手順はソースリポジトリのdocs/releases.mdを参照してください。
+
+## コンポーネント一覧
+
+| コンポーネント | バージョン | 配布箇所 | 本文 |
+| --- | --- | --- | --- |
+| [github.com/asticode/go-astikit](https://pkg.go.dev/github.com/asticode/go-astikit@v0.30.0) | v0.30.0 | Go（Windows / Linux / macOS の実行時依存） | [L0001](#l0001) |
+| [github.com/asticode/go-astits](https://pkg.go.dev/github.com/asticode/go-astits@v1.16.0) | v1.16.0 | Go（Windows / Linux / macOS の実行時依存） | [L0002](#l0002) |
+| [github.com/benburkert/openpgp](https://pkg.go.dev/github.com/benburkert/openpgp@v0.0.0-20160410205803-c2471f86866c) | v0.0.0-20160410205803-c2471f86866c | Go（Windows / Linux / macOS の実行時依存） | [L0003](#l0003) |
+| [github.com/bits-and-blooms/bitset](https://pkg.go.dev/github.com/bits-and-blooms/bitset@v1.24.2) | v1.24.2 | Go（Windows / Linux / macOS の実行時依存） | [L0004](#l0004) |
+| [github.com/blevesearch/bleve_index_api](https://pkg.go.dev/github.com/blevesearch/bleve_index_api@v1.3.11) | v1.3.11 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/blevesearch/bleve/v2](https://pkg.go.dev/github.com/blevesearch/bleve/v2@v2.6.0) | v2.6.0 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/blevesearch/geo](https://pkg.go.dev/github.com/blevesearch/geo@v0.2.5) | v0.2.5 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/blevesearch/go-porterstemmer](https://pkg.go.dev/github.com/blevesearch/go-porterstemmer@v1.0.3) | v1.0.3 | Go（Windows / Linux / macOS の実行時依存） | [L0006](#l0006) |
+| [github.com/blevesearch/gtreap](https://pkg.go.dev/github.com/blevesearch/gtreap@v0.1.1) | v0.1.1 | Go（Windows / Linux / macOS の実行時依存） | [L0007](#l0007) |
+| [github.com/blevesearch/mmap-go](https://pkg.go.dev/github.com/blevesearch/mmap-go@v1.2.0) | v1.2.0 | Go（Windows / Linux / macOS の実行時依存） | [L0008](#l0008) |
+| [github.com/blevesearch/scorch_segment_api/v2](https://pkg.go.dev/github.com/blevesearch/scorch_segment_api/v2@v2.4.7) | v2.4.7 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/blevesearch/segment](https://pkg.go.dev/github.com/blevesearch/segment@v0.9.1) | v0.9.1 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/blevesearch/snowballstem](https://pkg.go.dev/github.com/blevesearch/snowballstem@v0.9.0) | v0.9.0 | Go（Windows / Linux / macOS の実行時依存） | [L0009](#l0009) |
+| [github.com/blevesearch/upsidedown_store_api](https://pkg.go.dev/github.com/blevesearch/upsidedown_store_api@v1.0.2) | v1.0.2 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/blevesearch/vellum](https://pkg.go.dev/github.com/blevesearch/vellum@v1.2.0) | v1.2.0 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/blevesearch/zapx/v11](https://pkg.go.dev/github.com/blevesearch/zapx/v11@v11.4.3) | v11.4.3 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/blevesearch/zapx/v12](https://pkg.go.dev/github.com/blevesearch/zapx/v12@v12.4.3) | v12.4.3 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/blevesearch/zapx/v13](https://pkg.go.dev/github.com/blevesearch/zapx/v13@v13.4.3) | v13.4.3 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/blevesearch/zapx/v14](https://pkg.go.dev/github.com/blevesearch/zapx/v14@v14.4.3) | v14.4.3 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/blevesearch/zapx/v15](https://pkg.go.dev/github.com/blevesearch/zapx/v15@v15.4.3) | v15.4.3 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/blevesearch/zapx/v16](https://pkg.go.dev/github.com/blevesearch/zapx/v16@v16.3.4) | v16.3.4 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/blevesearch/zapx/v17](https://pkg.go.dev/github.com/blevesearch/zapx/v17@v17.1.2) | v17.1.2 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/comail/colog](https://pkg.go.dev/github.com/comail/colog@v0.0.0-20160416085026-fba8e7b1f46c) | v0.0.0-20160416085026-fba8e7b1f46c | Go（Windows / Linux / macOS の実行時依存） | [L0010](#l0010) |
+| [github.com/datarhei/gosrt](https://pkg.go.dev/github.com/datarhei/gosrt@v0.13.0) | v0.13.0 | Go（Windows / Linux / macOS の実行時依存） | [L0011](#l0011) |
+| [github.com/dustin/go-humanize](https://pkg.go.dev/github.com/dustin/go-humanize@v1.0.1) | v1.0.1 | Go（Windows / Linux / macOS の実行時依存） | [L0012](#l0012) |
+| [github.com/easonlin404/limit](https://pkg.go.dev/github.com/easonlin404/limit@v0.0.0-20190114092031-3d7b09b656e2) | v0.0.0-20190114092031-3d7b09b656e2 | Go（Windows / Linux / macOS の実行時依存） | [L0013](#l0013) |
+| [github.com/gin-contrib/cors](https://pkg.go.dev/github.com/gin-contrib/cors@v1.4.0) | v1.4.0 | Go（Windows / Linux / macOS の実行時依存） | [L0014](#l0014) |
+| [github.com/gin-contrib/sessions](https://pkg.go.dev/github.com/gin-contrib/sessions@v0.0.5) | v0.0.5 | Go（Windows / Linux / macOS の実行時依存） | [L0014](#l0014) |
+| [github.com/gin-contrib/sse](https://pkg.go.dev/github.com/gin-contrib/sse@v0.1.0) | v0.1.0 | Go（Windows / Linux / macOS の実行時依存） | [L0015](#l0015) |
+| [github.com/gin-gonic/gin](https://pkg.go.dev/github.com/gin-gonic/gin@v1.8.1) | v1.8.1 | Go（Windows / Linux / macOS の実行時依存） | [L0016](#l0016), [L0015](#l0015) |
+| [github.com/go-playground/locales](https://pkg.go.dev/github.com/go-playground/locales@v0.14.0) | v0.14.0 | Go（Windows / Linux / macOS の実行時依存） | [L0017](#l0017) |
+| [github.com/go-playground/universal-translator](https://pkg.go.dev/github.com/go-playground/universal-translator@v0.18.0) | v0.18.0 | Go（Windows / Linux / macOS の実行時依存） | [L0017](#l0017) |
+| [github.com/go-playground/validator/v10](https://pkg.go.dev/github.com/go-playground/validator/v10@v10.10.0) | v10.10.0 | Go（Windows / Linux / macOS の実行時依存） | [L0018](#l0018) |
+| [github.com/golang/snappy](https://pkg.go.dev/github.com/golang/snappy@v1.0.0) | v1.0.0 | Go（Windows / Linux / macOS の実行時依存） | [L0019](#l0019), [L0020](#l0020), [L0021](#l0021) |
+| [github.com/google/uuid](https://pkg.go.dev/github.com/google/uuid@v1.6.0) | v1.6.0 | Go（Windows / Linux / macOS の実行時依存） | [L0022](#l0022), [L0023](#l0023) |
+| [github.com/gorilla/context](https://pkg.go.dev/github.com/gorilla/context@v1.1.1) | v1.1.1 | Go（Windows / Linux / macOS の実行時依存） | [L0024](#l0024) |
+| [github.com/gorilla/securecookie](https://pkg.go.dev/github.com/gorilla/securecookie@v1.1.1) | v1.1.1 | Go（Windows / Linux / macOS の実行時依存） | [L0024](#l0024) |
+| [github.com/gorilla/sessions](https://pkg.go.dev/github.com/gorilla/sessions@v1.2.1) | v1.2.1 | Go（Windows / Linux / macOS の実行時依存） | [L0025](#l0025), [L0026](#l0026) |
+| [github.com/gorilla/websocket](https://pkg.go.dev/github.com/gorilla/websocket@v1.4.2) | v1.4.2 | Go（Windows / Linux / macOS の実行時依存） | [L0027](#l0027), [L0028](#l0028) |
+| [github.com/ikawaha/bleveplugin](https://pkg.go.dev/github.com/ikawaha/bleveplugin@v0.0.13) | v0.0.13 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/ikawaha/kagome-dict](https://pkg.go.dev/github.com/ikawaha/kagome-dict@v1.1.7) | v1.1.7 | Go（Windows / Linux / macOS の実行時依存） | [L0029](#l0029) |
+| [github.com/ikawaha/kagome-dict/ipa](https://pkg.go.dev/github.com/ikawaha/kagome-dict/ipa@v1.2.6) | v1.2.6 | Go（Windows / Linux / macOS の実行時依存） | [L0030](#l0030), [L0031](#l0031) |
+| [github.com/ikawaha/kagome-dict/uni](https://pkg.go.dev/github.com/ikawaha/kagome-dict/uni@v1.2.6) | v1.2.6 | Go（Windows / Linux / macOS の実行時依存） | [L0030](#l0030), [L0032](#l0032) |
+| [github.com/ikawaha/kagome/v2](https://pkg.go.dev/github.com/ikawaha/kagome/v2@v2.11.0) | v2.11.0 | Go（Windows / Linux / macOS の実行時依存） | [L0030](#l0030) |
+| [github.com/json-iterator/go](https://pkg.go.dev/github.com/json-iterator/go@v1.1.12) | v1.1.12 | Go（Windows / Linux / macOS の実行時依存） | [L0033](#l0033) |
+| [github.com/leodido/go-urn](https://pkg.go.dev/github.com/leodido/go-urn@v1.2.1) | v1.2.1 | Go（Windows / Linux / macOS の実行時依存） | [L0034](#l0034) |
+| [github.com/lestrrat-go/file-rotatelogs](https://pkg.go.dev/github.com/lestrrat-go/file-rotatelogs@v2.3.0+incompatible) | v2.3.0+incompatible | Go（Windows / Linux / macOS の実行時依存） | [L0035](#l0035) |
+| [github.com/lestrrat-go/strftime](https://pkg.go.dev/github.com/lestrrat-go/strftime@v1.0.1) | v1.0.1 | Go（Windows / Linux / macOS の実行時依存） | [L0036](#l0036) |
+| [github.com/mattn/go-isatty](https://pkg.go.dev/github.com/mattn/go-isatty@v0.0.24) | v0.0.24 | Go（Windows / Linux / macOS の実行時依存） | [L0037](#l0037) |
+| [github.com/modern-go/concurrent](https://pkg.go.dev/github.com/modern-go/concurrent@v0.0.0-20180228061459-e0a39a4cb421) | v0.0.0-20180228061459-e0a39a4cb421 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/modern-go/reflect2](https://pkg.go.dev/github.com/modern-go/reflect2@v1.0.2) | v1.0.2 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/mschoch/smat](https://pkg.go.dev/github.com/mschoch/smat@v0.2.0) | v0.2.0 | Go（Windows / Linux / macOS の実行時依存） | [L0005](#l0005) |
+| [github.com/ncruces/go-strftime](https://pkg.go.dev/github.com/ncruces/go-strftime@v1.0.0) | v1.0.0 | Go（Windows / Linux / macOS の実行時依存） | [L0038](#l0038) |
+| [github.com/pelletier/go-toml/v2](https://pkg.go.dev/github.com/pelletier/go-toml/v2@v2.0.1) | v2.0.1 | Go（Windows / Linux / macOS の実行時依存） | [L0039](#l0039) |
+| [github.com/pkg/errors](https://pkg.go.dev/github.com/pkg/errors@v0.9.1) | v0.9.1 | Go（Windows / Linux / macOS の実行時依存） | [L0040](#l0040) |
+| [github.com/remyoudompheng/bigfft](https://pkg.go.dev/github.com/remyoudompheng/bigfft@v0.0.0-20230129092748-24d4a6f8daec) | v0.0.0-20230129092748-24d4a6f8daec | Go（Windows / Linux / macOS の実行時依存） | [L0041](#l0041) |
+| [github.com/RoaringBitmap/roaring/v2](https://pkg.go.dev/github.com/RoaringBitmap/roaring/v2@v2.14.5) | v2.14.5 | Go（Windows / Linux / macOS の実行時依存） | [L0042](#l0042), [L0043](#l0043), [L0044](#l0044), [L0045](#l0045) |
+| [github.com/robfig/cron/v3](https://pkg.go.dev/github.com/robfig/cron/v3@v3.0.1) | v3.0.1 | Go（Windows / Linux / macOS の実行時依存） | [L0046](#l0046) |
+| [github.com/rs/xid](https://pkg.go.dev/github.com/rs/xid@v1.2.1) | v1.2.1 | Go（Windows / Linux / macOS の実行時依存） | [L0047](#l0047) |
+| [github.com/ugorji/go/codec](https://pkg.go.dev/github.com/ugorji/go/codec@v1.2.7) | v1.2.7 | Go（Windows / Linux / macOS の実行時依存） | [L0048](#l0048) |
+| [go.etcd.io/bbolt](https://pkg.go.dev/go.etcd.io/bbolt@v1.4.0) | v1.4.0 | Go（Windows / Linux / macOS の実行時依存） | [L0049](#l0049) |
+| [golang.org/x/crypto](https://pkg.go.dev/golang.org/x/crypto@v0.58.0) | v0.58.0 | Go（Windows / Linux / macOS の実行時依存） | [L0050](#l0050) |
+| [golang.org/x/net](https://pkg.go.dev/golang.org/x/net@v0.61.0) | v0.61.0 | Go（Windows / Linux / macOS の実行時依存） | [L0050](#l0050) |
+| [golang.org/x/sys](https://pkg.go.dev/golang.org/x/sys@v0.49.0) | v0.49.0 | Go（Windows / Linux / macOS の実行時依存） | [L0050](#l0050) |
+| [golang.org/x/text](https://pkg.go.dev/golang.org/x/text@v0.43.0) | v0.43.0 | Go（Windows / Linux / macOS の実行時依存） | [L0050](#l0050) |
+| [google.golang.org/protobuf](https://pkg.go.dev/google.golang.org/protobuf@v1.36.6) | v1.36.6 | Go（Windows / Linux / macOS の実行時依存） | [L0051](#l0051) |
+| [gopkg.in/ini.v1](https://pkg.go.dev/gopkg.in/ini.v1@v1.57.0) | v1.57.0 | Go（Windows / Linux / macOS の実行時依存） | [L0052](#l0052) |
+| [gopkg.in/yaml.v2](https://pkg.go.dev/gopkg.in/yaml.v2@v2.4.0) | v2.4.0 | Go（Windows / Linux / macOS の実行時依存） | [L0053](#l0053), [L0054](#l0054), [L0055](#l0055) |
+| [modernc.org/libc](https://pkg.go.dev/modernc.org/libc@v1.74.4) | v1.74.4 | Go（Windows / Linux / macOS の実行時依存） | [L0056](#l0056), [L0057](#l0057), [L0058](#l0058), [L0059](#l0059) |
+| [modernc.org/mathutil](https://pkg.go.dev/modernc.org/mathutil@v1.7.1) | v1.7.1 | Go（Windows / Linux / macOS の実行時依存） | [L0060](#l0060), [L0061](#l0061), [L0062](#l0062), [L0063](#l0063), [L0064](#l0064), [L0065](#l0065) |
+| [modernc.org/memory](https://pkg.go.dev/modernc.org/memory@v1.11.0) | v1.11.0 | Go（Windows / Linux / macOS の実行時依存） | [L0066](#l0066), [L0067](#l0067), [L0068](#l0068), [L0069](#l0069), [L0070](#l0070), [L0008](#l0008) |
+| [modernc.org/sqlite](https://pkg.go.dev/modernc.org/sqlite@v1.57.0) | v1.57.0 | Go（Windows / Linux / macOS の実行時依存） | [L0071](#l0071), [L0072](#l0072), [L0073](#l0073), [L0074](#l0074), [L0075](#l0075) |
+| [Go runtime / standard library](https://go.dev/LICENSE) | go1.26.3 | Go実行環境 | [L0050](#l0050), [L0076](#l0076) |
+| [vue-loader](https://github.com/vuejs/vue-loader.git) | 15.9.8 | Webアプリに出力されるコード | [L0077](#l0077) |
+| [axios](https://github.com/axios/axios.git) | 0.27.2 | Webアプリに出力されるコード | [L0078](#l0078) |
+| [vue](https://github.com/vuejs/vue.git) | 2.6.14 | Webアプリに出力されるコード | [L0079](#l0079) |
+| [vuetify](https://github.com/vuetifyjs/vuetify.git) | 2.6.6 | Webアプリに出力されるコード | [L0080](#l0080) |
+| [vuetify-loader](https://github.com/vuetifyjs/vuetify-loader.git) | 1.7.3 | Webアプリに出力されるコード | [L0081](#l0081) |
+| [webpack](https://github.com/webpack/webpack.git) | 5.73.0 | Webアプリのバンドル実行時コード | [L0082](#l0082) |
+| [ws](https://github.com/websockets/ws.git) | 8.21.3 | RockbarのNode.js実行時依存 | [L0083](#l0083) |
+| [Electron](https://github.com/electron/electron) | 42.11.8 | RockbarのWindows実行環境 | [L0084](#l0084) ＋付属ファイル（下記） |
+| [app-builder-lib](https://github.com/electron-userland/electron-builder.git) | 26.15.3 | Rockbarインストーラーに使われるNSISテンプレート | [L0085](#l0085), [L0086](#l0086), [L0087](#l0087) |
+| [Roboto](https://github.com/google/fonts/blob/main/ofl/roboto/OFL.txt) | Google Fonts配信（固定バージョンなし） | CDNから読み込むフォント・アイコン | [L0088](#l0088) |
+| [Noto Sans JP](https://github.com/google/fonts/blob/main/ofl/notosansjp/OFL.txt) | Google Fonts配信（固定バージョンなし） | CDNから読み込むフォント・アイコン | [L0089](#l0089) |
+| [Noto Sans Symbols](https://github.com/google/fonts/blob/main/ofl/notosanssymbols/OFL.txt) | Google Fonts配信（固定バージョンなし） | CDNから読み込むフォント・アイコン | [L0090](#l0090) |
+| [Noto Sans Symbols 2](https://github.com/google/fonts/blob/main/ofl/notosanssymbols2/OFL.txt) | Google Fonts配信（固定バージョンなし） | CDNから読み込むフォント・アイコン | [L0090](#l0090) |
+| [Material Design Icons (@mdi/font)](https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/LICENSE) | 7.4.47（@latest配信の取得時点） | CDNから読み込むフォント・アイコン | [L0091](#l0091), [L0005](#l0005), [L0092](#l0092) |
+| [Lucide / Feather-derived icons](https://github.com/lucide-icons/lucide/blob/0.468.0/LICENSE) | 0.468.0 | Rockbarの再生操作アイコン（派生アイコンを含む） | [L0093](#l0093) |
+| [NSIS installer / compression modules](https://github.com/electron-userland/electron-builder-binaries/releases/tag/nsis-3.0.4.1) | 3.0.4.1 | RockbarのWindowsインストーラー | [L0094](#l0094) |
+| [NSIS StdUtils plug-in](https://github.com/lordmulder/stdutils/tree/1.14) | 1.14 | RockbarのWindowsインストーラー用プラグイン | [L0095](#l0095), [L0096](#l0096), [L0097](#l0097), [L0098](#l0098), [L0099](#l0099) |
+| [NSIS nsis7z plug-in / LZMA SDK](https://nsis.sourceforge.io/Nsis7z_plug-in) | 19.00 | RockbarのWindowsインストーラー用プラグイン | [L0100](#l0100), [L0101](#l0101), [L0096](#l0096) |
+| [NSIS UAC plug-in](https://nsis.sourceforge.io/UAC_plug-in) | nsis-resources 3.4.1 | RockbarのWindowsインストーラー用プラグイン | [L0102](#l0102), [L0103](#l0103) |
+| [NSIS WinShell plug-in](https://nsis.sourceforge.io/WinShell_plug-in) | nsis-resources 3.4.1 | RockbarのWindowsインストーラー用プラグイン | [L0104](#l0104) |
+| [NSIS nsProcess plug-in](https://nsis.sourceforge.io/NsProcess_plugin) | nsis-resources 3.4.1 | RockbarのWindowsインストーラー用プラグイン | [L0105](#l0105) |
+
+## Electronの内包部品
+
+ElectronはChromium・Node.js等を含む1項目として扱います。これらの内包部品の著作権表示・ライセンス全文は、Electronに付属する `LICENSES.chromium.html` を改変せず同梱します。
+
+- TvRockGO配布ZIP: `licenses/electron/LICENSES.chromium.html`
+- Windows版Rockbar単体: インストール先の `LICENSES.chromium.html`
+
+Electron本体のMITライセンスはこの文書にも収録しています。内包部品の全文は上記ファイルをブラウザで開いて確認してください。
+
+
+## L0001
+
+対象:
+
+- github.com/asticode/go-astikit v0.30.0 / LICENSE
+
+```text
+MIT License
+
+Copyright (c) 2020 Quentin Renard
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0002
+
+対象:
+
+- github.com/asticode/go-astits v1.16.0 / LICENSE
+
+```text
+MIT License
+
+Copyright (c) 2017 Quentin Renard
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0003
+
+対象:
+
+- github.com/benburkert/openpgp v0.0.0-20160410205803-c2471f86866c / aes/keywrap/keywrap.go: source license header
+
+```text
+Copyright 2014 Matthew Endsley
+All rights reserved
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted providing that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0004
+
+対象:
+
+- github.com/bits-and-blooms/bitset v1.24.2 / LICENSE
+
+```text
+Copyright (c) 2014 Will Fitzgerald. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0005
+
+対象:
+
+- github.com/blevesearch/bleve_index_api v1.3.11 / LICENSE
+- github.com/blevesearch/bleve/v2 v2.6.0 / LICENSE
+- github.com/blevesearch/bleve/v2 v2.6.0 / analysis/lang/pl/stempel/LICENSE
+- github.com/blevesearch/geo v0.2.5 / LICENSE
+- github.com/blevesearch/scorch_segment_api/v2 v2.4.7 / LICENSE
+- github.com/blevesearch/segment v0.9.1 / LICENSE
+- github.com/blevesearch/upsidedown_store_api v1.0.2 / LICENSE
+- github.com/blevesearch/vellum v1.2.0 / LICENSE
+- github.com/blevesearch/vellum v1.2.0 / levenshtein/LICENSE
+- github.com/blevesearch/zapx/v11 v11.4.3 / LICENSE
+- github.com/blevesearch/zapx/v12 v12.4.3 / LICENSE
+- github.com/blevesearch/zapx/v13 v13.4.3 / LICENSE
+- github.com/blevesearch/zapx/v14 v14.4.3 / LICENSE
+- github.com/blevesearch/zapx/v15 v15.4.3 / LICENSE
+- github.com/blevesearch/zapx/v16 v16.3.4 / LICENSE
+- github.com/blevesearch/zapx/v17 v17.1.2 / LICENSE
+- github.com/ikawaha/bleveplugin v0.0.13 / LICENSE
+- github.com/modern-go/concurrent v0.0.0-20180228061459-e0a39a4cb421 / LICENSE
+- github.com/modern-go/reflect2 v1.0.2 / LICENSE
+- github.com/mschoch/smat v0.2.0 / LICENSE
+- Material Design Icons (@mdi/font) 7.4.47（@latest配信の取得時点） / Apache-2.0.txt
+
+```text
+Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright [yyyy] [name of copyright owner]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+```
+
+## L0006
+
+対象:
+
+- github.com/blevesearch/go-porterstemmer v1.0.3 / LICENSE
+
+```text
+Copyright (c) 2013 Charles Iliya Krempeaux <charles@reptile.ca> :: http://changelog.ca/
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
+## L0007
+
+対象:
+
+- github.com/blevesearch/gtreap v0.1.1 / LICENSE
+
+```text
+Copyright (C) 2012 Steve Yen
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+## L0008
+
+対象:
+
+- github.com/blevesearch/mmap-go v1.2.0 / LICENSE
+- modernc.org/memory v1.11.0 / LICENSE-MMAP-GO
+
+```text
+Copyright (c) 2011, Evan Shaw <edsrzf@gmail.com>
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+    * Redistributions of source code must retain the above copyright
+      notice, this list of conditions and the following disclaimer.
+    * Redistributions in binary form must reproduce the above copyright
+      notice, this list of conditions and the following disclaimer in the
+      documentation and/or other materials provided with the distribution.
+    * Neither the name of the copyright holder nor the
+      names of its contributors may be used to endorse or promote products
+      derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0009
+
+対象:
+
+- github.com/blevesearch/snowballstem v0.9.0 / COPYING
+
+```text
+Copyright (c) 2001, Dr Martin Porter
+Copyright (c) 2004,2005, Richard Boulton
+Copyright (c) 2013, Yoshiki Shibukawa
+Copyright (c) 2006,2007,2009,2010,2011,2014-2019, Olly Betts
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+  1. Redistributions of source code must retain the above copyright notice,
+     this list of conditions and the following disclaimer.
+  2. Redistributions in binary form must reproduce the above copyright notice,
+     this list of conditions and the following disclaimer in the documentation
+     and/or other materials provided with the distribution.
+  3. Neither the name of the Snowball project nor the names of its contributors
+     may be used to endorse or promote products derived from this software
+     without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0010
+
+対象:
+
+- github.com/comail/colog v0.0.0-20160416085026-fba8e7b1f46c / LICENSE
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2015 comail
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0011
+
+対象:
+
+- github.com/datarhei/gosrt v0.13.0 / LICENSE
+
+```text
+MIT License
+
+Copyright (c) 2020-2022 FOSS GmbH
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0012
+
+対象:
+
+- github.com/dustin/go-humanize v1.0.1 / LICENSE
+
+```text
+Copyright (c) 2005-2008  Dustin Sallings <dustin@spy.net>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+<http://www.opensource.org/licenses/mit-license.php>
+```
+
+## L0013
+
+対象:
+
+- github.com/easonlin404/limit v0.0.0-20190114092031-3d7b09b656e2 / license
+
+```text
+MIT License
+
+Copyright (c) 2017 Eason Lin
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0014
+
+対象:
+
+- github.com/gin-contrib/cors v1.4.0 / LICENSE
+- github.com/gin-contrib/sessions v0.0.5 / LICENSE
+
+```text
+MIT License
+
+Copyright (c) 2016 Gin-Gonic
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0015
+
+対象:
+
+- github.com/gin-contrib/sse v0.1.0 / LICENSE
+- github.com/gin-gonic/gin v1.8.1 / LICENSE
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2014 Manuel Martínez-Almeida
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
+## L0016
+
+対象:
+
+- github.com/gin-gonic/gin v1.8.1 / AUTHORS.md
+
+```text
+List of all the awesome people working to make Gin the best Web Framework in Go.
+
+## gin 1.x series authors
+
+**Gin Core Team:** Bo-Yi Wu (@appleboy), thinkerou (@thinkerou), Javier Provecho (@javierprovecho)
+
+## gin 0.x series authors
+
+**Maintainers:** Manu Martinez-Almeida (@manucorporat), Javier Provecho (@javierprovecho)
+
+------
+
+People and companies, who have contributed, in alphabetical order.
+
+- 178inaba <178inaba@users.noreply.github.com>
+- A. F <hello@clivern.com>
+- ABHISHEK SONI <abhishek.rocks26@gmail.com>
+- Abhishek Chanda <achanda@users.noreply.github.com>
+- Abner Chen <houjunchen@gmail.com>
+- AcoNCodes <acongame@gmail.com>
+- Adam Dratwinski <adam.dratwinski@gmail.com>
+- Adam Mckaig <adam.mckaig@gmail.com>
+- Adam Zielinski <MusicAdam@users.noreply.github.com>
+- Adonis <donileo@gmail.com>
+- Alan Wang <azzwacb9001@126.com>
+- Albin Gilles <gilles.albin@gmail.com>
+- Aleksandr Didenko <aa.didenko@yandex.ru>
+- Alessandro (Ale) Segala <43508+ItalyPaleAle@users.noreply.github.com>
+- Alex <AWulkan@users.noreply.github.com>
+- Alexander <alexanderchenmh@gmail.com>
+- Alexander Lokhman <alex.lokhman@gmail.com>
+- Alexander Melentyev <55826637+alexander-melentyev@users.noreply.github.com>
+- Alexander Nyquist <nyquist.alexander@gmail.com>
+- Allen Ren <kulong0105@gmail.com>
+- AllinGo <tanhp@outlook.com>
+- Ammar Bandukwala <ammar@ammar.io>
+- An Xiao (Luffy) <hac@zju.edu.cn>
+- Andre Dublin <81dublin@gmail.com>
+- Andrew Szeto <github@jabagawee.com>
+- Andrey Abramov <andreyabramov.aaa@gmail.com>
+- Andrey Nering <andrey.nering@gmail.com>
+- Andrey Smirnov <Smirnov.Andrey@gmail.com>
+- Andrii Bubis <firstrow@gmail.com>
+- André Bazaglia <bazaglia@users.noreply.github.com>
+- Andy Pan <panjf2000@gmail.com>
+- Antoine GIRARD <sapk@users.noreply.github.com>
+- Anup Kumar Panwar <1anuppanwar@gmail.com>
+- Aravinth Sundaram <gosh.aravind@gmail.com>
+- Artem <horechek@gmail.com>
+- Ashwani <ashwanisharma686@gmail.com>
+- Aurelien Regat-Barrel <arb@cyberkarma.net>
+- Austin Heap <me@austinheap.com>
+- Barnabus <jbampton@users.noreply.github.com>
+- Bo-Yi Wu <appleboy.tw@gmail.com>
+- Boris Borshevsky <BorisBorshevsky@gmail.com>
+- Boyi Wu <p581581@gmail.com>
+- BradyBromley <51128276+BradyBromley@users.noreply.github.com>
+- Brendan Fosberry <brendan@shopkeep.com>
+- Brian Wigginton <brianwigginton@gmail.com>
+- Carlos Eduardo <carlosedp@gmail.com>
+- Chad Russell <chaddouglasrussell@gmail.com>
+- Charles <cxjava@gmail.com>
+- Christian Muehlhaeuser <muesli@gmail.com>
+- Christian Persson <saser@live.se>
+- Christopher Harrington <ironiridis@gmail.com>
+- Damon Zhao <yijun.zhao@outlook.com>
+- Dan Markham <dmarkham@gmail.com>
+- Dang Nguyen <hoangdang.me@gmail.com>
+- Daniel Krom <kromdan@gmail.com>
+- Daniel M. Lambea <dmlambea@gmail.com>
+- Danieliu <liudanking@gmail.com>
+- David Irvine <aviddiviner@gmail.com>
+- David Zhang <crispgm@gmail.com>
+- Davor Kapsa <dvrkps@users.noreply.github.com>
+- DeathKing <DeathKing@users.noreply.github.com>
+- Dennis Cho <47404603+forest747@users.noreply.github.com>
+- Dmitry Dorogin <dmirogin@ya.ru>
+- Dmitry Kutakov <vkd.castle@gmail.com>
+- Dmitry Sedykh <dmitrys@d3h.local>
+- Don2Quixote <35610661+Don2Quixote@users.noreply.github.com>
+- Donn Pebe <iam@donnpebe.com>
+- Dustin Decker <dustindecker@protonmail.com>
+- Eason Lin <easonlin404@gmail.com>
+- Edward Betts <edward@4angle.com>
+- Egor Seredin <4819888+agmt@users.noreply.github.com>
+- Emmanuel Goh <emmanuel@visenze.com>
+- Equim <sayaka@ekyu.moe>
+- Eren A. Akyol <eren@redmc.me>
+- Eric_Lee <xplzv@126.com>
+- Erik Bender <erik.bender@develerik.dev>
+- Ethan Kan <ethankan@neoplot.com>
+- Evgeny Persienko <e.persienko@office.ngs.ru>
+- Faisal Alam <ifaisalalam@gmail.com>
+- Fareed Dudhia <fareeddudhia@googlemail.com>
+- Filip Figiel <figiel.filip@gmail.com>
+- Florian Polster <couchpolster@icqmail.com>
+- Frank Bille <github@frankbille.dk>
+- Franz Bettag <franz@bett.ag>
+- Ganlv <ganlvtech@users.noreply.github.com>
+- Gaozhen Ying <yinggaozhen@hotmail.com>
+- George Gabolaev <gabolaev98@gmail.com>
+- George Kirilenko <necryin@users.noreply.github.com>
+- Georges Varouchas <georges.varouchas@gmail.com>
+- Gordon Tyler <gordon@doxxx.net>
+- Harindu Perera <harinduenator@gmail.com>
+- Helios <674876158@qq.com>
+- Henry Kwan <piengeng@users.noreply.github.com>
+- Henry Yee <henry@yearning.io>
+- Himanshu Mishra <OrkoHunter@users.noreply.github.com>
+- Hiroyuki Tanaka <h.tanaka.0325@gmail.com>
+- Ibraheem Ahmed <ibrah1440@gmail.com>
+- Ignacio Galindo <joiggama@gmail.com>
+- Igor H. Vieira <zignd.igor@gmail.com>
+- Ildar1111 <54001462+Ildar1111@users.noreply.github.com>
+- Iskander (Alex) Sharipov <iskander.sharipov@intel.com>
+- Ismail Gjevori <isgjevori@protonmail.com>
+- Ivan Chen <allenivan@gmail.com>
+- JINNOUCHI Yasushi <delphinus@remora.cx>
+- James Pettyjohn <japettyjohn@users.noreply.github.com>
+- Jamie Stackhouse <jamie.stackhouse@redspace.com>
+- Jason Lee <jawc@hotmail.com>
+- Javier Provecho <j.provecho@dartekstudios.com>
+- Javier Provecho <javier.provecho@bq.com>
+- Javier Provecho <javiertitan@gmail.com>
+- Javier Provecho Fernandez <j.provecho@dartekstudios.com>
+- Javier Provecho Fernandez <javiertitan@gmail.com>
+- Jean-Christophe Lebreton <jclebreton@gmail.com>
+- Jeff <laojianzi1994@gmail.com>
+- Jeremy Loy <jeremy.b.loy@icloud.com>
+- Jim Filippou <p3160253@aueb.gr>
+- Jimmy Pettersson <jimmy@expertmaker.com>
+- John Bampton <jbampton@users.noreply.github.com>
+- Johnny Dallas <johnnydallas0308@gmail.com>
+- Johnny Dallas <theonlyjohnny@theonlyjohnny.sh>
+- Jonathan (JC) Chen <jc@dijonkitchen.org>
+- Josep Jesus Bigorra Algaba <42377845+averageflow@users.noreply.github.com>
+- Josh Horowitz <joshua.m.horowitz@gmail.com>
+- Joshua Loper <josh.el3@gmail.com>
+- Julien Schmidt <github@julienschmidt.com>
+- Jun Kimura <jksmphone@gmail.com>
+- Justin Beckwith <justin.beckwith@gmail.com>
+- Justin Israel <justinisrael@gmail.com>
+- Justin Mayhew <mayhew@live.ca>
+- Jérôme Laforge <jerome-laforge@users.noreply.github.com>
+- Kacper Bąk <56700396+53jk1@users.noreply.github.com>
+- Kamron Batman <kamronbatman@users.noreply.github.com>
+- Kane Rogers <kane@cleanstream.com.au>
+- Kaushik Neelichetty <kaushikneelichetty6132@gmail.com>
+- Keiji Yoshida <yoshida.keiji.84@gmail.com>
+- Kel Cecil <kel.cecil@listhub.com>
+- Kevin Mulvey <kmulvey@linux.com>
+- Kevin Zhu <ipandtcp@gmail.com>
+- Kirill Motkov <motkov.kirill@gmail.com>
+- Klemen Sever <ksever@student.42.fr>
+- Kristoffer A. Iversen <kristoffer.a.iversen@gmail.com>
+- Krzysztof Szafrański <k.p.szafranski@gmail.com>
+- Kumar McMillan <kumar.mcmillan@gmail.com>
+- Kyle Mcgill <email@kylescottmcgill.com>
+- Lanco <35420416+lancoLiu@users.noreply.github.com>
+- Levi Olson <olson.levi@gmail.com>
+- Lin Kao-Yuan <mosdeo@gmail.com>
+- Linus Unnebäck <linus@folkdatorn.se>
+- Lucas Clemente <lucas@clemente.io>
+- Ludwig Valda Vasquez <bredov@gmail.com>
+- Luis GG <lggomez@users.noreply.github.com>
+- MW Lim <williamchange@gmail.com>
+- Maksimov Sergey <konjoot@gmail.com>
+- Manjusaka <lizheao940510@gmail.com>
+- Manu MA <manu.mtza@gmail.com>
+- Manu MA <manu.valladolid@gmail.com>
+- Manu Mtz-Almeida <manu.valladolid@gmail.com>
+- Manu Mtz.-Almeida <manu.valladolid@gmail.com>
+- Manuel Alonso <manuelalonso@invisionapp.com>
+- Mara Kim <hacker.root@gmail.com>
+- Mario Kostelac <mario@intercom.io>
+- Martin Karlsch <martin@karlsch.com>
+- Matt Newberry <mnewberry@opentable.com>
+- Matt Williams <gh@mattyw.net>
+- Matthieu MOREL <mmorel-35@users.noreply.github.com>
+- Max Hilbrunner <mhilbrunner@users.noreply.github.com>
+- Maxime Soulé <btik-git@scoubidou.com>
+- MetalBreaker <johnymichelson@gmail.com>
+- Michael Puncel <mpuncel@squareup.com>
+- MichaelDeSteven <51652084+MichaelDeSteven@users.noreply.github.com>
+- Mike <38686456+icy4ever@users.noreply.github.com>
+- Mike Stipicevic <mst@ableton.com>
+- Miki Tebeka <miki.tebeka@gmail.com>
+- Miles <MilesLin@users.noreply.github.com>
+- Mirza Ceric <mirza.ceric@b2match.com>
+- Mykyta Semenistyi <nikeiwe@gmail.com>
+- Naoki Takano <honten@tinkermode.com>
+- Ngalim Siregar <ngalim.siregar@gmail.com>
+- Ni Hao <supernihaooo@qq.com>
+- Nick Gerakines <nick@gerakines.net>
+- Nikifor Seryakov <nikandfor@gmail.com>
+- Notealot <714804968@qq.com>
+- Olivier Mengué <dolmen@cpan.org>
+- Olivier Robardet <orobardet@users.noreply.github.com>
+- Pablo Moncada <pablo.moncada@bq.com>
+- Pablo Moncada <pmoncadaisla@gmail.com>
+- Panmax <967168@qq.com>
+- Peperoncino <2wua4nlyi@gmail.com>
+- Philipp Meinen <philipp@bind.ch>
+- Pierre Massat <pierre@massat.io>
+- Qt <golang.chen@gmail.com>
+- Quentin ROYER <aydendevg@gmail.com>
+- README Bot <35302948+codetriage-readme-bot@users.noreply.github.com>
+- Rafal Zajac <rzajac@gmail.com>
+- Rahul Datta Roy <rahuldroy@users.noreply.github.com>
+- Rajiv Kilaparti <rajivk085@gmail.com>
+- Raphael Gavache <raphael.gavache@datadoghq.com>
+- Ray Rodriguez <rayrod2030@gmail.com>
+- Regner Blok-Andersen <shadowdf@gmail.com>
+- Remco <remco@dutchcoders.io>
+- Rex Lee(李俊) <duguying2008@gmail.com>
+- Richard Lee <dlackty@gmail.com>
+- Riverside <wangyb65@gmail.com>
+- Robert Wilkinson <wilkinson.robert.a@gmail.com>
+- Rogier Lommers <rogier@lommers.org>
+- Rohan Pai <me@rohanpai.com>
+- Romain Beuque <rbeuque74@gmail.com>
+- Roman Belyakovsky <ihryamzik@gmail.com>
+- Roman Zaynetdinov <627197+zaynetro@users.noreply.github.com>
+- Roman Zaynetdinov <roman.zaynetdinov@lekane.com>
+- Ronald Petty <ronald.petty@rx-m.com>
+- Ross Wolf <31489089+rw-access@users.noreply.github.com>
+- Roy Lou <roylou@gmail.com>
+- Rubi <14269809+codenoid@users.noreply.github.com>
+- Ryan <46182144+ryanker@users.noreply.github.com>
+- Ryan J. Yoder <me@ryanjyoder.com>
+- SRK.Lyu <superalsrk@gmail.com>
+- Sai <sairoutine@gmail.com>
+- Samuel Abreu <sdepaula@gmail.com>
+- Santhosh Kumar <santhoshkumarr1096@gmail.com>
+- Sasha Melentyev <sasha@melentyev.io>
+- Sasha Myasoedov <msoedov@gmail.com>
+- Segev Finer <segev208@gmail.com>
+- Sergey Egorov <egorovhome@gmail.com>
+- Sergey Fedchenko <seregayoga@bk.ru>
+- Sergey Gonimar <sergey.gonimar@gmail.com>
+- Sergey Ponomarev <me@sergey-ponomarev.ru>
+- Serica <943914044@qq.com>
+- Shamus Taylor <Shamus03@me.com>
+- Shilin Wang <jarvisfironman@gmail.com>
+- Shuo <openset.wang@gmail.com>
+- Skuli Oskarsson <skuli@codeiak.io>
+- Snawoot <vladislav-ex-github@vm-0.com>
+- Sridhar Ratnakumar <srid@srid.ca>
+- Steeve Chailloux <steeve@chaahk.com>
+- Sudhir Mishra <sudhirxps@gmail.com>
+- Suhas Karanth <sudo-suhas@users.noreply.github.com>
+- TaeJun Park <miking38@gmail.com>
+- Tatsuya Hoshino <tatsuya7.hoshino7@gmail.com>
+- Tevic <tevic.tt@gmail.com>
+- Tevin Jeffrey <tev.jeffrey@gmail.com>
+- The Gitter Badger <badger@gitter.im>
+- Thibault Jamet <tjamet@users.noreply.github.com>
+- Thomas Boerger <thomas@webhippie.de>
+- Thomas Schaffer <loopfz@gmail.com>
+- Tommy Chu <tommychu2256@gmail.com>
+- Tudor Roman <tudurom@gmail.com>
+- Uwe Dauernheim <djui@users.noreply.github.com>
+- Valentine Oragbakosi <valentine13400@gmail.com>
+- Vas N <pnvasanth@users.noreply.github.com>
+- Vasilyuk Vasiliy <By-Vasiliy@users.noreply.github.com>
+- Victor Castell <victor@victorcastell.com>
+- Vince Yuan <vince.yuan@gmail.com>
+- Vyacheslav Dubinin <vyacheslav.dubinin@gmail.com>
+- Waynerv <ampedee@gmail.com>
+- Weilin Shi <934587911@qq.com>
+- Xudong Cai <fifsky@gmail.com>
+- Yasuhiro Matsumoto <mattn.jp@gmail.com>
+- Yehezkiel Syamsuhadi <ybs@ybs.im>
+- Yoshiki Nakagawa <yyoshiki41@gmail.com>
+- Yoshiyuki Kinjo <yskkin+github@gmail.com>
+- Yue Yang <g1enyy0ung@gmail.com>
+- ZYunH <zyunhjob@163.com>
+- Zach Newburgh <zach.newburgh@gmail.com>
+- Zasda Yusuf Mikail <zasdaym@gmail.com>
+- ZhangYunHao <zyunhjob@163.com>
+- ZhiFeng Hu <hufeng1987@gmail.com>
+- Zhu Xi <zhuxi910511@163.com>
+- a2tt <usera2tt@gmail.com>
+- ahuigo <1781999+ahuigo@users.noreply.github.com>
+- ali <anio@users.noreply.github.com>
+- aljun <salameryy@163.com>
+- andrea <crypto.andrea@protonmail.ch>
+- andriikushch <andrii.kushch@gmail.com>
+- anoty <anjunyou@foxmail.com>
+- awkj <hzzbiu@gmail.com>
+- axiaoxin <254606826@qq.com>
+- bbiao <bbbiao@gmail.com>
+- bestgopher <84328409@qq.com>
+- betahu <zhong.wenhuang@foxmail.com>
+- bigwheel <k.bigwheel+eng@gmail.com>
+- bn4t <17193640+bn4t@users.noreply.github.com>
+- bullgare <bullgare@gmail.com>
+- chainhelen <chainhelen@gmail.com>
+- chenyang929 <chenyang929code@gmail.com>
+- chriswhelix <chris.williams@helix.com>
+- collinmsn <4130944@qq.com>
+- cssivision <cssivision@gmail.com>
+- danielalves <alves.lopes.dan@gmail.com>
+- delphinus <delphinus@remora.cx>
+- dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+- dickeyxxx <jeff@dickeyxxx.com>
+- edebernis <emeric.debernis@gmail.com>
+- error10 <error@ioerror.us>
+- esplo <esplo@users.noreply.github.com>
+- eudore <30709860+eudore@users.noreply.github.com>
+- ffhelicopter <32922889+ffhelicopter@users.noreply.github.com>
+- filikos <11477309+filikos@users.noreply.github.com>
+- forging2012 <forging2012@users.noreply.github.com>
+- goqihoo <goqihoo@gmail.com>
+- grapeVine <treeui.old@gmail.com>
+- guonaihong <guonaihong@qq.com>
+- heige <daheige@users.noreply.github.com>
+- heige <zhuwei313@hotmail.com>
+- hellojukay <hellojukay@163.com>
+- henrylee2cn <henrylee2cn@gmail.com>
+- htobenothing <htobenothing@gmail.com>
+- iamhesir <78344375+iamhesir@users.noreply.github.com>
+- ijaa <kailiu2013@gmail.com>
+- ishanray <ishan.iipm@gmail.com>
+- ishanray <ishanray@users.noreply.github.com>
+- itcloudy <272685110@qq.com>
+- jarodsong6 <jarodsong6@gmail.com>
+- jasonrhansen <jasonrodneyhansen@gmail.com>
+- jincheng9 <perfume0607@gmail.com>
+- joeADSP <75027008+joeADSP@users.noreply.github.com>
+- junfengye <junfeng.yejf@gmail.com>
+- kaiiak <aNxFi37X@outlook.com>
+- kebo <kevinke2020@outlook.com>
+- keke <19yamashita15@gmail.com>
+- kishor kunal raj <68464660+kishorkunal-raj@users.noreply.github.com>
+- kyledinh <kyledinh@gmail.com>
+- lantw44 <lantw44@gmail.com>
+- likakuli <1154584512@qq.com>
+- linfangrong <linfangrong.liuxin@qq.com>
+- linzi <873804682@qq.com>
+- llgoer <yanghuxiao@vip.qq.com>
+- long-road <13412081338@163.com>
+- mbesancon <mathieu.besancon@gmail.com>
+- mehdy <mehdy.khoshnoody@gmail.com>
+- metal A-wing <freedom.awing.777@gmail.com>
+- micanzhang <micanzhang@gmail.com>
+- minarc <ragnhildmowinckel@gmail.com>
+- mllu <mornlyn@gmail.com>
+- mopemoepe <yutaka.matsubara@gmail.com>
+- msoedov <msoedov@gmail.com>
+- mstmdev <mstmdev@gmail.com>
+- novaeye <fcoffee@gmail.com>
+- olebedev <oolebedev@gmail.com>
+- phithon <phith0n@users.noreply.github.com>
+- pjgg <pablo.gonzalez.granados@gmail.com>
+- qm012 <67568757+qm012@users.noreply.github.com>
+- raymonder jin <rayjingithub@gmail.com>
+- rns <ruslan.shvedov@gmail.com>
+- root@andrea:~# <crypto.andrea@protonmail.ch>
+- sekky0905 <20237968+sekky0905@users.noreply.github.com>
+- senhtry <w169q169@gmail.com>
+- shadrus <shadrus@gmail.com>
+- silasb <silas.baronda@gmail.com>
+- solos <lxl1217@gmail.com>
+- songjiayang <songjiayang@users.noreply.github.com>
+- sope <shenshouer@163.com>
+- srt180 <30768686+srt180@users.noreply.github.com>
+- stackerzzq <foo_stacker@yeah.net>
+- sunshineplan <sunshineplan@users.noreply.github.com>
+- syssam <s.y.s.sam.sys@gmail.com>
+- techjanitor <puntme@gmail.com>
+- techjanitor <techjanitor@users.noreply.github.com>
+- thinkerou <thinkerou@gmail.com>
+- thinkgo <49174849+thinkgos@users.noreply.github.com>
+- tsirolnik <tsirolnik@users.noreply.github.com>
+- tyltr <31768692+tylitianrui@users.noreply.github.com>
+- vinhha96 <anhvinha1@gmail.com>
+- voidman <retmain@foxmail.com>
+- vz <vzvway@gmail.com>
+- wei <wei840222@gmail.com>
+- weibaohui <weibaohui@yeah.net>
+- whirosan <whirosan@users.noreply.github.com>
+- willnewrelic <will@newrelic.com>
+- wssccc <wssccc@qq.com>
+- wuhuizuo <wuhuizuo@126.com>
+- xyb <xyb4638@gmail.com>
+- y-yagi <yuuji.yaginuma@gmail.com>
+- yiranzai <wuqingdzx@gmail.com>
+- youzeliang <youzel@126.com>
+- yugu <chenzilong_1227@foxmail.com>
+- yuyabe <yuyabee@gmail.com>
+- zebozhuang <zebozhuang@163.com>
+- zero11-0203 <93071220+zero11-0203@users.noreply.github.com>
+- zesani <7sin@outlook.co.th>
+- zhanweidu <zhanweidu@163.com>
+- zhing <zqwillseven@gmail.com>
+- ziheng <zihenglv@gmail.com>
+- zzjin <zzjin@users.noreply.github.com>
+- 森 優太 <59682979+uta-mori@users.noreply.github.com>
+- 杰哥 <858806258@qq.com>
+- 涛叔 <hi@taoshu.in>
+- 市民233 <mengrenxiong@gmail.com>
+- 尹宝强 <wmdandme@gmail.com>
+- 梦溪笔谈 <loongmxbt@gmail.com>
+- 飞雪无情 <ls8707@gmail.com>
+- 寻寻觅觅的Gopher <zoujh99@qq.com>
+```
+
+## L0017
+
+対象:
+
+- github.com/go-playground/locales v0.14.0 / LICENSE
+- github.com/go-playground/universal-translator v0.18.0 / LICENSE
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2016 Go Playground
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0018
+
+対象:
+
+- github.com/go-playground/validator/v10 v10.10.0 / LICENSE
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2015 Dean Karn
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0019
+
+対象:
+
+- github.com/golang/snappy v1.0.0 / AUTHORS
+
+```text
+# This is the official list of Snappy-Go authors for copyright purposes.
+# This file is distinct from the CONTRIBUTORS files.
+# See the latter for an explanation.
+
+# Names should be added to this file as
+#	Name or Organization <email address>
+# The email address is not required for organizations.
+
+# Please keep the list sorted.
+
+Amazon.com, Inc
+Damian Gryski <dgryski@gmail.com>
+Eric Buth <eric@topos.com>
+Google Inc.
+Jan Mercl <0xjnml@gmail.com>
+Klaus Post <klauspost@gmail.com>
+Rodolfo Carvalho <rhcarvalho@gmail.com>
+Sebastien Binet <seb.binet@gmail.com>
+```
+
+## L0020
+
+対象:
+
+- github.com/golang/snappy v1.0.0 / CONTRIBUTORS
+
+```text
+# This is the official list of people who can contribute
+# (and typically have contributed) code to the Snappy-Go repository.
+# The AUTHORS file lists the copyright holders; this file
+# lists people.  For example, Google employees are listed here
+# but not in AUTHORS, because Google holds the copyright.
+#
+# The submission process automatically checks to make sure
+# that people submitting code are listed in this file (by email address).
+#
+# Names should be added to this file only after verifying that
+# the individual or the individual's organization has agreed to
+# the appropriate Contributor License Agreement, found here:
+#
+#     http://code.google.com/legal/individual-cla-v1.0.html
+#     http://code.google.com/legal/corporate-cla-v1.0.html
+#
+# The agreement for individuals can be filled out on the web.
+#
+# When adding J Random Contributor's name to this file,
+# either J's name or J's organization's name should be
+# added to the AUTHORS file, depending on whether the
+# individual or corporate CLA was used.
+
+# Names should be added to this file like so:
+#     Name <email address>
+
+# Please keep the list sorted.
+
+Alex Legg <alexlegg@google.com>
+Damian Gryski <dgryski@gmail.com>
+Eric Buth <eric@topos.com>
+Jan Mercl <0xjnml@gmail.com>
+Jonathan Swinney <jswinney@amazon.com>
+Kai Backman <kaib@golang.org>
+Klaus Post <klauspost@gmail.com>
+Marc-Antoine Ruel <maruel@chromium.org>
+Nigel Tao <nigeltao@golang.org>
+Rob Pike <r@golang.org>
+Rodolfo Carvalho <rhcarvalho@gmail.com>
+Russ Cox <rsc@golang.org>
+Sebastien Binet <seb.binet@gmail.com>
+```
+
+## L0021
+
+対象:
+
+- github.com/golang/snappy v1.0.0 / LICENSE
+
+```text
+Copyright (c) 2011 The Snappy-Go Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0022
+
+対象:
+
+- github.com/google/uuid v1.6.0 / CONTRIBUTORS
+
+```text
+Paul Borman <borman@google.com>
+bmatsuo
+shawnps
+theory
+jboverfelt
+dsymonds
+cd1
+wallclockbuilder
+dansouza
+```
+
+## L0023
+
+対象:
+
+- github.com/google/uuid v1.6.0 / LICENSE
+
+```text
+Copyright (c) 2009,2014 Google Inc. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0024
+
+対象:
+
+- github.com/gorilla/context v1.1.1 / LICENSE
+- github.com/gorilla/securecookie v1.1.1 / LICENSE
+
+```text
+Copyright (c) 2012 Rodrigo Moraes. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+     * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+     * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+     * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0025
+
+対象:
+
+- github.com/gorilla/sessions v1.2.1 / AUTHORS
+
+```text
+# This is the official list of gorilla/sessions authors for copyright purposes.
+#
+# Please keep the list sorted.
+
+Ahmadreza Zibaei <ahmadrezazibaei@hotmail.com>
+Anton Lindström <lindztr@gmail.com>
+Brian Jones <mojobojo@gmail.com>
+Collin Stedman <kronion@users.noreply.github.com>
+Deniz Eren <dee.116@gmail.com>
+Dmitry Chestnykh <dmitry@codingrobots.com>
+Dustin Oprea <myselfasunder@gmail.com>
+Egon Elbre <egonelbre@gmail.com>
+enumappstore <appstore@enumapps.com>
+Geofrey Ernest <geofreyernest@live.com>
+Google LLC (https://opensource.google.com/)
+Jerry Saravia <SaraviaJ@gmail.com>
+Jonathan Gillham <jonathan.gillham@gamil.com>
+Justin Clift <justin@postgresql.org>
+Justin Hellings <justin.hellings@gmail.com>
+Kamil Kisiel <kamil@kamilkisiel.net>
+Keiji Yoshida <yoshida.keiji.84@gmail.com>
+kliron <kliron@gmail.com>
+Kshitij Saraogi <KshitijSaraogi@gmail.com>
+Lauris BH <lauris@nix.lv>
+Lukas Rist <glaslos@gmail.com>
+Mark Dain <ancarda@users.noreply.github.com>
+Matt Ho <matt.ho@gmail.com>
+Matt Silverlock <matt@eatsleeprepeat.net>
+Mattias Wadman <mattias.wadman@gmail.com>
+Michael Schuett <michaeljs1990@gmail.com>
+Michael Stapelberg <stapelberg@users.noreply.github.com>
+Mirco Zeiss <mirco.zeiss@gmail.com>
+moraes <rodrigo.moraes@gmail.com>
+nvcnvn <nguyen@open-vn.org>
+pappz <zoltan.pmail@gmail.com>
+Pontus Leitzler <leitzler@users.noreply.github.com>
+QuaSoft <info@quasoft.net>
+rcadena <robert.cadena@gmail.com>
+rodrigo moraes <rodrigo.moraes@gmail.com>
+Shawn Smith <shawnpsmith@gmail.com>
+Taylor Hurt <taylor.a.hurt@gmail.com>
+Tortuoise <sanyasinp@gmail.com>
+Vitor De Mario <vitordemario@gmail.com>
+```
+
+## L0026
+
+対象:
+
+- github.com/gorilla/sessions v1.2.1 / LICENSE
+
+```text
+Copyright (c) 2012-2018 The Gorilla Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+     * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+     * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+     * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0027
+
+対象:
+
+- github.com/gorilla/websocket v1.4.2 / AUTHORS
+
+```text
+# This is the official list of Gorilla WebSocket authors for copyright
+# purposes.
+#
+# Please keep the list sorted.
+
+Gary Burd <gary@beagledreams.com>
+Google LLC (https://opensource.google.com/)
+Joachim Bauch <mail@joachim-bauch.de>
+```
+
+## L0028
+
+対象:
+
+- github.com/gorilla/websocket v1.4.2 / LICENSE
+
+```text
+Copyright (c) 2013 The Gorilla WebSocket Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+  Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+  Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0029
+
+対象:
+
+- github.com/ikawaha/kagome-dict v1.1.7 / LICENSE
+
+```text
+MIT License
+
+Copyright (c) 2021 ikawaha
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0030
+
+対象:
+
+- github.com/ikawaha/kagome-dict/ipa v1.2.6 / LICENSE
+- github.com/ikawaha/kagome-dict/uni v1.2.6 / LICENSE
+- github.com/ikawaha/kagome/v2 v2.11.0 / LICENSE
+
+```text
+MIT License
+
+Copyright (c) 2020 ikawaha
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0031
+
+対象:
+
+- github.com/ikawaha/kagome-dict/ipa v1.2.6 / NOTICE.txt
+
+```text
+===========================================================================
+A Dictionary of Kagome Japanese Morphological Analyzer
+===========================================================================
+
+This software includes a binary and/or source version of data from
+
+  mecab-ipadic-2.7.0-20070801
+
+which can be obtained from
+
+  http://jaist.dl.sourceforge.net/project/mecab/mecab-ipadic/2.7.0-20070801/mecab-ipadic-2.7.0-20070801.tar.gz
+===========================================================================
+mecab-ipadic-2.7.0-20070801 Notice
+===========================================================================
+
+Nara Institute of Science and Technology (NAIST),
+the copyright holders, disclaims all warranties with regard to this
+software, including all implied warranties of merchantability and
+fitness, in no event shall NAIST be liable for
+any special, indirect or consequential damages or any damages
+whatsoever resulting from loss of use, data or profits, whether in an
+action of contract, negligence or other tortuous action, arising out
+of or in connection with the use or performance of this software.
+
+A large portion of the dictionary entries
+originate from ICOT Free Software.  The following conditions for ICOT
+Free Software applies to the current dictionary as well.
+
+Each User may also freely distribute the Program, whether in its
+original form or modified, to any third party or parties, PROVIDED
+that the provisions of Section 3 ("NO WARRANTY") will ALWAYS appear
+on, or be attached to, the Program, which is distributed substantially
+in the same form as set out herein and that such intended
+distribution, if actually made, will neither violate or otherwise
+contravene any of the laws and regulations of the countries having
+jurisdiction over the User or the intended distribution itself.
+
+NO WARRANTY
+
+The program was produced on an experimental basis in the course of the
+research and development conducted during the project and is provided
+to users as so produced on an experimental basis.  Accordingly, the
+program is provided without any warranty whatsoever, whether express,
+implied, statutory or otherwise.  The term "warranty" used herein
+includes, but is not limited to, any warranty of the quality,
+performance, merchantability and fitness for a particular purpose of
+the program and the nonexistence of any infringement or violation of
+any right of any third party.
+
+Each user of the program will agree and understand, and be deemed to
+have agreed and understood, that there is no warranty whatsoever for
+the program and, accordingly, the entire risk arising from or
+otherwise connected with the program is assumed by the user.
+
+Therefore, neither ICOT, the copyright holder, or any other
+organization that participated in or was otherwise related to the
+development of the program and their respective officials, directors,
+officers and other employees shall be held liable for any and all
+damages, including, without limitation, general, special, incidental
+and consequential damages, arising out of or otherwise in connection
+with the use or inability to use the program or any product, material
+or result produced or otherwise obtained by using the program,
+regardless of whether they have been advised of, or otherwise had
+knowledge of, the possibility of such damages at any time during the
+project or thereafter.  Each user will be deemed to have agreed to the
+foregoing by his or her commencement of use of the program.  The term
+"use" as used herein includes, but is not limited to, the use,
+modification, copying and distribution of the program and the
+production of secondary products from the program.
+
+In the case where the program, whether in its original form or
+modified, was distributed or delivered to or received by a user from
+any person, organization or entity other than ICOT, unless it makes or
+grants independently of ICOT any specific warranty to the user in
+writing, such person, organization or entity, will also be exempted
+from and not be held liable to the user for any such damages as noted
+above as far as the program is concerned.
+```
+
+## L0032
+
+対象:
+
+- github.com/ikawaha/kagome-dict/uni v1.2.6 / NOTICE.txt
+
+```text
+===========================================================================
+A Dictionary of Kagome Japanese Morphological Analyzer
+===========================================================================
+
+This software includes a binary and/or source version of data from
+
+  unidic-mecab-2.1.2_src
+
+which can be obtained from
+
+  https://osdn.jp/projects/unidic/downloads/58338/unidic-mecab-2.1.2_src.zip/
+
+===========================================================================
+unidic-mecab-2.1.2_src Notice (BSD)
+===========================================================================
+
+Copyright (c) 2011-2013, The UniDic Consortium
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+ * Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+
+ * Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in the
+       documentation and/or other materials provided with the
+          distribution.
+
+ * Neither the name of the UniDic Consortium nor the names of its
+    contributors may be used to endorse or promote products derived
+       from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0033
+
+対象:
+
+- github.com/json-iterator/go v1.1.12 / LICENSE
+
+```text
+MIT License
+
+Copyright (c) 2016 json-iterator
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0034
+
+対象:
+
+- github.com/leodido/go-urn v1.2.1 / LICENSE
+
+```text
+MIT License
+
+Copyright (c) 2018 Leonardo Di Donato
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0035
+
+対象:
+
+- github.com/lestrrat-go/file-rotatelogs v2.3.0+incompatible / LICENSE
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2014 lestrrat
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+## L0036
+
+対象:
+
+- github.com/lestrrat-go/strftime v1.0.1 / LICENSE
+
+```text
+MIT License
+
+Copyright (c) 2016 lestrrat
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0037
+
+対象:
+
+- github.com/mattn/go-isatty v0.0.24 / LICENSE
+
+```text
+Copyright (c) Yasuhiro MATSUMOTO <mattn.jp@gmail.com>
+
+MIT License (Expat)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+## L0038
+
+対象:
+
+- github.com/ncruces/go-strftime v1.0.0 / LICENSE
+
+```text
+MIT License
+
+Copyright (c) 2022 Nuno Cruces
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0039
+
+対象:
+
+- github.com/pelletier/go-toml/v2 v2.0.1 / LICENSE
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2013 - 2022 Thomas Pelletier, Eric Anderton
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0040
+
+対象:
+
+- github.com/pkg/errors v0.9.1 / LICENSE
+
+```text
+Copyright (c) 2015, Dave Cheney <dave@cheney.net>
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0041
+
+対象:
+
+- github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec / LICENSE
+
+```text
+Copyright (c) 2012 The Go Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0042
+
+対象:
+
+- github.com/RoaringBitmap/roaring/v2 v2.14.5 / AUTHORS
+
+```text
+# This is the official list of roaring authors for copyright purposes.
+
+Todd Gruben (@tgruben),
+Daniel Lemire (@lemire),
+Elliot Murphy (@statik),
+Bob Potter (@bpot),
+Tyson Maly (@tvmaly),
+Will Glynn (@willglynn),
+Brent Pedersen (@brentp)
+Maciej Biłas (@maciej),
+Joe Nall (@joenall)
+```
+
+## L0043
+
+対象:
+
+- github.com/RoaringBitmap/roaring/v2 v2.14.5 / CONTRIBUTORS
+
+```text
+# This is the official list of roaring contributors
+
+Todd Gruben (@tgruben),
+Daniel Lemire (@lemire),
+Elliot Murphy (@statik),
+Bob Potter (@bpot),
+Tyson Maly (@tvmaly),
+Will Glynn (@willglynn),
+Brent Pedersen (@brentp),
+Jason E. Aten (@glycerine),
+Vali Malinoiu (@0x4139),
+Forud Ghafouri (@fzerorubigd),
+Joe Nall (@joenall),
+(@fredim),
+Edd Robinson (@e-dard),
+Alexander Petrov (@alldroll),
+Guy Molinari (@guymolinari),
+Ling Jin (@JinLingChristopher)
+```
+
+## L0044
+
+対象:
+
+- github.com/RoaringBitmap/roaring/v2 v2.14.5 / LICENSE
+
+```text
+Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright 2016 by the authors
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+================================================================================
+
+Portions of runcontainer.go are from the Go standard library, which is licensed
+under:
+
+Copyright (c) 2009 The Go Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+     notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+     copyright notice, this list of conditions and the following disclaimer
+     in the documentation and/or other materials provided with the
+     distribution.
+   * Neither the name of Google Inc. nor the names of its
+     contributors may be used to endorse or promote products derived from
+     this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0045
+
+対象:
+
+- github.com/RoaringBitmap/roaring/v2 v2.14.5 / LICENSE-2.0.txt
+
+```text
+Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "[]"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright 2016 by the authors
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+```
+
+## L0046
+
+対象:
+
+- github.com/robfig/cron/v3 v3.0.1 / LICENSE
+
+```text
+Copyright (C) 2012 Rob Figueiredo
+All Rights Reserved.
+
+MIT LICENSE
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+## L0047
+
+対象:
+
+- github.com/rs/xid v1.2.1 / LICENSE
+
+```text
+Copyright (c) 2015 Olivier Poitrey <rs@dailymotion.com>
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is furnished
+to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
+## L0048
+
+対象:
+
+- github.com/ugorji/go/codec v1.2.7 / LICENSE
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2012-2020 Ugorji Nwoke.
+All rights reserved.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0049
+
+対象:
+
+- go.etcd.io/bbolt v1.4.0 / LICENSE
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2013 Ben Johnson
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+## L0050
+
+対象:
+
+- golang.org/x/crypto v0.58.0 / LICENSE
+- golang.org/x/net v0.61.0 / LICENSE
+- golang.org/x/sys v0.49.0 / LICENSE
+- golang.org/x/text v0.43.0 / LICENSE
+- Go runtime / standard library go1.26.3 / LICENSE
+- Go runtime / standard library go1.26.3 / src/vendor/golang.org/x/crypto/LICENSE
+- Go runtime / standard library go1.26.3 / src/vendor/golang.org/x/net/LICENSE
+- Go runtime / standard library go1.26.3 / src/vendor/golang.org/x/sys/LICENSE
+- Go runtime / standard library go1.26.3 / src/vendor/golang.org/x/text/LICENSE
+
+```text
+Copyright 2009 The Go Authors.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the name of Google LLC nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0051
+
+対象:
+
+- google.golang.org/protobuf v1.36.6 / LICENSE
+
+```text
+Copyright (c) 2018 The Go Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0052
+
+対象:
+
+- gopkg.in/ini.v1 v1.57.0 / LICENSE
+
+```text
+Apache License
+Version 2.0, January 2004
+http://www.apache.org/licenses/
+
+TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+1. Definitions.
+
+"License" shall mean the terms and conditions for use, reproduction, and
+distribution as defined by Sections 1 through 9 of this document.
+
+"Licensor" shall mean the copyright owner or entity authorized by the copyright
+owner that is granting the License.
+
+"Legal Entity" shall mean the union of the acting entity and all other entities
+that control, are controlled by, or are under common control with that entity.
+For the purposes of this definition, "control" means (i) the power, direct or
+indirect, to cause the direction or management of such entity, whether by
+contract or otherwise, or (ii) ownership of fifty percent (50%) or more of the
+outstanding shares, or (iii) beneficial ownership of such entity.
+
+"You" (or "Your") shall mean an individual or Legal Entity exercising
+permissions granted by this License.
+
+"Source" form shall mean the preferred form for making modifications, including
+but not limited to software source code, documentation source, and configuration
+files.
+
+"Object" form shall mean any form resulting from mechanical transformation or
+translation of a Source form, including but not limited to compiled object code,
+generated documentation, and conversions to other media types.
+
+"Work" shall mean the work of authorship, whether in Source or Object form, made
+available under the License, as indicated by a copyright notice that is included
+in or attached to the work (an example is provided in the Appendix below).
+
+"Derivative Works" shall mean any work, whether in Source or Object form, that
+is based on (or derived from) the Work and for which the editorial revisions,
+annotations, elaborations, or other modifications represent, as a whole, an
+original work of authorship. For the purposes of this License, Derivative Works
+shall not include works that remain separable from, or merely link (or bind by
+name) to the interfaces of, the Work and Derivative Works thereof.
+
+"Contribution" shall mean any work of authorship, including the original version
+of the Work and any modifications or additions to that Work or Derivative Works
+thereof, that is intentionally submitted to Licensor for inclusion in the Work
+by the copyright owner or by an individual or Legal Entity authorized to submit
+on behalf of the copyright owner. For the purposes of this definition,
+"submitted" means any form of electronic, verbal, or written communication sent
+to the Licensor or its representatives, including but not limited to
+communication on electronic mailing lists, source code control systems, and
+issue tracking systems that are managed by, or on behalf of, the Licensor for
+the purpose of discussing and improving the Work, but excluding communication
+that is conspicuously marked or otherwise designated in writing by the copyright
+owner as "Not a Contribution."
+
+"Contributor" shall mean Licensor and any individual or Legal Entity on behalf
+of whom a Contribution has been received by Licensor and subsequently
+incorporated within the Work.
+
+2. Grant of Copyright License.
+
+Subject to the terms and conditions of this License, each Contributor hereby
+grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+irrevocable copyright license to reproduce, prepare Derivative Works of,
+publicly display, publicly perform, sublicense, and distribute the Work and such
+Derivative Works in Source or Object form.
+
+3. Grant of Patent License.
+
+Subject to the terms and conditions of this License, each Contributor hereby
+grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free,
+irrevocable (except as stated in this section) patent license to make, have
+made, use, offer to sell, sell, import, and otherwise transfer the Work, where
+such license applies only to those patent claims licensable by such Contributor
+that are necessarily infringed by their Contribution(s) alone or by combination
+of their Contribution(s) with the Work to which such Contribution(s) was
+submitted. If You institute patent litigation against any entity (including a
+cross-claim or counterclaim in a lawsuit) alleging that the Work or a
+Contribution incorporated within the Work constitutes direct or contributory
+patent infringement, then any patent licenses granted to You under this License
+for that Work shall terminate as of the date such litigation is filed.
+
+4. Redistribution.
+
+You may reproduce and distribute copies of the Work or Derivative Works thereof
+in any medium, with or without modifications, and in Source or Object form,
+provided that You meet the following conditions:
+
+You must give any other recipients of the Work or Derivative Works a copy of
+this License; and
+You must cause any modified files to carry prominent notices stating that You
+changed the files; and
+You must retain, in the Source form of any Derivative Works that You distribute,
+all copyright, patent, trademark, and attribution notices from the Source form
+of the Work, excluding those notices that do not pertain to any part of the
+Derivative Works; and
+If the Work includes a "NOTICE" text file as part of its distribution, then any
+Derivative Works that You distribute must include a readable copy of the
+attribution notices contained within such NOTICE file, excluding those notices
+that do not pertain to any part of the Derivative Works, in at least one of the
+following places: within a NOTICE text file distributed as part of the
+Derivative Works; within the Source form or documentation, if provided along
+with the Derivative Works; or, within a display generated by the Derivative
+Works, if and wherever such third-party notices normally appear. The contents of
+the NOTICE file are for informational purposes only and do not modify the
+License. You may add Your own attribution notices within Derivative Works that
+You distribute, alongside or as an addendum to the NOTICE text from the Work,
+provided that such additional attribution notices cannot be construed as
+modifying the License.
+You may add Your own copyright statement to Your modifications and may provide
+additional or different license terms and conditions for use, reproduction, or
+distribution of Your modifications, or for any such Derivative Works as a whole,
+provided Your use, reproduction, and distribution of the Work otherwise complies
+with the conditions stated in this License.
+
+5. Submission of Contributions.
+
+Unless You explicitly state otherwise, any Contribution intentionally submitted
+for inclusion in the Work by You to the Licensor shall be under the terms and
+conditions of this License, without any additional terms or conditions.
+Notwithstanding the above, nothing herein shall supersede or modify the terms of
+any separate license agreement you may have executed with Licensor regarding
+such Contributions.
+
+6. Trademarks.
+
+This License does not grant permission to use the trade names, trademarks,
+service marks, or product names of the Licensor, except as required for
+reasonable and customary use in describing the origin of the Work and
+reproducing the content of the NOTICE file.
+
+7. Disclaimer of Warranty.
+
+Unless required by applicable law or agreed to in writing, Licensor provides the
+Work (and each Contributor provides its Contributions) on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied,
+including, without limitation, any warranties or conditions of TITLE,
+NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are
+solely responsible for determining the appropriateness of using or
+redistributing the Work and assume any risks associated with Your exercise of
+permissions under this License.
+
+8. Limitation of Liability.
+
+In no event and under no legal theory, whether in tort (including negligence),
+contract, or otherwise, unless required by applicable law (such as deliberate
+and grossly negligent acts) or agreed to in writing, shall any Contributor be
+liable to You for damages, including any direct, indirect, special, incidental,
+or consequential damages of any character arising as a result of this License or
+out of the use or inability to use the Work (including but not limited to
+damages for loss of goodwill, work stoppage, computer failure or malfunction, or
+any and all other commercial damages or losses), even if such Contributor has
+been advised of the possibility of such damages.
+
+9. Accepting Warranty or Additional Liability.
+
+While redistributing the Work or Derivative Works thereof, You may choose to
+offer, and charge a fee for, acceptance of support, warranty, indemnity, or
+other liability obligations and/or rights consistent with this License. However,
+in accepting such obligations, You may act only on Your own behalf and on Your
+sole responsibility, not on behalf of any other Contributor, and only if You
+agree to indemnify, defend, and hold each Contributor harmless for any liability
+incurred by, or claims asserted against, such Contributor by reason of your
+accepting any such warranty or additional liability.
+
+END OF TERMS AND CONDITIONS
+
+APPENDIX: How to apply the Apache License to your work
+
+To apply the Apache License to your work, attach the following boilerplate
+notice, with the fields enclosed by brackets "[]" replaced with your own
+identifying information. (Don't include the brackets!) The text should be
+enclosed in the appropriate comment syntax for the file format. We also
+recommend that a file or class name and description of purpose be included on
+the same "printed page" as the copyright notice for easier identification within
+third-party archives.
+
+   Copyright 2014 Unknwon
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+```
+
+## L0053
+
+対象:
+
+- gopkg.in/yaml.v2 v2.4.0 / LICENSE
+
+```text
+Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+   APPENDIX: How to apply the Apache License to your work.
+
+      To apply the Apache License to your work, attach the following
+      boilerplate notice, with the fields enclosed by brackets "{}"
+      replaced with your own identifying information. (Don't include
+      the brackets!)  The text should be enclosed in the appropriate
+      comment syntax for the file format. We also recommend that a
+      file or class name and description of purpose be included on the
+      same "printed page" as the copyright notice for easier
+      identification within third-party archives.
+
+   Copyright {yyyy} {name of copyright owner}
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+```
+
+## L0054
+
+対象:
+
+- gopkg.in/yaml.v2 v2.4.0 / LICENSE.libyaml
+
+```text
+The following files were ported to Go from C files of libyaml, and thus
+are still covered by their original copyright and license:
+
+    apic.go
+    emitterc.go
+    parserc.go
+    readerc.go
+    scannerc.go
+    writerc.go
+    yamlh.go
+    yamlprivateh.go
+
+Copyright (c) 2006 Kirill Simonov
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0055
+
+対象:
+
+- gopkg.in/yaml.v2 v2.4.0 / NOTICE
+
+```text
+Copyright 2011-2016 Canonical Ltd.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
+
+## L0056
+
+対象:
+
+- modernc.org/libc v1.74.4 / AUTHORS
+
+```text
+# This file lists authors for copyright purposes.  This file is distinct from
+# the CONTRIBUTORS files.  See the latter for an explanation.
+#
+# Names should be added to this file as:
+#     Name or Organization <email address>
+#
+# The email address is not required for organizations.
+#
+# Please keep the list sorted.
+
+Dan Kortschak <dan@kortschak.io>
+Dan Peterson <danp@danp.net>
+David Leadbeater <dgl@dgl.cx>
+Fabrice Colliot <f.colliot@gmail.com>
+Jan Mercl <0xjnml@gmail.com>
+Jason DeBettencourt <jasond17@gmail.com>
+Jasper Siepkes <jasper@siepkes.nl>
+Kieran Klukas <kieran@dunkirk.sh>
+Koichi Shiraishi <zchee.io@gmail.com>
+Marius Orcsik <marius@federated.id>
+Olivier Mengué <dolmen@cpan.org>
+Patricio Whittingslow <graded.sp@gmail.com>
+Scot C Bontrager <scot@indievisible.org>
+Steffen Butzer <steffen(dot)butzer@outlook.com>
+```
+
+## L0057
+
+対象:
+
+- modernc.org/libc v1.74.4 / CONTRIBUTORS
+
+```text
+# This file lists people who contributed code to this repository.  The AUTHORS
+# file lists the copyright holders; this file lists people.
+#
+# Names should be added to this file like so:
+#     Name <email address>
+#
+# Please keep the list sorted.
+
+Bjørn Wiegell <bj.wiegell@gmail.com>
+Dan Kortschak <dan@kortschak.io>
+Dan Peterson <danp@danp.net>
+David Leadbeater <dgl@dgl.cx>
+Fabrice Colliot <f.colliot@gmail.com>
+Jaap Aarts <jaap.aarts1@gmail.com>
+Jan Mercl <0xjnml@gmail.com>
+Jason DeBettencourt <jasond17@gmail.com>
+Jasper Siepkes <jasper@siepkes.nl>
+Kieran Klukas <kieran@dunkirk.sh>
+Koichi Shiraishi <zchee.io@gmail.com>
+Leonardo Taccari <leot@NetBSD.org>
+Marius Orcsik <marius@federated.id>
+Olivier Mengué <dolmen@cpan.org>
+Patricio Whittingslow <graded.sp@gmail.com>
+Roman Khafizianov <roman@any.org>
+Scot C Bontrager <scot@indievisible.org>
+Steffen Butzer <steffen(dot)butzer@outlook.com>
+W. Michael Petullo <mike@flyn.org>
+ZHU Zijia <piggynl@outlook.com>
+```
+
+## L0058
+
+対象:
+
+- modernc.org/libc v1.74.4 / LICENSE
+
+```text
+Copyright (c) 2017 The Libc Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the names of the authors nor the names of the
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0059
+
+対象:
+
+- modernc.org/libc v1.74.4 / LICENSE-3RD-PARTY.md
+
+```text
+# Third-Party Software Notices
+
+This repository contains code and assets acquired from third-party sources.
+While the main project is licensed under the BSD-3 License, the components
+listed below are subject to their own specific license terms and copyright
+notices.
+
+The following is a list of third-party software included in this repository,
+their locations, and their respective licenses.
+
+
+----
+
+## Go
+
+* **URL:** https://github.com/golang/go
+----
+
+Copyright (c) 2009 The Go Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+----
+
+## musl libc
+
+* **URL:** https://musl.libc.org/
+
+----
+
+musl as a whole is licensed under the following standard MIT license:
+
+----------------------------------------------------------------------
+Copyright © 2005-2020 Rich Felker, et al.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+----------------------------------------------------------------------
+
+Authors/contributors include:
+
+A. Wilcox
+Ada Worcester
+Alex Dowad
+Alex Suykov
+Alexander Monakov
+Andre McCurdy
+Andrew Kelley
+Anthony G. Basile
+Aric Belsito
+Arvid Picciani
+Bartosz Brachaczek
+Benjamin Peterson
+Bobby Bingham
+Boris Brezillon
+Brent Cook
+Chris Spiegel
+Clément Vasseur
+Daniel Micay
+Daniel Sabogal
+Daurnimator
+David Carlier
+David Edelsohn
+Denys Vlasenko
+Dmitry Ivanov
+Dmitry V. Levin
+Drew DeVault
+Emil Renner Berthing
+Fangrui Song
+Felix Fietkau
+Felix Janda
+Gianluca Anzolin
+Hauke Mehrtens
+He X
+Hiltjo Posthuma
+Isaac Dunham
+Jaydeep Patil
+Jens Gustedt
+Jeremy Huntwork
+Jo-Philipp Wich
+Joakim Sindholt
+John Spencer
+Julien Ramseier
+Justin Cormack
+Kaarle Ritvanen
+Khem Raj
+Kylie McClain
+Leah Neukirchen
+Luca Barbato
+Luka Perkov
+M Farkas-Dyck (Strake)
+Mahesh Bodapati
+Markus Wichmann
+Masanori Ogino
+Michael Clark
+Michael Forney
+Mikhail Kremnyov
+Natanael Copa
+Nicholas J. Kain
+orc
+Pascal Cuoq
+Patrick Oppenlander
+Petr Hosek
+Petr Skocik
+Pierre Carrier
+Reini Urban
+Rich Felker
+Richard Pennington
+Ryan Fairfax
+Samuel Holland
+Segev Finer
+Shiz
+sin
+Solar Designer
+Stefan Kristiansson
+Stefan O'Rear
+Szabolcs Nagy
+Timo Teräs
+Trutz Behn
+Valentin Ochs
+Will Dietz
+William Haddon
+William Pitcock
+
+Portions of this software are derived from third-party works licensed
+under terms compatible with the above MIT license:
+
+The TRE regular expression implementation (src/regex/reg* and
+src/regex/tre*) is Copyright © 2001-2008 Ville Laurikari and licensed
+under a 2-clause BSD license (license text in the source files). The
+included version has been heavily modified by Rich Felker in 2012, in
+the interests of size, simplicity, and namespace cleanliness.
+
+Much of the math library code (src/math/* and src/complex/*) is
+Copyright © 1993,2004 Sun Microsystems or
+Copyright © 2003-2011 David Schultz or
+Copyright © 2003-2009 Steven G. Kargl or
+Copyright © 2003-2009 Bruce D. Evans or
+Copyright © 2008 Stephen L. Moshier or
+Copyright © 2017-2018 Arm Limited
+and labelled as such in comments in the individual source files. All
+have been licensed under extremely permissive terms.
+
+The ARM memcpy code (src/string/arm/memcpy.S) is Copyright © 2008
+The Android Open Source Project and is licensed under a two-clause BSD
+license. It was taken from Bionic libc, used on Android.
+
+The AArch64 memcpy and memset code (src/string/aarch64/*) are
+Copyright © 1999-2019, Arm Limited.
+
+The implementation of DES for crypt (src/crypt/crypt_des.c) is
+Copyright © 1994 David Burren. It is licensed under a BSD license.
+
+The implementation of blowfish crypt (src/crypt/crypt_blowfish.c) was
+originally written by Solar Designer and placed into the public
+domain. The code also comes with a fallback permissive license for use
+in jurisdictions that may not recognize the public domain.
+
+The smoothsort implementation (src/stdlib/qsort.c) is Copyright © 2011
+Valentin Ochs and is licensed under an MIT-style license.
+
+The x86_64 port was written by Nicholas J. Kain and is licensed under
+the standard MIT terms.
+
+The mips and microblaze ports were originally written by Richard
+Pennington for use in the ellcc project. The original code was adapted
+by Rich Felker for build system and code conventions during upstream
+integration. It is licensed under the standard MIT terms.
+
+The mips64 port was contributed by Imagination Technologies and is
+licensed under the standard MIT terms.
+
+The powerpc port was also originally written by Richard Pennington,
+and later supplemented and integrated by John Spencer. It is licensed
+under the standard MIT terms.
+
+All other files which have no copyright comments are original works
+produced specifically for use as part of this library, written either
+by Rich Felker, the main author of the library, or by one or more
+contibutors listed above. Details on authorship of individual files
+can be found in the git version control history of the project. The
+omission of copyright and license comments in each file is in the
+interest of source tree size.
+
+In addition, permission is hereby granted for all public header files
+(include/* and arch/*/bits/*) and crt files intended to be linked into
+applications (crt/*, ldso/dlstart.c, and arch/*/crt_arch.h) to omit
+the copyright notice and permission notice otherwise required by the
+license, and to use these files without any requirement of
+attribution. These files include substantial contributions from:
+
+Bobby Bingham
+John Spencer
+Nicholas J. Kain
+Rich Felker
+Richard Pennington
+Stefan Kristiansson
+Szabolcs Nagy
+
+all of whom have explicitly granted such permission.
+
+This file previously contained text expressing a belief that most of
+the files covered by the above exception were sufficiently trivial not
+to be subject to copyright, resulting in confusion over whether it
+negated the permissions granted in the license. In the spirit of
+permissive licensing, and of not having licensing issues being an
+obstacle to adoption, that text has been removed.
+
+----
+
+## go-netdb
+
+* **URL:** https://github.com/dominikh/go-netdb
+
+----
+
+Copyright (c) 2012 Dominik Honnef
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+----
+
+## NixOS/nixpkgs
+
+* **URL:** https://github.com/NixOS/nixpkgs
+
+----
+
+Copyright (c) 2003-2025 Eelco Dolstra and the Nixpkgs/NixOS contributors
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+## L0060
+
+対象:
+
+- modernc.org/mathutil v1.7.1 / AUTHORS
+
+```text
+# This file lists authors for copyright purposes.  This file is distinct from
+# the CONTRIBUTORS files.  See the latter for an explanation.
+#
+# Names should be added to this file as:
+#     Name or Organization <email address>
+#
+# The email address is not required for organizations.
+#
+# Please keep the list sorted.
+
+CZ.NIC z.s.p.o. <kontakt@nic.cz>
+Edward Betts <edward@4angle.com>
+Jan Mercl <0xjnml@gmail.com>
+```
+
+## L0061
+
+対象:
+
+- modernc.org/mathutil v1.7.1 / CONTRIBUTORS
+
+```text
+# This file lists people who contributed code to this repository.  The AUTHORS
+# file lists the copyright holders; this file lists people.
+#
+# Names should be added to this file like so:
+#     Name <email address>
+#
+# Please keep the list sorted.
+
+Bodecker DellaMaria <bojdell@gmail.com>
+Edward Betts <edward@4angle.com>
+Faiz Abbasi <faizamodo@gmail.com>
+Gary Burd <gary@beagledreams.com>
+Jan Mercl <0xjnml@gmail.com>
+Muhammad Surya <surya.asriadie@gmail.com>
+Santiago De la Cruz <delacruzsantiago12@gmail.com>
+```
+
+## L0062
+
+対象:
+
+- modernc.org/mathutil v1.7.1 / LICENSE
+
+```text
+Copyright (c) 2014 The mathutil Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the names of the authors nor the names of the
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0063
+
+対象:
+
+- modernc.org/mathutil v1.7.1 / mersenne/AUTHORS
+
+```text
+# This file lists authors for copyright purposes.  This file is distinct from
+# the CONTRIBUTORS files.  See the latter for an explanation.
+#
+# Names should be added to this file as:
+#     Name or Organization <email address>
+#
+# The email address is not required for organizations.
+#
+# Please keep the list sorted.
+
+Jan Mercl <0xjnml@gmail.com>
+```
+
+## L0064
+
+対象:
+
+- modernc.org/mathutil v1.7.1 / mersenne/CONTRIBUTORS
+
+```text
+# This file lists people who contributed code to this repository.  The AUTHORS
+# file lists the copyright holders; this file lists people.
+#
+# Names should be added to this file like so:
+#     Name <email address>
+#
+# Please keep the list sorted.
+
+Jan Mercl <0xjnml@gmail.com>
+Santiago De la Cruz <delacruzsantiago12@gmail.com>
+```
+
+## L0065
+
+対象:
+
+- modernc.org/mathutil v1.7.1 / mersenne/LICENSE
+
+```text
+Copyright (c) 2014 The mersenne Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the names of the authors nor the names of the
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0066
+
+対象:
+
+- modernc.org/memory v1.11.0 / AUTHORS
+
+```text
+# This file lists authors for copyright purposes.  This file is distinct from
+# the CONTRIBUTORS files.  See the latter for an explanation.
+#
+# Names should be added to this file as:
+#     Name or Organization <email address>
+#
+# The email address is not required for organizations.
+#
+# Please keep the list sorted.
+
+Chris Waldon <christopher(dot)waldon(dot)dev@gmail.com>
+Gleb Sakhnov <gleb.sakhnov@gmail.com>
+Jan Mercl <0xjnml@gmail.com>
+Scot C Bontrager <scot@indievisible.org>
+Steffen Butzer <steffen(dot)butzer@outlook.com>
+```
+
+## L0067
+
+対象:
+
+- modernc.org/memory v1.11.0 / CONTRIBUTORS
+
+```text
+# This file lists people who contributed code to this repository.  The AUTHORS
+# file lists the copyright holders; this file lists people.
+#
+# Names should be added to this file like so:
+#     Name <email address>
+#
+# Please keep the list sorted.
+
+Anup Kodlekere <anup.kodlekere@ibm.com>
+Chris Waldon <christopher(dot)waldon(dot)dev@gmail.com>
+Gleb Sakhnov <gleb.sakhnov@gmail.com>
+Jan Mercl <0xjnml@gmail.com>
+Scot C Bontrager <scot@indievisible.org>
+Steffen Butzer <steffen(dot)butzer@outlook.com>
+ZHU Zijia <piggynl@outlook.com>
+```
+
+## L0068
+
+対象:
+
+- modernc.org/memory v1.11.0 / LICENSE
+
+```text
+Copyright (c) 2017 The Memory Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the names of the authors nor the names of the
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0069
+
+対象:
+
+- modernc.org/memory v1.11.0 / LICENSE-GO
+
+```text
+Copyright (c) 2009 The Go Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+   * Redistributions of source code must retain the above copyright
+notice, this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following disclaimer
+in the documentation and/or other materials provided with the
+distribution.
+   * Neither the name of Google Inc. nor the names of its
+contributors may be used to endorse or promote products derived from
+this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0070
+
+対象:
+
+- modernc.org/memory v1.11.0 / LICENSE-LOGO
+
+```text
+https://commons.wikimedia.org/wiki/File:Memory_infra_logo.png
+```
+
+## L0071
+
+対象:
+
+- modernc.org/sqlite v1.57.0 / AUTHORS
+
+```text
+# This file lists authors for copyright purposes.  This file is distinct from
+# the CONTRIBUTORS files.  See the latter for an explanation.
+#
+# Names should be added to this file as:
+#     Name or Organization <email address>
+#
+# The email address is not required for organizations.
+#
+# Please keep the list sorted.
+
+Angus Dippenaar <angusdippenaar@gmail.com>
+Artyom Pervukhin <github@artyom.dev>
+Dan Kortschak <dan@kortschak.io>
+Dan Peterson <danp@danp.net>
+David Walton <david@davidwalton.com>
+Davsk Ltd Co <skinner.david@gmail.com>
+FerretDB Inc.
+Harald Albrecht <thediveo@gmx.eu>
+Ian Chechin <ian00chechin@gmail.com>
+Jaap Aarts <jaap.aarts1@gmail.com>
+Jan Mercl <0xjnml@gmail.com>
+Josh Bleecher Snyder <josharian@gmail.com>
+Josh Klein <josh.klein@outlook.com>
+Logan Snow <logansnow@protonmail.com>
+Michael Hoffmann <mhoffm@posteo.de>
+Michael Rykov <mrykov@gmail.com>
+Morgan Bazalgette <morgan@howl.moe>
+Ross Light <ross@zombiezen.com>
+SUSE LLC <moio@suse.com>
+Saed SayedAhmed <saadmtsa@gmail.com>
+Steffen Butzer <steffen(dot)butzer@outlook.com>
+Toni Spets <toni.spets@beeper.com>
+W. Michael Petullo <mike@flyn.org>
+Zhenghao Zhang zhangzhenghao@hotmail.com
+```
+
+## L0072
+
+対象:
+
+- modernc.org/sqlite v1.57.0 / CONTRIBUTORS
+
+```text
+# This file lists people who contributed code to this repository.  The AUTHORS
+# file lists the copyright holders; this file lists people.
+#
+# Names should be added to this file like so:
+#     Name <email address>
+#
+# Please keep the list sorted.
+
+Adrian Witas <adrianwit@gmail.com>
+Alexander Menzhinsky <amenzhinsky@gmail.com>
+Alexey Palazhchenko <alexey.palazhchenko@gmail.com>
+Angus Dippenaar <angusdippenaar@gmail.com>
+Artyom Pervukhin <github@artyom.dev>
+Dan Kortschak <dan@kortschak.io>
+Dan Peterson <danp@danp.net>
+David Skinner <skinner.david@gmail.com>
+David Walton <david@davidwalton.com>
+Elle Mouton <elle.mouton@gmail.com>
+FlyingOnion <731677080@qq.com>
+Gleb Sakhnov <gleb.sakhnov@gmail.com>
+Guénaël Muller <inkey@inkey-art.net>
+HaoZi <haozi@loli.email>
+Harald Albrecht <thediveo@gmx.eu>
+Ian Chechin <ian00chechin@gmail.com>
+Jaap Aarts <jaap.aarts1@gmail.com>
+Jan Mercl <0xjnml@gmail.com>
+Josh Bleecher Snyder <josharian@gmail.com>
+Josh Klein <josh.klein@outlook.com>
+Kim <grufwub@gmail.com>
+Logan Snow <logansnow@protonmail.com>
+Mario Salgado <mariozalgo@gmail.com>
+Mark Summerfield <mark@qtrac.eu>
+Matthew Gabeler-Lee <fastcat@gmail.com>
+Michael Hoffmann <mhoffm@posteo.de>
+Michael Rykov <mrykov@gmail.com>
+Morgan Bazalgette <morgan@howl.moe>
+Prathyush PV <prathyush.pv@temporal.io>
+Romain Le Disez <r.gitlab@ledisez.net>
+Ross Light <ross@zombiezen.com>
+SUSE LLC <legal@suse.de>
+Saed SayedAhmed <saadmtsa@gmail.com>
+Sean McGivern <sean@mcgivern.me.uk>
+Steffen Butzer <steffen(dot)butzer@outlook.com>
+Toni Spets <toni.spets@beeper.com>
+W. Michael Petullo <mike@flyn.org>
+Walter Wanderley <walterwanderley@gmail.com>
+Yaacov Akiba Slama <ya@slamail.org>
+Zhenghao Zhang zhangzhenghao@hotmail.com
+```
+
+## L0073
+
+対象:
+
+- modernc.org/sqlite v1.57.0 / LICENSE
+
+```text
+Copyright (c) 2017 The Sqlite Authors. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+this list of conditions and the following disclaimer in the documentation
+and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors
+may be used to endorse or promote products derived from this software without
+specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+## L0074
+
+対象:
+
+- modernc.org/sqlite v1.57.0 / LICENSE-SQLITE
+
+```text
+SQLite Is Public Domain
+
+All of the code and documentation in SQLite has been dedicated to the public
+domain by the authors. All code authors, and representatives of the companies
+they work for, have signed affidavits dedicating their contributions to the
+public domain and originals of those signed affidavits are stored in a firesafe
+at the main offices of Hwaci. Anyone is free to copy, modify, publish, use,
+compile, sell, or distribute the original SQLite code, either in source code
+form or as a compiled binary, for any purpose, commercial or non-commercial,
+and by any means.
+
+The previous paragraph applies to the deliverable code and documentation in
+SQLite - those parts of the SQLite library that you actually bundle and ship
+with a larger application. Some scripts used as part of the build process (for
+example the "configure" scripts generated by autoconf) might fall under other
+open-source licenses. Nothing from these build scripts ever reaches the final
+deliverable SQLite library, however, and so the licenses associated with those
+scripts should not be a factor in assessing your rights to copy and use the
+SQLite library.
+
+All of the deliverable code in SQLite has been written from scratch. No code
+has been taken from other projects or from the open internet. Every line of
+code can be traced back to its original author, and all of those authors have
+public domain dedications on file. So the SQLite code base is clean and is
+uncontaminated with licensed code from other projects.
+```
+
+## L0075
+
+対象:
+
+- modernc.org/sqlite v1.57.0 / LICENSE-SQLITE_VEC
+
+```text
+MIT License
+
+Copyright (c) 2024 Alex Garcia
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0076
+
+対象:
+
+- Go runtime / standard library go1.26.3 / PATENTS
+
+```text
+Additional IP Rights Grant (Patents)
+
+"This implementation" means the copyrightable works distributed by
+Google as part of the Go project.
+
+Google hereby grants to You a perpetual, worldwide, non-exclusive,
+no-charge, royalty-free, irrevocable (except as stated in this section)
+patent license to make, have made, use, offer to sell, sell, import,
+transfer and otherwise run, modify and propagate the contents of this
+implementation of Go, where such license applies only to those patent
+claims, both currently owned or controlled by Google and acquired in
+the future, licensable by Google that are necessarily infringed by this
+implementation of Go.  This grant does not include claims that would be
+infringed only as a consequence of further modification of this
+implementation.  If you or your agent or exclusive licensee institute or
+order or agree to the institution of patent litigation against any
+entity (including a cross-claim or counterclaim in a lawsuit) alleging
+that this implementation of Go or any code incorporated within this
+implementation of Go constitutes direct or contributory patent
+infringement, or inducement of patent infringement, then any patent
+rights granted to you under this License for this implementation of Go
+shall terminate as of the date such litigation is filed.
+```
+
+## L0077
+
+対象:
+
+- vue-loader 15.9.8 / LICENSE
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2015-present Yuxi (Evan) You
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0078
+
+対象:
+
+- axios 0.27.2 / LICENSE
+
+```text
+Copyright (c) 2014-present Matt Zabriskie
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
+## L0079
+
+対象:
+
+- vue 2.6.14 / LICENSE
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2013-present, Yuxi (Evan) You
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
+## L0080
+
+対象:
+
+- vuetify 2.6.6 / LICENSE.md
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2016-2020 John Jeremy Leider
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
+## L0081
+
+対象:
+
+- vuetify-loader 1.7.3 / LICENSE.md
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2016-2019 John Jeremy Leider
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+## L0082
+
+対象:
+
+- webpack 5.73.0 / LICENSE
+
+```text
+Copyright JS Foundation and other contributors
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+'Software'), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+## L0083
+
+対象:
+
+- ws 8.21.3 / LICENSE
+
+```text
+Copyright (c) 2011 Einar Otto Stangvik <einaros@gmail.com>
+Copyright (c) 2013 Arnout Kazemier and contributors
+Copyright (c) 2016 Luigi Pinca and contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+## L0084
+
+対象:
+
+- Electron 42.11.8 / Electron distribution LICENSE
+
+```text
+Copyright (c) Electron contributors
+Copyright (c) 2013-2020 GitHub Inc.
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+```
+
+## L0085
+
+対象:
+
+- app-builder-lib 26.15.3 / out/util/license.d.ts
+
+```text
+import { Nullish } from "builder-util-runtime";
+import { PlatformPackager } from "../platformPackager";
+export declare function getLicenseAssets(fileNames: Array<string>, packager: PlatformPackager<any>): {
+    file: string;
+    lang: string;
+    langWithRegion: string;
+    langName: any;
+}[];
+export declare function getNotLocalizedLicenseFile(custom: string | Nullish, packager: PlatformPackager<any>, supportedExtension?: Array<string>): Promise<string | null>;
+export declare function getLicenseFiles(packager: PlatformPackager<any>): Promise<Array<LicenseFile>>;
+export interface LicenseFile {
+    file: string;
+    lang: string;
+    langWithRegion: string;
+    langName: string;
+}
+```
+
+## L0086
+
+対象:
+
+- app-builder-lib 26.15.3 / out/util/license.js
+
+```text
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.getLicenseAssets = getLicenseAssets;
+exports.getNotLocalizedLicenseFile = getNotLocalizedLicenseFile;
+exports.getLicenseFiles = getLicenseFiles;
+const path = require("path");
+const langs_1 = require("./langs");
+function getLicenseAssets(fileNames, packager) {
+    return fileNames
+        .sort((a, b) => {
+        const aW = a.includes("_en") ? 0 : 100;
+        const bW = b.includes("_en") ? 0 : 100;
+        return aW === bW ? a.localeCompare(b) : aW - bW;
+    })
+        .map(file => {
+        let lang = /_([^.]+)\./.exec(file)[1];
+        let langWithRegion;
+        if (lang.includes("_")) {
+            langWithRegion = lang;
+            lang = langWithRegion.substring(0, lang.indexOf("_"));
+        }
+        else {
+            lang = lang.toLowerCase();
+            langWithRegion = (0, langs_1.toLangWithRegion)(lang);
+        }
+        return { file: path.join(packager.buildResourcesDir, file), lang, langWithRegion, langName: langs_1.langIdToName[lang] };
+    });
+}
+async function getNotLocalizedLicenseFile(custom, packager, supportedExtension = ["rtf", "txt", "html"]) {
+    const possibleFiles = [];
+    for (const name of ["license", "eula"]) {
+        for (const ext of supportedExtension) {
+            possibleFiles.push(`${name}.${ext}`);
+            possibleFiles.push(`${name.toUpperCase()}.${ext}`);
+            possibleFiles.push(`${name}.${ext.toUpperCase()}`);
+            possibleFiles.push(`${name.toUpperCase()}.${ext.toUpperCase()}`);
+        }
+    }
+    return await packager.getResource(custom, ...possibleFiles);
+}
+async function getLicenseFiles(packager) {
+    return getLicenseAssets((await packager.resourceList).filter(it => {
+        const name = it.toLowerCase();
+        return (name.startsWith("license_") || name.startsWith("eula_")) && (name.endsWith(".rtf") || name.endsWith(".txt") || name.endsWith(".html"));
+    }), packager);
+}
+//# sourceMappingURL=license.js.map
+```
+
+## L0087
+
+対象:
+
+- app-builder-lib 26.15.3 / out/util/license.js.map
+
+```text
+{"version":3,"file":"license.js","sourceRoot":"","sources":["../../src/util/license.ts"],"names":[],"mappings":";;AAKA,4CAmBC;AAED,gEAgBC;AAED,0CAQC;AAnDD,6BAA4B;AAE5B,mCAAwD;AAExD,SAAgB,gBAAgB,CAAC,SAAwB,EAAE,QAA+B;IACxF,OAAO,SAAS;SACb,IAAI,CAAC,CAAC,CAAC,EAAE,CAAC,EAAE,EAAE;QACb,MAAM,EAAE,GAAG,CAAC,CAAC,QAAQ,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAA;QACtC,MAAM,EAAE,GAAG,CAAC,CAAC,QAAQ,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAA;QACtC,OAAO,EAAE,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,aAAa,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,EAAE,GAAG,EAAE,CAAA;IACjD,CAAC,CAAC;SACD,GAAG,CAAC,IAAI,CAAC,EAAE;QACV,IAAI,IAAI,GAAG,YAAY,CAAC,IAAI,CAAC,IAAI,CAAE,CAAC,CAAC,CAAC,CAAA;QACtC,IAAI,cAAc,CAAA;QAClB,IAAI,IAAI,CAAC,QAAQ,CAAC,GAAG,CAAC,EAAE,CAAC;YACvB,cAAc,GAAG,IAAI,CAAA;YACrB,IAAI,GAAG,cAAc,CAAC,SAAS,CAAC,CAAC,EAAE,IAAI,CAAC,OAAO,CAAC,GAAG,CAAC,CAAC,CAAA;QACvD,CAAC;aAAM,CAAC;YACN,IAAI,GAAG,IAAI,CAAC,WAAW,EAAE,CAAA;YACzB,cAAc,GAAG,IAAA,wBAAgB,EAAC,IAAI,CAAC,CAAA;QACzC,CAAC;QACD,OAAO,EAAE,IAAI,EAAE,IAAI,CAAC,IAAI,CAAC,QAAQ,CAAC,iBAAiB,EAAE,IAAI,CAAC,EAAE,IAAI,EAAE,cAAc,EAAE,QAAQ,EAAG,oBAAoB,CAAC,IAAI,CAAC,EAAE,CAAA;IAC3H,CAAC,CAAC,CAAA;AACN,CAAC;AAEM,KAAK,UAAU,0BAA0B,CAC9C,MAAwB,EACxB,QAA+B,EAC/B,qBAAoC,CAAC,KAAK,EAAE,KAAK,EAAE,MAAM,CAAC;IAE1D,MAAM,aAAa,GAAkB,EAAE,CAAA;IACvC,KAAK,MAAM,IAAI,IAAI,CAAC,SAAS,EAAE,MAAM,CAAC,EAAE,CAAC;QACvC,KAAK,MAAM,GAAG,IAAI,kBAAkB,EAAE,CAAC;YACrC,aAAa,CAAC,IAAI,CAAC,GAAG,IAAI,IAAI,GAAG,EAAE,CAAC,CAAA;YACpC,aAAa,CAAC,IAAI,CAAC,GAAG,IAAI,CAAC,WAAW,EAAE,IAAI,GAAG,EAAE,CAAC,CAAA;YAClD,aAAa,CAAC,IAAI,CAAC,GAAG,IAAI,IAAI,GAAG,CAAC,WAAW,EAAE,EAAE,CAAC,CAAA;YAClD,aAAa,CAAC,IAAI,CAAC,GAAG,IAAI,CAAC,WAAW,EAAE,IAAI,GAAG,CAAC,WAAW,EAAE,EAAE,CAAC,CAAA;QAClE,CAAC;IACH,CAAC;IAED,OAAO,MAAM,QAAQ,CAAC,WAAW,CAAC,MAAM,EAAE,GAAG,aAAa,CAAC,CAAA;AAC7D,CAAC;AAEM,KAAK,UAAU,eAAe,CAAC,QAA+B;IACnE,OAAO,gBAAgB,CACrB,CAAC,MAAM,QAAQ,CAAC,YAAY,CAAC,CAAC,MAAM,CAAC,EAAE,CAAC,EAAE;QACxC,MAAM,IAAI,GAAG,EAAE,CAAC,WAAW,EAAE,CAAA;QAC7B,OAAO,CAAC,IAAI,CAAC,UAAU,CAAC,UAAU,CAAC,IAAI,IAAI,CAAC,UAAU,CAAC,OAAO,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,QAAQ,CAAC,MAAM,CAAC,IAAI,IAAI,CAAC,QAAQ,CAAC,MAAM,CAAC,IAAI,IAAI,CAAC,QAAQ,CAAC,OAAO,CAAC,CAAC,CAAA;IAChJ,CAAC,CAAC,EACF,QAAQ,CACT,CAAA;AACH,CAAC","sourcesContent":["import { Nullish } from \"builder-util-runtime\"\nimport * as path from \"path\"\nimport { PlatformPackager } from \"../platformPackager\"\nimport { langIdToName, toLangWithRegion } from \"./langs\"\n\nexport function getLicenseAssets(fileNames: Array<string>, packager: PlatformPackager<any>) {\n  return fileNames\n    .sort((a, b) => {\n      const aW = a.includes(\"_en\") ? 0 : 100\n      const bW = b.includes(\"_en\") ? 0 : 100\n      return aW === bW ? a.localeCompare(b) : aW - bW\n    })\n    .map(file => {\n      let lang = /_([^.]+)\\./.exec(file)![1]\n      let langWithRegion\n      if (lang.includes(\"_\")) {\n        langWithRegion = lang\n        lang = langWithRegion.substring(0, lang.indexOf(\"_\"))\n      } else {\n        lang = lang.toLowerCase()\n        langWithRegion = toLangWithRegion(lang)\n      }\n      return { file: path.join(packager.buildResourcesDir, file), lang, langWithRegion, langName: (langIdToName as any)[lang] }\n    })\n}\n\nexport async function getNotLocalizedLicenseFile(\n  custom: string | Nullish,\n  packager: PlatformPackager<any>,\n  supportedExtension: Array<string> = [\"rtf\", \"txt\", \"html\"]\n): Promise<string | null> {\n  const possibleFiles: Array<string> = []\n  for (const name of [\"license\", \"eula\"]) {\n    for (const ext of supportedExtension) {\n      possibleFiles.push(`${name}.${ext}`)\n      possibleFiles.push(`${name.toUpperCase()}.${ext}`)\n      possibleFiles.push(`${name}.${ext.toUpperCase()}`)\n      possibleFiles.push(`${name.toUpperCase()}.${ext.toUpperCase()}`)\n    }\n  }\n\n  return await packager.getResource(custom, ...possibleFiles)\n}\n\nexport async function getLicenseFiles(packager: PlatformPackager<any>): Promise<Array<LicenseFile>> {\n  return getLicenseAssets(\n    (await packager.resourceList).filter(it => {\n      const name = it.toLowerCase()\n      return (name.startsWith(\"license_\") || name.startsWith(\"eula_\")) && (name.endsWith(\".rtf\") || name.endsWith(\".txt\") || name.endsWith(\".html\"))\n    }),\n    packager\n  )\n}\n\nexport interface LicenseFile {\n  file: string\n  lang: string\n  langWithRegion: string\n  langName: string\n}\n"]}
+```
+
+## L0088
+
+対象:
+
+- Roboto Google Fonts配信（固定バージョンなし） / Roboto-OFL.txt
+
+```text
+Copyright 2011 The Roboto Project Authors (https://github.com/googlefonts/roboto-classic)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://openfontlicense.org
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+```
+
+## L0089
+
+対象:
+
+- Noto Sans JP Google Fonts配信（固定バージョンなし） / NotoSansJP-OFL.txt
+
+```text
+Copyright 2014-2021 Adobe (http://www.adobe.com/), with Reserved Font Name 'Source'
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+```
+
+## L0090
+
+対象:
+
+- Noto Sans Symbols Google Fonts配信（固定バージョンなし） / NotoSansSymbols-OFL.txt
+- Noto Sans Symbols 2 Google Fonts配信（固定バージョンなし） / NotoSansSymbols2-OFL.txt
+
+```text
+Copyright 2022 The Noto Project Authors (https://github.com/notofonts/symbols)
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+https://scripts.sil.org/OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+```
+
+## L0091
+
+対象:
+
+- Material Design Icons (@mdi/font) 7.4.47（@latest配信の取得時点） / MDI-LICENSE.txt
+
+```text
+Pictogrammers Free License
+--------------------------
+
+This icon collection is released as free, open source, and GPL friendly by
+the [Pictogrammers](http://pictogrammers.com/) icon group. You may use it
+for commercial projects, open source projects, or anything really.
+
+# Icons: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+Some of the icons are redistributed under the Apache 2.0 license. All other
+icons are either redistributed under their respective licenses or are
+distributed under the Apache 2.0 license.
+
+# Fonts: Apache 2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+All web and desktop fonts are distributed under the Apache 2.0 license. Web
+and desktop fonts contain some icons that are redistributed under the Apache
+2.0 license. All other icons are either redistributed under their respective
+licenses or are distributed under the Apache 2.0 license.
+
+# Code: MIT (https://opensource.org/licenses/MIT)
+The MIT license applies to all non-font and non-icon files.
+```
+
+## L0092
+
+対象:
+
+- Material Design Icons (@mdi/font) 7.4.47（@latest配信の取得時点） / MDI-CSS-MIT.txt
+
+```text
+Material Design Icons webfont CSS
+Author: Austin Andrews (upstream package.json)
+CSS attribution: MaterialDesignIcons.com
+
+The distribution LICENSE specifies MIT for non-font and non-icon code.
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0093
+
+対象:
+
+- Lucide / Feather-derived icons 0.468.0 / assets/playback-icons/LICENSE
+
+```text
+ISC License
+
+Copyright (c) for portions of Lucide are held by Cole Bemis 2013-2022 as part of Feather (MIT). All other copyright (c) for Lucide are held by Lucide Contributors 2022.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+---
+
+Feather-derived portions of Lucide (MIT):
+
+The MIT License (MIT)
+
+Copyright (c) 2013-2022 Cole Bemis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+## L0094
+
+対象:
+
+- NSIS installer / compression modules 3.0.4.1 / NSIS distribution COPYING
+
+```text
+COPYRIGHT
+---------
+
+Copyright (C) 1999-2018 Contributors
+
+More detailed copyright information can be found in the individual source code files.
+
+APPLICABLE LICENSES
+-------------------
+
+* All NSIS source code, plug-ins, documentation, examples, header files and graphics, with the exception of the compression modules and where otherwise noted, are licensed under the zlib/libpng license.
+
+* The zlib compression module for NSIS is licensed under the zlib/libpng license.
+
+* The bzip2 compression module for NSIS is licensed under the bzip2 license.
+
+* The LZMA compression module for NSIS is licensed under the Common Public License version 1.0.
+
+ZLIB/LIBPNG LICENSE
+-------------------
+
+This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+
+      1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+
+      2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+
+      3. This notice may not be removed or altered from any source distribution.
+
+BZIP2 LICENSE
+-------------
+
+This program, "bzip2" and associated library "libbzip2", are copyright (C) 1996-2000 Julian R Seward. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+      1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+      2. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+
+      3. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+
+      4. The name of the author may not be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Julian Seward, Cambridge, UK.
+
+jseward@acm.org
+
+COMMON PUBLIC LICENSE VERSION 1.0
+---------------------------------
+
+THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS COMMON PUBLIC LICENSE ("AGREEMENT"). ANY USE, REPRODUCTION OR DISTRIBUTION OF THE PROGRAM CONSTITUTES RECIPIENT'S ACCEPTANCE OF THIS AGREEMENT.
+
+1. DEFINITIONS
+
+"Contribution" means:
+
+      a) in the case of the initial Contributor, the initial code and documentation distributed under this Agreement, and
+      b) in the case of each subsequent Contributor:
+
+      i) changes to the Program, and
+
+      ii) additions to the Program;
+
+      where such changes and/or additions to the Program originate from and are distributed by that particular Contributor. A Contribution 'originates' from a Contributor if it was added to the Program by such Contributor itself or anyone acting on such Contributor's behalf. Contributions do not include additions to the Program which: (i) are separate modules of software distributed in conjunction with the Program under their own license agreement, and (ii) are not derivative works of the Program.
+
+"Contributor" means any person or entity that distributes the Program.
+
+"Licensed Patents " mean patent claims licensable by a Contributor which are necessarily infringed by the use or sale of its Contribution alone or when combined with the Program.
+
+"Program" means the Contributions distributed in accordance with this Agreement.
+
+"Recipient" means anyone who receives the Program under this Agreement, including all Contributors.
+
+2. GRANT OF RIGHTS
+
+      a) Subject to the terms of this Agreement, each Contributor hereby grants Recipient a non-exclusive, worldwide, royalty-free copyright license to reproduce, prepare derivative works of, publicly display, publicly perform, distribute and sublicense the Contribution of such Contributor, if any, and such derivative works, in source code and object code form.
+
+      b) Subject to the terms of this Agreement, each Contributor hereby grants Recipient a non-exclusive, worldwide, royalty-free patent license under Licensed Patents to make, use, sell, offer to sell, import and otherwise transfer the Contribution of such Contributor, if any, in source code and object code form. This patent license shall apply to the combination of the Contribution and the Program if, at the time the Contribution is added by the Contributor, such addition of the Contribution causes such combination to be covered by the Licensed Patents. The patent license shall not apply to any other combinations which include the Contribution. No hardware per se is licensed hereunder.
+
+      c) Recipient understands that although each Contributor grants the licenses to its Contributions set forth herein, no assurances are provided by any Contributor that the Program does not infringe the patent or other intellectual property rights of any other entity. Each Contributor disclaims any liability to Recipient for claims brought by any other entity based on infringement of intellectual property rights or otherwise. As a condition to exercising the rights and licenses granted hereunder, each Recipient hereby assumes sole responsibility to secure any other intellectual property rights needed, if any. For example, if a third party patent license is required to allow Recipient to distribute the Program, it is Recipient's responsibility to acquire that license before distributing the Program.
+
+      d) Each Contributor represents that to its knowledge it has sufficient copyright rights in its Contribution, if any, to grant the copyright license set forth in this Agreement.
+
+3. REQUIREMENTS
+
+A Contributor may choose to distribute the Program in object code form under its own license agreement, provided that:
+
+      a) it complies with the terms and conditions of this Agreement; and
+
+      b) its license agreement:
+
+      i) effectively disclaims on behalf of all Contributors all warranties and conditions, express and implied, including warranties or conditions of title and non-infringement, and implied warranties or conditions of merchantability and fitness for a particular purpose;
+
+      ii) effectively excludes on behalf of all Contributors all liability for damages, including direct, indirect, special, incidental and consequential damages, such as lost profits;
+
+      iii) states that any provisions which differ from this Agreement are offered by that Contributor alone and not by any other party; and
+
+      iv) states that source code for the Program is available from such Contributor, and informs licensees how to obtain it in a reasonable manner on or through a medium customarily used for software exchange.
+
+When the Program is made available in source code form:
+
+      a) it must be made available under this Agreement; and
+
+      b) a copy of this Agreement must be included with each copy of the Program.
+
+Contributors may not remove or alter any copyright notices contained within the Program.
+
+Each Contributor must identify itself as the originator of its Contribution, if any, in a manner that reasonably allows subsequent Recipients to identify the originator of the Contribution.
+
+4. COMMERCIAL DISTRIBUTION
+
+Commercial distributors of software may accept certain responsibilities with respect to end users, business partners and the like. While this license is intended to facilitate the commercial use of the Program, the Contributor who includes the Program in a commercial product offering should do so in a manner which does not create potential liability for other Contributors. Therefore, if a Contributor includes the Program in a commercial product offering, such Contributor ("Commercial Contributor") hereby agrees to defend and indemnify every other Contributor ("Indemnified Contributor") against any losses, damages and costs (collectively "Losses") arising from claims, lawsuits and other legal actions brought by a third party against the Indemnified Contributor to the extent caused by the acts or omissions of such Commercial Contributor in connection with its distribution of the Program in a commercial product offering. The obligations in this section do not apply to any claims or Losses relating to any actual or alleged intellectual property infringement. In order to qualify, an Indemnified Contributor must: a) promptly notify the Commercial Contributor in writing of such claim, and b) allow the Commercial Contributor to control, and cooperate with the Commercial Contributor in, the defense and any related settlement negotiations. The Indemnified Contributor may participate in any such claim at its own expense.
+
+For example, a Contributor might include the Program in a commercial product offering, Product X. That Contributor is then a Commercial Contributor. If that Commercial Contributor then makes performance claims, or offers warranties related to Product X, those performance claims and warranties are such Commercial Contributor's responsibility alone. Under this section, the Commercial Contributor would have to defend claims against the other Contributors related to those performance claims and warranties, and if a court requires any other Contributor to pay any damages as a result, the Commercial Contributor must pay those damages.
+
+5. NO WARRANTY
+
+EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PROGRAM IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, EITHER EXPRESS OR IMPLIED INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OR CONDITIONS OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. Each Recipient is solely responsible for determining the appropriateness of using and distributing the Program and assumes all risks associated with its exercise of rights under this Agreement, including but not limited to the risks and costs of program errors, compliance with applicable laws, damage to or loss of data, programs or equipment, and unavailability or interruption of operations.
+
+6. DISCLAIMER OF LIABILITY
+
+EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, NEITHER RECIPIENT NOR ANY CONTRIBUTORS SHALL HAVE ANY LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING WITHOUT LIMITATION LOST PROFITS), HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OR DISTRIBUTION OF THE PROGRAM OR THE EXERCISE OF ANY RIGHTS GRANTED HEREUNDER, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+7. GENERAL
+
+If any provision of this Agreement is invalid or unenforceable under applicable law, it shall not affect the validity or enforceability of the remainder of the terms of this Agreement, and without further action by the parties hereto, such provision shall be reformed to the minimum extent necessary to make such provision valid and enforceable.
+
+If Recipient institutes patent litigation against a Contributor with respect to a patent applicable to software (including a cross-claim or counterclaim in a lawsuit), then any patent licenses granted by that Contributor to such Recipient under this Agreement shall terminate as of the date such litigation is filed. In addition, if Recipient institutes patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Program itself (excluding combinations of the Program with other software or hardware) infringes such Recipient's patent(s), then such Recipient's rights granted under Section 2(b) shall terminate as of the date such litigation is filed.
+
+All Recipient's rights under this Agreement shall terminate if it fails to comply with any of the material terms or conditions of this Agreement and does not cure such failure in a reasonable period of time after becoming aware of such noncompliance. If all Recipient's rights under this Agreement terminate, Recipient agrees to cease use and distribution of the Program as soon as reasonably practicable. However, Recipient's obligations under this Agreement and any licenses granted by Recipient relating to the Program shall continue and survive.
+
+Everyone is permitted to copy and distribute copies of this Agreement, but in order to avoid inconsistency the Agreement is copyrighted and may only be modified in the following manner. The Agreement Steward reserves the right to publish new versions (including revisions) of this Agreement from time to time. No one other than the Agreement Steward has the right to modify this Agreement. IBM is the initial Agreement Steward. IBM may assign the responsibility to serve as the Agreement Steward to a suitable separate entity. Each new version of the Agreement will be given a distinguishing version number. The Program (including Contributions) may always be distributed subject to the version of the Agreement under which it was received. In addition, after a new version of the Agreement is published, Contributor may elect to distribute the Program (including its Contributions) under the new version. Except as expressly stated in Sections 2(a) and 2(b) above, Recipient receives no rights or licenses to the intellectual property of any Contributor under this Agreement, whether expressly, by implication, estoppel or otherwise. All rights in the Program not expressly granted under this Agreement are reserved.
+
+This Agreement is governed by the laws of the State of New York and the intellectual property laws of the United States of America. No party to this Agreement will bring a legal action under this Agreement more than one year after the cause of action arose. Each party waives its rights to a jury trial in any resulting litigation.
+
+SPECIAL EXCEPTION FOR LZMA COMPRESSION MODULE
+---------------------------------------------
+
+Igor Pavlov and Amir Szekely, the authors of the LZMA compression module for NSIS, expressly permit you to statically or dynamically link your code (or bind by name) to the files from the LZMA compression module for NSIS without subjecting your linked code to the terms of the Common Public license version 1.0. Any modifications or additions to files from the LZMA compression module for NSIS, however, are subject to the terms of the Common Public License version 1.0.
+```
+
+## L0095
+
+対象:
+
+- NSIS StdUtils plug-in 1.14 / StdUtils/NOTICE.txt
+
+```text
+StdUtils plug-in Library for NSIS 1.14
+Copyright (C) 2004-2018 LoRd_MuldeR <mulder2@gmx.de>
+
+Source and license files:
+https://github.com/lordmulder/stdutils/tree/1.14
+
+The LGPL text and the author's LGPL clarification are reproduced separately.
+The bundled rhash and BLAKE2 copyright and permission notices are reproduced
+alongside them. The copyright above also appears in the bundled DLL's version
+resource. No changes are made to the plugin DLL.
+```
+
+## L0096
+
+対象:
+
+- NSIS StdUtils plug-in 1.14 / StdUtils/LGPL.txt
+- NSIS nsis7z plug-in / LZMA SDK 19.00 / StdUtils/LGPL.txt
+
+```text
+GNU LESSER GENERAL PUBLIC LICENSE
+                       Version 2.1, February 1999
+
+ Copyright (C) 1991, 1999 Free Software Foundation, Inc.
+ 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+
+[This is the first released version of the Lesser GPL.  It also counts
+ as the successor of the GNU Library Public License, version 2, hence
+ the version number 2.1.]
+
+                            Preamble
+
+  The licenses for most software are designed to take away your
+freedom to share and change it.  By contrast, the GNU General Public
+Licenses are intended to guarantee your freedom to share and change
+free software--to make sure the software is free for all its users.
+
+  This license, the Lesser General Public License, applies to some
+specially designated software packages--typically libraries--of the
+Free Software Foundation and other authors who decide to use it.  You
+can use it too, but we suggest you first think carefully about whether
+this license or the ordinary General Public License is the better
+strategy to use in any particular case, based on the explanations below.
+
+  When we speak of free software, we are referring to freedom of use,
+not price.  Our General Public Licenses are designed to make sure that
+you have the freedom to distribute copies of free software (and charge
+for this service if you wish); that you receive source code or can get
+it if you want it; that you can change the software and use pieces of
+it in new free programs; and that you are informed that you can do
+these things.
+
+  To protect your rights, we need to make restrictions that forbid
+distributors to deny you these rights or to ask you to surrender these
+rights.  These restrictions translate to certain responsibilities for
+you if you distribute copies of the library or if you modify it.
+
+  For example, if you distribute copies of the library, whether gratis
+or for a fee, you must give the recipients all the rights that we gave
+you.  You must make sure that they, too, receive or can get the source
+code.  If you link other code with the library, you must provide
+complete object files to the recipients, so that they can relink them
+with the library after making changes to the library and recompiling
+it.  And you must show them these terms so they know their rights.
+
+  We protect your rights with a two-step method: (1) we copyright the
+library, and (2) we offer you this license, which gives you legal
+permission to copy, distribute and/or modify the library.
+
+  To protect each distributor, we want to make it very clear that
+there is no warranty for the free library.  Also, if the library is
+modified by someone else and passed on, the recipients should know
+that what they have is not the original version, so that the original
+author's reputation will not be affected by problems that might be
+introduced by others.
+
+  Finally, software patents pose a constant threat to the existence of
+any free program.  We wish to make sure that a company cannot
+effectively restrict the users of a free program by obtaining a
+restrictive license from a patent holder.  Therefore, we insist that
+any patent license obtained for a version of the library must be
+consistent with the full freedom of use specified in this license.
+
+  Most GNU software, including some libraries, is covered by the
+ordinary GNU General Public License.  This license, the GNU Lesser
+General Public License, applies to certain designated libraries, and
+is quite different from the ordinary General Public License.  We use
+this license for certain libraries in order to permit linking those
+libraries into non-free programs.
+
+  When a program is linked with a library, whether statically or using
+a shared library, the combination of the two is legally speaking a
+combined work, a derivative of the original library.  The ordinary
+General Public License therefore permits such linking only if the
+entire combination fits its criteria of freedom.  The Lesser General
+Public License permits more lax criteria for linking other code with
+the library.
+
+  We call this license the "Lesser" General Public License because it
+does Less to protect the user's freedom than the ordinary General
+Public License.  It also provides other free software developers Less
+of an advantage over competing non-free programs.  These disadvantages
+are the reason we use the ordinary General Public License for many
+libraries.  However, the Lesser license provides advantages in certain
+special circumstances.
+
+  For example, on rare occasions, there may be a special need to
+encourage the widest possible use of a certain library, so that it becomes
+a de-facto standard.  To achieve this, non-free programs must be
+allowed to use the library.  A more frequent case is that a free
+library does the same job as widely used non-free libraries.  In this
+case, there is little to gain by limiting the free library to free
+software only, so we use the Lesser General Public License.
+
+  In other cases, permission to use a particular library in non-free
+programs enables a greater number of people to use a large body of
+free software.  For example, permission to use the GNU C Library in
+non-free programs enables many more people to use the whole GNU
+operating system, as well as its variant, the GNU/Linux operating
+system.
+
+  Although the Lesser General Public License is Less protective of the
+users' freedom, it does ensure that the user of a program that is
+linked with the Library has the freedom and the wherewithal to run
+that program using a modified version of the Library.
+
+  The precise terms and conditions for copying, distribution and
+modification follow.  Pay close attention to the difference between a
+"work based on the library" and a "work that uses the library".  The
+former contains code derived from the library, whereas the latter must
+be combined with the library in order to run.
+
+                  GNU LESSER GENERAL PUBLIC LICENSE
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+  0. This License Agreement applies to any software library or other
+program which contains a notice placed by the copyright holder or
+other authorized party saying it may be distributed under the terms of
+this Lesser General Public License (also called "this License").
+Each licensee is addressed as "you".
+
+  A "library" means a collection of software functions and/or data
+prepared so as to be conveniently linked with application programs
+(which use some of those functions and data) to form executables.
+
+  The "Library", below, refers to any such software library or work
+which has been distributed under these terms.  A "work based on the
+Library" means either the Library or any derivative work under
+copyright law: that is to say, a work containing the Library or a
+portion of it, either verbatim or with modifications and/or translated
+straightforwardly into another language.  (Hereinafter, translation is
+included without limitation in the term "modification".)
+
+  "Source code" for a work means the preferred form of the work for
+making modifications to it.  For a library, complete source code means
+all the source code for all modules it contains, plus any associated
+interface definition files, plus the scripts used to control compilation
+and installation of the library.
+
+  Activities other than copying, distribution and modification are not
+covered by this License; they are outside its scope.  The act of
+running a program using the Library is not restricted, and output from
+such a program is covered only if its contents constitute a work based
+on the Library (independent of the use of the Library in a tool for
+writing it).  Whether that is true depends on what the Library does
+and what the program that uses the Library does.
+
+  1. You may copy and distribute verbatim copies of the Library's
+complete source code as you receive it, in any medium, provided that
+you conspicuously and appropriately publish on each copy an
+appropriate copyright notice and disclaimer of warranty; keep intact
+all the notices that refer to this License and to the absence of any
+warranty; and distribute a copy of this License along with the
+Library.
+
+  You may charge a fee for the physical act of transferring a copy,
+and you may at your option offer warranty protection in exchange for a
+fee.
+
+  2. You may modify your copy or copies of the Library or any portion
+of it, thus forming a work based on the Library, and copy and
+distribute such modifications or work under the terms of Section 1
+above, provided that you also meet all of these conditions:
+
+    a) The modified work must itself be a software library.
+
+    b) You must cause the files modified to carry prominent notices
+    stating that you changed the files and the date of any change.
+
+    c) You must cause the whole of the work to be licensed at no
+    charge to all third parties under the terms of this License.
+
+    d) If a facility in the modified Library refers to a function or a
+    table of data to be supplied by an application program that uses
+    the facility, other than as an argument passed when the facility
+    is invoked, then you must make a good faith effort to ensure that,
+    in the event an application does not supply such function or
+    table, the facility still operates, and performs whatever part of
+    its purpose remains meaningful.
+
+    (For example, a function in a library to compute square roots has
+    a purpose that is entirely well-defined independent of the
+    application.  Therefore, Subsection 2d requires that any
+    application-supplied function or table used by this function must
+    be optional: if the application does not supply it, the square
+    root function must still compute square roots.)
+
+These requirements apply to the modified work as a whole.  If
+identifiable sections of that work are not derived from the Library,
+and can be reasonably considered independent and separate works in
+themselves, then this License, and its terms, do not apply to those
+sections when you distribute them as separate works.  But when you
+distribute the same sections as part of a whole which is a work based
+on the Library, the distribution of the whole must be on the terms of
+this License, whose permissions for other licensees extend to the
+entire whole, and thus to each and every part regardless of who wrote
+it.
+
+Thus, it is not the intent of this section to claim rights or contest
+your rights to work written entirely by you; rather, the intent is to
+exercise the right to control the distribution of derivative or
+collective works based on the Library.
+
+In addition, mere aggregation of another work not based on the Library
+with the Library (or with a work based on the Library) on a volume of
+a storage or distribution medium does not bring the other work under
+the scope of this License.
+
+  3. You may opt to apply the terms of the ordinary GNU General Public
+License instead of this License to a given copy of the Library.  To do
+this, you must alter all the notices that refer to this License, so
+that they refer to the ordinary GNU General Public License, version 2,
+instead of to this License.  (If a newer version than version 2 of the
+ordinary GNU General Public License has appeared, then you can specify
+that version instead if you wish.)  Do not make any other change in
+these notices.
+
+  Once this change is made in a given copy, it is irreversible for
+that copy, so the ordinary GNU General Public License applies to all
+subsequent copies and derivative works made from that copy.
+
+  This option is useful when you wish to copy part of the code of
+the Library into a program that is not a library.
+
+  4. You may copy and distribute the Library (or a portion or
+derivative of it, under Section 2) in object code or executable form
+under the terms of Sections 1 and 2 above provided that you accompany
+it with the complete corresponding machine-readable source code, which
+must be distributed under the terms of Sections 1 and 2 above on a
+medium customarily used for software interchange.
+
+  If distribution of object code is made by offering access to copy
+from a designated place, then offering equivalent access to copy the
+source code from the same place satisfies the requirement to
+distribute the source code, even though third parties are not
+compelled to copy the source along with the object code.
+
+  5. A program that contains no derivative of any portion of the
+Library, but is designed to work with the Library by being compiled or
+linked with it, is called a "work that uses the Library".  Such a
+work, in isolation, is not a derivative work of the Library, and
+therefore falls outside the scope of this License.
+
+  However, linking a "work that uses the Library" with the Library
+creates an executable that is a derivative of the Library (because it
+contains portions of the Library), rather than a "work that uses the
+library".  The executable is therefore covered by this License.
+Section 6 states terms for distribution of such executables.
+
+  When a "work that uses the Library" uses material from a header file
+that is part of the Library, the object code for the work may be a
+derivative work of the Library even though the source code is not.
+Whether this is true is especially significant if the work can be
+linked without the Library, or if the work is itself a library.  The
+threshold for this to be true is not precisely defined by law.
+
+  If such an object file uses only numerical parameters, data
+structure layouts and accessors, and small macros and small inline
+functions (ten lines or less in length), then the use of the object
+file is unrestricted, regardless of whether it is legally a derivative
+work.  (Executables containing this object code plus portions of the
+Library will still fall under Section 6.)
+
+  Otherwise, if the work is a derivative of the Library, you may
+distribute the object code for the work under the terms of Section 6.
+Any executables containing that work also fall under Section 6,
+whether or not they are linked directly with the Library itself.
+
+  6. As an exception to the Sections above, you may also combine or
+link a "work that uses the Library" with the Library to produce a
+work containing portions of the Library, and distribute that work
+under terms of your choice, provided that the terms permit
+modification of the work for the customer's own use and reverse
+engineering for debugging such modifications.
+
+  You must give prominent notice with each copy of the work that the
+Library is used in it and that the Library and its use are covered by
+this License.  You must supply a copy of this License.  If the work
+during execution displays copyright notices, you must include the
+copyright notice for the Library among them, as well as a reference
+directing the user to the copy of this License.  Also, you must do one
+of these things:
+
+    a) Accompany the work with the complete corresponding
+    machine-readable source code for the Library including whatever
+    changes were used in the work (which must be distributed under
+    Sections 1 and 2 above); and, if the work is an executable linked
+    with the Library, with the complete machine-readable "work that
+    uses the Library", as object code and/or source code, so that the
+    user can modify the Library and then relink to produce a modified
+    executable containing the modified Library.  (It is understood
+    that the user who changes the contents of definitions files in the
+    Library will not necessarily be able to recompile the application
+    to use the modified definitions.)
+
+    b) Use a suitable shared library mechanism for linking with the
+    Library.  A suitable mechanism is one that (1) uses at run time a
+    copy of the library already present on the user's computer system,
+    rather than copying library functions into the executable, and (2)
+    will operate properly with a modified version of the library, if
+    the user installs one, as long as the modified version is
+    interface-compatible with the version that the work was made with.
+
+    c) Accompany the work with a written offer, valid for at
+    least three years, to give the same user the materials
+    specified in Subsection 6a, above, for a charge no more
+    than the cost of performing this distribution.
+
+    d) If distribution of the work is made by offering access to copy
+    from a designated place, offer equivalent access to copy the above
+    specified materials from the same place.
+
+    e) Verify that the user has already received a copy of these
+    materials or that you have already sent this user a copy.
+
+  For an executable, the required form of the "work that uses the
+Library" must include any data and utility programs needed for
+reproducing the executable from it.  However, as a special exception,
+the materials to be distributed need not include anything that is
+normally distributed (in either source or binary form) with the major
+components (compiler, kernel, and so on) of the operating system on
+which the executable runs, unless that component itself accompanies
+the executable.
+
+  It may happen that this requirement contradicts the license
+restrictions of other proprietary libraries that do not normally
+accompany the operating system.  Such a contradiction means you cannot
+use both them and the Library together in an executable that you
+distribute.
+
+  7. You may place library facilities that are a work based on the
+Library side-by-side in a single library together with other library
+facilities not covered by this License, and distribute such a combined
+library, provided that the separate distribution of the work based on
+the Library and of the other library facilities is otherwise
+permitted, and provided that you do these two things:
+
+    a) Accompany the combined library with a copy of the same work
+    based on the Library, uncombined with any other library
+    facilities.  This must be distributed under the terms of the
+    Sections above.
+
+    b) Give prominent notice with the combined library of the fact
+    that part of it is a work based on the Library, and explaining
+    where to find the accompanying uncombined form of the same work.
+
+  8. You may not copy, modify, sublicense, link with, or distribute
+the Library except as expressly provided under this License.  Any
+attempt otherwise to copy, modify, sublicense, link with, or
+distribute the Library is void, and will automatically terminate your
+rights under this License.  However, parties who have received copies,
+or rights, from you under this License will not have their licenses
+terminated so long as such parties remain in full compliance.
+
+  9. You are not required to accept this License, since you have not
+signed it.  However, nothing else grants you permission to modify or
+distribute the Library or its derivative works.  These actions are
+prohibited by law if you do not accept this License.  Therefore, by
+modifying or distributing the Library (or any work based on the
+Library), you indicate your acceptance of this License to do so, and
+all its terms and conditions for copying, distributing or modifying
+the Library or works based on it.
+
+  10. Each time you redistribute the Library (or any work based on the
+Library), the recipient automatically receives a license from the
+original licensor to copy, distribute, link with or modify the Library
+subject to these terms and conditions.  You may not impose any further
+restrictions on the recipients' exercise of the rights granted herein.
+You are not responsible for enforcing compliance by third parties with
+this License.
+
+  11. If, as a consequence of a court judgment or allegation of patent
+infringement or for any other reason (not limited to patent issues),
+conditions are imposed on you (whether by court order, agreement or
+otherwise) that contradict the conditions of this License, they do not
+excuse you from the conditions of this License.  If you cannot
+distribute so as to satisfy simultaneously your obligations under this
+License and any other pertinent obligations, then as a consequence you
+may not distribute the Library at all.  For example, if a patent
+license would not permit royalty-free redistribution of the Library by
+all those who receive copies directly or indirectly through you, then
+the only way you could satisfy both it and this License would be to
+refrain entirely from distribution of the Library.
+
+If any portion of this section is held invalid or unenforceable under any
+particular circumstance, the balance of the section is intended to apply,
+and the section as a whole is intended to apply in other circumstances.
+
+It is not the purpose of this section to induce you to infringe any
+patents or other property right claims or to contest validity of any
+such claims; this section has the sole purpose of protecting the
+integrity of the free software distribution system which is
+implemented by public license practices.  Many people have made
+generous contributions to the wide range of software distributed
+through that system in reliance on consistent application of that
+system; it is up to the author/donor to decide if he or she is willing
+to distribute software through any other system and a licensee cannot
+impose that choice.
+
+This section is intended to make thoroughly clear what is believed to
+be a consequence of the rest of this License.
+
+  12. If the distribution and/or use of the Library is restricted in
+certain countries either by patents or by copyrighted interfaces, the
+original copyright holder who places the Library under this License may add
+an explicit geographical distribution limitation excluding those countries,
+so that distribution is permitted only in or among countries not thus
+excluded.  In such case, this License incorporates the limitation as if
+written in the body of this License.
+
+  13. The Free Software Foundation may publish revised and/or new
+versions of the Lesser General Public License from time to time.
+Such new versions will be similar in spirit to the present version,
+but may differ in detail to address new problems or concerns.
+
+Each version is given a distinguishing version number.  If the Library
+specifies a version number of this License which applies to it and
+"any later version", you have the option of following the terms and
+conditions either of that version or of any later version published by
+the Free Software Foundation.  If the Library does not specify a
+license version number, you may choose any version ever published by
+the Free Software Foundation.
+
+  14. If you wish to incorporate parts of the Library into other free
+programs whose distribution conditions are incompatible with these,
+write to the author to ask for permission.  For software which is
+copyrighted by the Free Software Foundation, write to the Free
+Software Foundation; we sometimes make exceptions for this.  Our
+decision will be guided by the two goals of preserving the free status
+of all derivatives of our free software and of promoting the sharing
+and reuse of software generally.
+
+                            NO WARRANTY
+
+  15. BECAUSE THE LIBRARY IS LICENSED FREE OF CHARGE, THERE IS NO
+WARRANTY FOR THE LIBRARY, TO THE EXTENT PERMITTED BY APPLICABLE LAW.
+EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR
+OTHER PARTIES PROVIDE THE LIBRARY "AS IS" WITHOUT WARRANTY OF ANY
+KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE
+LIBRARY IS WITH YOU.  SHOULD THE LIBRARY PROVE DEFECTIVE, YOU ASSUME
+THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+  16. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN
+WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY
+AND/OR REDISTRIBUTE THE LIBRARY AS PERMITTED ABOVE, BE LIABLE TO YOU
+FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR
+CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE
+LIBRARY (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING
+RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A
+FAILURE OF THE LIBRARY TO OPERATE WITH ANY OTHER SOFTWARE), EVEN IF
+SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH
+DAMAGES.
+
+                     END OF TERMS AND CONDITIONS
+
+           How to Apply These Terms to Your New Libraries
+
+  If you develop a new library, and you want it to be of the greatest
+possible use to the public, we recommend making it free software that
+everyone can redistribute and change.  You can do so by permitting
+redistribution under these terms (or, alternatively, under the terms of the
+ordinary General Public License).
+
+  To apply these terms, attach the following notices to the library.  It is
+safest to attach them to the start of each source file to most effectively
+convey the exclusion of warranty; and each file should have at least the
+"copyright" line and a pointer to where the full notice is found.
+
+    <one line to give the library's name and a brief idea of what it does.>
+    Copyright (C) <year>  <name of author>
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public
+    License as published by the Free Software Foundation; either
+    version 2.1 of the License, or (at your option) any later version.
+
+    This library is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+    Lesser General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public
+    License along with this library; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+
+Also add information on how to contact you by electronic and paper mail.
+
+You should also get your employer (if you work as a programmer) or your
+school, if any, to sign a "copyright disclaimer" for the library, if
+necessary.  Here is a sample; alter the names:
+
+  Yoyodyne, Inc., hereby disclaims all copyright interest in the
+  library `Frob' (a library for tweaking knobs) written by James Random Hacker.
+
+  <signature of Ty Coon>, 1 April 1990
+  Ty Coon, President of Vice
+
+That's all there is to it!
+```
+
+## L0097
+
+対象:
+
+- NSIS StdUtils plug-in 1.14 / StdUtils/LGPL_CLARIFICATION.txt
+
+```text
+StdUtils plug-in LGPL Clarification
+===================================
+
+The author of the StdUtils plug-in Library for NSIS adds the following clarification to the GNU Lesser General Public License version 2.1:
+
+Installer programs created with NSIS (Nullsoft Scriptable Install System) that incorporate and use the StdUtils plug-in Library, strictly through the NSIS plug-in interface, and that contain/distribute *verbatim* copies of the StdUtils plug-in Library are considered a "work that uses the Library"; they do NOT(!) represent a derivative of the Library.
+
+This means that if you incorporate a *verbatim* (unmodified) copy of the provided StdUtils plug-in DLL into your NSIS-based installer, then you still *are* allowed to distribute that installer under the license of your choice, including (but not limited to) "proprietary" licenses.
+
+
+Rationalization
+---------------
+
+Technically, incorporating a plug-in DLL into your NSIS-based installer is NO(!) different from storing the plug-in DLL in an, e.g., ZIP archive. The plug-in DLL therefore will NOT(!) be linked "statically" to the actual installer program (i.e. the NSIS "exehead"), but instead resides in the "data" (archive) section of the installer file as a payload.
+
+The plug-in DLL will be extracted from the installer file and will be called/linked by the installer program (i.e. the NSIS "exehead") at runtime, in the form of a separate DLL file. The calling application consequently does NOT(!) need to be distributed under the GNU Lesser General Public License; it *may* be distributed under a proprietary license.
+
+
+Limitations
+-----------
+
+Even though the StdUtils plug-in Library *may* be incorporated into "proprietary" installer programs, the plug-in DLL itself will still be distributed under the terms of the General Public License version 2.1, which means that all restrictions of the General Public License version 2.1 must still be adhered to!
+
+In particular this means that:
+
+(a) If you make any modifications to the StdUtils plug-in Library, either by modifying the provided DLL file directly or by recompiling the DLL file from a *modified* version of the original source codes, then you MUST(!) ship your *modified* source codes alongside with the installer and share them under the same license terms as the original library.
+
+(b) If you include any code of the StdUtils plug-in Library directly into your software, rather than making your software call the StdUtils plug-in Library at runtime (as a separate DLL file), then your software becomes derivative of the Library and therefore your software as a whole MUST(!) be distributed under the General Public License version 2.1.
+
+
+LoRd_MudeR <mulder2@gmx.de>
+```
+
+## L0098
+
+対象:
+
+- NSIS StdUtils plug-in 1.14 / StdUtils/rhash-COPYING.txt
+
+```text
+RHash License
+
+Copyright (c) 2005-2014 Aleksey Kravchenko <rhash.admin@gmail.com>
+
+Permission is hereby granted, free of charge,  to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction,  including without limitation the rights
+to  use,  copy,  modify,  merge, publish, distribute, sublicense, and/or sell
+copies  of  the Software,  and  to permit  persons  to whom  the Software  is
+furnished to do so.
+
+The Software  is distributed in the hope that it will be useful,  but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  Use  this  program  at  your  own  risk!
+```
+
+## L0099
+
+対象:
+
+- NSIS StdUtils plug-in 1.14 / StdUtils/blake2-COPYING.txt
+
+```text
+Creative Commons Legal Code
+
+CC0 1.0 Universal
+
+    CREATIVE COMMONS CORPORATION IS NOT A LAW FIRM AND DOES NOT PROVIDE
+    LEGAL SERVICES. DISTRIBUTION OF THIS DOCUMENT DOES NOT CREATE AN
+    ATTORNEY-CLIENT RELATIONSHIP. CREATIVE COMMONS PROVIDES THIS
+    INFORMATION ON AN "AS-IS" BASIS. CREATIVE COMMONS MAKES NO WARRANTIES
+    REGARDING THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS
+    PROVIDED HEREUNDER, AND DISCLAIMS LIABILITY FOR DAMAGES RESULTING FROM
+    THE USE OF THIS DOCUMENT OR THE INFORMATION OR WORKS PROVIDED
+    HEREUNDER.
+
+Statement of Purpose
+
+The laws of most jurisdictions throughout the world automatically confer
+exclusive Copyright and Related Rights (defined below) upon the creator
+and subsequent owner(s) (each and all, an "owner") of an original work of
+authorship and/or a database (each, a "Work").
+
+Certain owners wish to permanently relinquish those rights to a Work for
+the purpose of contributing to a commons of creative, cultural and
+scientific works ("Commons") that the public can reliably and without fear
+of later claims of infringement build upon, modify, incorporate in other
+works, reuse and redistribute as freely as possible in any form whatsoever
+and for any purposes, including without limitation commercial purposes.
+These owners may contribute to the Commons to promote the ideal of a free
+culture and the further production of creative, cultural and scientific
+works, or to gain reputation or greater distribution for their Work in
+part through the use and efforts of others.
+
+For these and/or other purposes and motivations, and without any
+expectation of additional consideration or compensation, the person
+associating CC0 with a Work (the "Affirmer"), to the extent that he or she
+is an owner of Copyright and Related Rights in the Work, voluntarily
+elects to apply CC0 to the Work and publicly distribute the Work under its
+terms, with knowledge of his or her Copyright and Related Rights in the
+Work and the meaning and intended legal effect of CC0 on those rights.
+
+1. Copyright and Related Rights. A Work made available under CC0 may be
+protected by copyright and related or neighboring rights ("Copyright and
+Related Rights"). Copyright and Related Rights include, but are not
+limited to, the following:
+
+  i. the right to reproduce, adapt, distribute, perform, display,
+     communicate, and translate a Work;
+ ii. moral rights retained by the original author(s) and/or performer(s);
+iii. publicity and privacy rights pertaining to a person's image or
+     likeness depicted in a Work;
+ iv. rights protecting against unfair competition in regards to a Work,
+     subject to the limitations in paragraph 4(a), below;
+  v. rights protecting the extraction, dissemination, use and reuse of data
+     in a Work;
+ vi. database rights (such as those arising under Directive 96/9/EC of the
+     European Parliament and of the Council of 11 March 1996 on the legal
+     protection of databases, and under any national implementation
+     thereof, including any amended or successor version of such
+     directive); and
+vii. other similar, equivalent or corresponding rights throughout the
+     world based on applicable law or treaty, and any national
+     implementations thereof.
+
+2. Waiver. To the greatest extent permitted by, but not in contravention
+of, applicable law, Affirmer hereby overtly, fully, permanently,
+irrevocably and unconditionally waives, abandons, and surrenders all of
+Affirmer's Copyright and Related Rights and associated claims and causes
+of action, whether now known or unknown (including existing as well as
+future claims and causes of action), in the Work (i) in all territories
+worldwide, (ii) for the maximum duration provided by applicable law or
+treaty (including future time extensions), (iii) in any current or future
+medium and for any number of copies, and (iv) for any purpose whatsoever,
+including without limitation commercial, advertising or promotional
+purposes (the "Waiver"). Affirmer makes the Waiver for the benefit of each
+member of the public at large and to the detriment of Affirmer's heirs and
+successors, fully intending that such Waiver shall not be subject to
+revocation, rescission, cancellation, termination, or any other legal or
+equitable action to disrupt the quiet enjoyment of the Work by the public
+as contemplated by Affirmer's express Statement of Purpose.
+
+3. Public License Fallback. Should any part of the Waiver for any reason
+be judged legally invalid or ineffective under applicable law, then the
+Waiver shall be preserved to the maximum extent permitted taking into
+account Affirmer's express Statement of Purpose. In addition, to the
+extent the Waiver is so judged Affirmer hereby grants to each affected
+person a royalty-free, non transferable, non sublicensable, non exclusive,
+irrevocable and unconditional license to exercise Affirmer's Copyright and
+Related Rights in the Work (i) in all territories worldwide, (ii) for the
+maximum duration provided by applicable law or treaty (including future
+time extensions), (iii) in any current or future medium and for any number
+of copies, and (iv) for any purpose whatsoever, including without
+limitation commercial, advertising or promotional purposes (the
+"License"). The License shall be deemed effective as of the date CC0 was
+applied by Affirmer to the Work. Should any part of the License for any
+reason be judged legally invalid or ineffective under applicable law, such
+partial invalidity or ineffectiveness shall not invalidate the remainder
+of the License, and in such case Affirmer hereby affirms that he or she
+will not (i) exercise any of his or her remaining Copyright and Related
+Rights in the Work or (ii) assert any associated claims and causes of
+action with respect to the Work, in either case contrary to Affirmer's
+express Statement of Purpose.
+
+4. Limitations and Disclaimers.
+
+ a. No trademark or patent rights held by Affirmer are waived, abandoned,
+    surrendered, licensed or otherwise affected by this document.
+ b. Affirmer offers the Work as-is and makes no representations or
+    warranties of any kind concerning the Work, express, implied,
+    statutory or otherwise, including without limitation warranties of
+    title, merchantability, fitness for a particular purpose, non
+    infringement, or the absence of latent or other defects, accuracy, or
+    the present or absence of errors, whether or not discoverable, all to
+    the greatest extent permissible under applicable law.
+ c. Affirmer disclaims responsibility for clearing rights of other persons
+    that may apply to the Work or any use thereof, including without
+    limitation any person's Copyright and Related Rights in the Work.
+    Further, Affirmer disclaims responsibility for obtaining any necessary
+    consents, permissions or other rights required for any use of the
+    Work.
+ d. Affirmer understands and acknowledges that Creative Commons is not a
+    party to this document and has no duty or obligation with respect to
+    this CC0 or use of the Work.
+```
+
+## L0100
+
+対象:
+
+- NSIS nsis7z plug-in / LZMA SDK 19.00 / nsis7z/License.txt
+
+```text
+LZMA SDK is written and placed in the public domain by Igor Pavlov.
+
+Some code in LZMA SDK is based on public domain code from another developers:
+  1) PPMd var.H (2001): Dmitry Shkarin
+  2) SHA-256: Wei Dai (Crypto++ library)
+
+You can copy, modify, distribute and perform LZMA SDK code, even for commercial purposes,
+all without asking permission.
+
+LZMA SDK code is compatible with open source licenses, for example, you can
+include it to GNU GPL or GNU LGPL code.
+```
+
+## L0101
+
+対象:
+
+- NSIS nsis7z plug-in / LZMA SDK 19.00 / nsis7z/nsis7z.txt
+
+```text
+NSIS 7z Extract Plugin.
+(c) brainsucker (Nik Medved), 2009.
+Updated by Marek Mizanin, 2011.
+Updated by Stuart Welch 2015-2016.
+Updated by Marek Mizanin, 2019.
+Uses 7-Zip source code, (C) 1999-2015 Igor Pavlov.
+
+Abstract.
+---------
+
+Nowadays NSIS has very good compression algorithms (including superb
+lzma-solid), but neverless, dedicated archivers provide slightly better
+ratios. Moreover, if you have "pack of files" which is never changed itself,
+but used in several different or frequent releases, it will be handy to pack
+it once with 7z, and then use like "merge-module", to save several bytes
+and setup compilation time together (the last is most important, we get up to
+10x compilation time reduction for some of our setups using 60mb 7z-packed (240
+original) merge modules).
+
+History.
+--------
+
+Actually we are using this plugin as binary for around 4 years (it was first
+compiled with something like 7z 4.05), but around 7z releases 4.30 it lost
+compatibility with the newer archives (so we kept in secret place special
+"old" 7z version to pack our merge-modules ;). And strangely, in several
+weeks after initial compilation I've lost my hard-drive, so we got only
+this single "nsis7z.dll" file kept in our CVS for years. But due to 7z license
+that wasn't completely legal, and also some other people were asking me for
+license details (to use this plugin in their products setups).
+
+Yesterday I've got some spare time, and decided to recreate original plugin,
+saving compatibility with old one, but adding some minor features, and
+trying to preserve source-code compatibility with future 7z-releases (as much
+as I can).
+
+[Marek Mizanin] Because I need Unicode version of this plug-in I took the last
+7z sources - 7z921.tar.bz2 and make following changes so I was able to build it:
+- char replaced with TCHAR
+- added 	g_pluginExtra = extra; into funcname(HWND hwndParent, int string_size, \
+- added _T before "strings"
+- updated Nsis7z.vcproj, changed default to Unicode
+- files in NsisPluginSample changed to 2.46 Unicode NSIS
+- added modified WorkDir.cpp from 7z sources
+- comment out //#include "../../Compress/LZMA_Alone/LzmaBenchCon.h"
+- fixed void DoInitialize()
+- updated int DoExtract(LPTSTR archive, LPTSTR dir, bool overwrite, bool expath, ExtractProgressHandler epc)
+- updated License.txt from 7z921.tar.bz2
+- added _release_ANSI and _release_unicode directory with builded nsis7z.dll
+
+[Stuart Welch]
+15th July 2015
+* Updated to LZMA SDK 15.07 beta
+* Updated License.txt
+
+[Stuart Welch]
+11th March 2016
+* Updated to LZMA SDK 15.14
+
+[Marek Mizanin]
+23th March 2019
+* Updated to LZMA SDK 19.00
+- updated project file to VS 2017
+- added new files from SDK to project (Lzma2DecMt, MtDec, XzDecoder, XzEncoder
+- renamed UserInputsUtils.cpp to UserInputsUtils2.cpp because conflict (could somebody check if it is ok?)
+- renamed StdAfx.cpp to StdAfx2.cpp because conflict
+- added #include "../../../Common/Common.h" to solve build error
+- added #pragma warning(disable : 4996) to solve build error with 'GetVersionExW': was declared deprecated
+- changed version to 19.00
+
+
+Usage.
+------
+
+Simple. Look at example1.nsi.
+Details? Unpack you merge module as 7z archive to somewere on users harddrive,
+set target dir for archive contents with SetOutPath, and call plugin. Example:
+
+    File "ArchiveName.7z"
+    Nsis7z::Extract "ArchiveName.7z"
+    Delete "$OUTDIR/ArchiveName.7z"
+
+Usually I'm showing something like "Installing package..." with DetailsPrint
+before this, and plugin will move progress bar during unpack operation, to keep
+user notified on setup progress.
+
+Plugin now has two additional commands:
+
+    Nsis7z::ExtractWithDetails "Test.7z" "Installing package %s..."
+
+Unpacks archive in details mode, with promt generated from second param, use
+ %s to insert unpack details like "10% (5 / 10 MB)"
+
+      GetFunctionAddress $R9 CallbackTest
+      Nsis7z::ExtractWithCallback "Test.7z" $R9
+
+Unpacks archive in callback mode - plugin will animate progress bar, you can do
+anything (like setting user prompt) in callback function.
+
+
+License.
+--------
+
+I know very little about open source world and associated laws, but AFAIK ;) I
+can compile, distribute and use this plugin under LGPL license (7z uses one)
+as soon as source code for it is readily available. No problems here, all
+regards and fame goes to Igor Pavlov, 7-zip author.
+
+You can download source code for this plugin at http://nsis.sf.net or
+http://brains.by or ask me at any time to send it to you, if you got
+distribution package without sources (brainsucker.na@gmail.com).
+
+Compiling.
+----------
+
+Sorry, but I have no time to recreate make files by hand, so only VS2008
+solution/project are included. To build plugin you need to unpack 7z464.tar.bz2
+(or later, hopefully; you can retreive one from www.7-zip.org) somewhere, and
+then unpack plugin source distribution to the same folder. Solution for plugin
+can be found at CPP\7zip\Bundles\Nsis7z subfolder (Nsis7z.sln). You should
+compile it as ANSI version (NOT unicode, Release or Debug).
+
+I've tried to strip plugin as much as possible (still very big, 170 kb too much
+comparing to 30 kb ansi-C 7z unpacker provided by Igor Pavlov), so it should
+support only 7Z unpacking, with LZMA, Deflate, BCJ2, etc. methods. Also it will
+only work at NT systems (95/98/ME - bad luck, sorry ;), according to source code
+and statements at comments.
+
+[Marek Mizanin]
+9.21
+First extract 7z921.tar.bz2 and then nsis7z_921 because WorkDir.cpp is modified.
+For ANSI version you should replace NsisPluginSample with files from
+c:\Program Files\NSIS\Examples\Plugin\nsis
+
+19.00
+Extract nsis7z_19.00.7z, then extract C and CPP folders from lzma1900.7z to Contrib\nsis7z.
+Build Nsis7z.sln in VS 2017.
+[Marek Mizanin end]
+```
+
+## L0102
+
+対象:
+
+- NSIS UAC plug-in nsis-resources 3.4.1 / UAC/NOTICE.txt
+
+```text
+NSIS UAC plug-in
+Copyright (C) Anders Kjersem.
+Licensed under the zlib/libpng license; see the accompanying License.txt.
+
+The copyright and license statement above is from the source archive's
+NSIS_CUSTOMPISDK.h. The plug-in is distributed by its author at:
+https://nsis.sourceforge.io/UAC_plug-in
+```
+
+## L0103
+
+対象:
+
+- NSIS UAC plug-in nsis-resources 3.4.1 / UAC/License.txt
+
+```text
+This software is provided 'as-is', without any express or implied warranty.
+
+ZLIB/LIBPNG LICENSE
+-------------------
+
+This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+
+      1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+
+      2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+
+      3. This notice may not be removed or altered from any source distribution.
+```
+
+## L0104
+
+対象:
+
+- NSIS WinShell plug-in nsis-resources 3.4.1 / WinShell-NOTICE.txt
+
+```text
+NSIS WinShell plug-in
+Author: Anders
+Upstream: https://nsis.sourceforge.io/WinShell_plug-in
+
+The author's plug-in page identifies the license as "Freeware".
+The author's WinShell.zip download contains plug-in DLLs but no separate
+copyright or license text. No MIT, BSD or other license is substituted here.
+NSIS's own plug-in API is covered by its COPYING notice, reproduced separately.
+```
+
+## L0105
+
+対象:
+
+- NSIS nsProcess plug-in nsis-resources 3.4.1 / nsProcess-NOTICE.txt
+
+```text
+NSIS nsProcess plug-in
+Author: Shengalts Aleksander (Instructor)
+Upstream: https://nsis.sourceforge.io/NsProcess_plugin
+
+Upstream attribution also credits Ravi Kochhar for FIND_PROC_BY_NAME and
+iceman_k, DITMan and brainsucker for their contributions.
+The nsis-resources 3.4.1 bundle supplies the plug-in DLL without a separate
+license file. No MIT, BSD or other license is substituted here. NSIS's own
+plug-in API is covered by its COPYING notice, reproduced separately.
+```

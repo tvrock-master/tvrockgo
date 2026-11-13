@@ -1,0 +1,62 @@
+{
+  "name": "tvrockgo-app",
+  "version": "1.0.0",
+  "description": "TvRockGO web app for browsing TV listings, searching programs and captions, scheduling recordings, and controlling devices.",
+  "author": "tvrock-master",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "core-js": "^3.8.3",
+    "vue": "^2.6.14",
+    "vuetify": "^2.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.5.1",
+    "vue-template-compiler": "^2.6.14",
+    "vuetify-loader": "^1.7.0"
+  },
+  "overrides": {
+    "browserslist": "4.26.3",
+    "caniuse-lite": "1.0.30001810",
+    "node-releases": "2.0.21"
+  },
+  "resolutions": {
+    "browserslist": "4.26.3",
+    "caniuse-lite": "1.0.30001810",
+    "node-releases": "2.0.21"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser",
+      "requireConfigFile": false
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

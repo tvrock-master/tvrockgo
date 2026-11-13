@@ -1,0 +1,7 @@
+[
+  { "name": "NSIS StdUtils plug-in", "version": "1.14", "source": "https://github.com/lordmulder/stdutils/tree/1.14", "files": ["StdUtils/NOTICE.txt", "StdUtils/LGPL.txt", "StdUtils/LGPL_CLARIFICATION.txt", "StdUtils/rhash-COPYING.txt", "StdUtils/blake2-COPYING.txt"] },
+  { "name": "NSIS nsis7z plug-in / LZMA SDK", "version": "19.00", "source": "https://nsis.sourceforge.io/Nsis7z_plug-in", "files": ["nsis7z/License.txt", "nsis7z/nsis7z.txt", "StdUtils/LGPL.txt"] },
+  { "name": "NSIS UAC plug-in", "version": "nsis-resources 3.4.1", "source": "https://nsis.sourceforge.io/UAC_plug-in", "files": ["UAC/NOTICE.txt", "UAC/License.txt"] },
+  { "name": "NSIS WinShell plug-in", "version": "nsis-resources 3.4.1", "source": "https://nsis.sourceforge.io/WinShell_plug-in", "files": ["WinShell-NOTICE.txt"] },
+  { "name": "NSIS nsProcess plug-in", "version": "nsis-resources 3.4.1", "source": "https://nsis.sourceforge.io/NsProcess_plugin", "files": ["nsProcess-NOTICE.txt"] }
+]
